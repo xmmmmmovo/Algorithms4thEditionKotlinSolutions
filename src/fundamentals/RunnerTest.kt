@@ -1,0 +1,25 @@
+package fundamentals
+
+import algorithms.fourSumForce
+import algorithms.threeSumBinaryFast
+import ds.Buffer
+
+data class tt(var string: String = "")
+
+fun test1() {
+    var t = tt("11")
+
+    var tmp = tt("22")
+    println(t.string.let {
+        t = tmp
+    })
+
+    println(tmp)
+
+    for (i in 1..10)
+        println(i)
+}
+
+fun main() {
+    println(threeSumBinaryFast(listOf(1, -1, 2, 0)))
+}
