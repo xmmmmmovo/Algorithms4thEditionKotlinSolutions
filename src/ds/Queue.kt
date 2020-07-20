@@ -3,7 +3,7 @@ package ds
 /**
  * 单项队列类
  * */
-class Queue<T> : Iterable<T> {
+class Queue<T> : Collection<T> {
     private var first: Node<T>? = null
     private var last: Node<T>? = null
     private var n: Int = 0
@@ -16,10 +16,11 @@ class Queue<T> : Iterable<T> {
         }
     }
 
-    fun isEmpty(): Boolean = first == null
+    override fun isEmpty(): Boolean = first == null
 
-    fun size(): Int = n
-
+    /**
+     * 入队列
+     * */
     fun enqueue(item: T) {
         val ol = last
         last = Node(
@@ -34,6 +35,9 @@ class Queue<T> : Iterable<T> {
         n++
     }
 
+    /**
+     * 出队列
+     * */
     fun dequeue(): T {
         if (isEmpty()) {
             throw NoSuchElementException("Stack underflow")
@@ -47,11 +51,49 @@ class Queue<T> : Iterable<T> {
         }!!
     }
 
+    /**
+     * 查看队列首
+     * */
     fun peek(): T {
         if (isEmpty()) {
             throw NoSuchElementException("Stack underflow")
         }
         return first?.item!!
+    }
+
+    override val size: Int
+        get() = n
+
+    /**
+     * 是否包含[element]
+     * */
+    override fun contains(element: T): Boolean {
+        return indexOf(element) != -1
+    }
+
+    /**
+     * 是否包含所有[elements]
+     * */
+    override fun containsAll(elements: Collection<T>): Boolean =
+        if (elements.isEmpty())
+            false
+        else
+            elements.all {
+                contains(it)
+            }
+
+    /**
+     * 查看[element]的位置
+     * */
+    private fun indexOf(element: T): Int {
+        var index = 0
+        this.forEach {
+            if (it == element) {
+                return index
+            }
+            index++
+        }
+        return -1
     }
 
     override fun toString(): String {

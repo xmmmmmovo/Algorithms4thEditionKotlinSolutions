@@ -1,5 +1,6 @@
 package fundamentals
 
+import algorithms.JosephusSolutions
 import algorithms.fourSumForce
 import algorithms.threeSumBinaryFast
 import ds.Buffer
@@ -21,5 +22,5 @@ fun test1() {
 }
 
 fun main() {
-    println(threeSumBinaryFast(listOf(1, -1, 2, 0)))
+    val jo = JosephusSolutions()
 }

@@ -173,13 +173,8 @@ class LinkedList<T> : MutableList<T> {
             }
 
     /**
-     * 获取[index]节点数据
+     * 查看[element]的位置
      * */
-    override fun get(index: Int): T {
-        checkElementIndex(index, size)
-        return getNode(index).item ?: throw NoSuchElementException()
-    }
-
     override fun indexOf(element: T): Int {
         var index = 0
         this.forEach {
@@ -189,6 +184,15 @@ class LinkedList<T> : MutableList<T> {
             index++
         }
         return -1
+    }
+
+
+    /**
+     * 获取[index]节点数据
+     * */
+    override fun get(index: Int): T {
+        checkElementIndex(index, size)
+        return getNode(index).item ?: throw NoSuchElementException()
     }
 
     /**

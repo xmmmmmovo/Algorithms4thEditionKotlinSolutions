@@ -41,23 +41,3 @@ fun threeSumBinaryFast(list: List<Int>): List<List<Int>> {
 
     return res
 }
-
-/**
- * 双指针求可重复三数之和
- * */
-fun threeSumDoublePointFast(list: List<Int>): List<List<Int>> {
-    if (list.size < 3) throw IllegalArgumentException("数组元素小于3个!")
-    var res = LinkedList<List<Int>>()
-    // 依旧是先排序
-    val sl = list.sorted()
-    for (i in 0 until sl.size - 2) {
-        // 这里是短路或,所以不会出现异常
-        if (i == 0 || sl[i] != sl[i - 1]) {
-            val lo = i + 1
-            val hi = sl.size - 1
-            val sum = 0 - sl[i]
-        }
-    }
-
-    return res
-}

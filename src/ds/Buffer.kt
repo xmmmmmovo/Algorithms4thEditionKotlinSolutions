@@ -15,14 +15,14 @@ class Buffer {
      * 光标左边删除
      * */
     fun delete(): Char =
-        if (ls.size() == 0) throw NoSuchElementException("无法删除")
+        if (ls.size == 0) throw NoSuchElementException("无法删除")
         else ls.pop()
 
     /**
      * 光标左移
      * */
     fun left(k: Int) {
-        if (k > ls.size()) throw IllegalArgumentException("无法到达")
+        if (k > ls.size) throw IllegalArgumentException("无法到达")
         for (i in 1..k) {
             rs.push(ls.pop())
         }
@@ -32,7 +32,7 @@ class Buffer {
      * 光标右移
      * */
     fun right(k: Int) {
-        if (k > rs.size()) throw IllegalArgumentException("无法到达")
+        if (k > rs.size) throw IllegalArgumentException("无法到达")
         for (i in 1..k) {
             ls.push(rs.pop())
         }
@@ -42,7 +42,7 @@ class Buffer {
      * 返回buffer大小
      * */
     val size: Int
-        get() = ls.size() + rs.size()
+        get() = ls.size + rs.size
 
     override fun toString(): String {
         return StringBuilder().also {
