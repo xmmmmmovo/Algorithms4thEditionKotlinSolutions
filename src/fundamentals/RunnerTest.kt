@@ -22,5 +22,9 @@ fun test1() {
 }
 
 fun main() {
-    val jo = JosephusSolutions()
+    val jo = JosephusSolutions(5, 3)
+    val joo = JosephusSolutions(10, 17)
+
+    println(jo.queueForceSolution())
+    println(joo.queueForceSolution())
 }

@@ -38,15 +38,17 @@ class CircularLinkedList<T> : MutableCollection<T> {
     override fun isEmpty(): Boolean {
         TODO("Not yet implemented")
     }
-    
+
     override fun add(element: T): Boolean {
         linkedLast(element)
         return true
     }
 
-    override fun addAll(elements: Collection<T>): Boolean {
-        TODO("Not yet implemented")
-    }
+    override fun addAll(elements: Collection<T>): Boolean =
+        elements.all {
+            add(it)
+        }
+
 
     override fun remove(element: T): Boolean {
         TODO("Not yet implemented")
@@ -99,47 +101,6 @@ class CircularLinkedList<T> : MutableCollection<T> {
             l.next = nNode
         }
         _size++
-    }
-
-    /**
-     * 解除首部连接
-     * */
-    private fun unlinkFirst(): T {
-        val f = first ?: throw NoSuchElementException()
-        val item = f.item
-        val next = f.next
-        // 快速GC
-        f.next = null
-        f.item = null
-        first = next
-        if (next == null) {
-            last = null
-        } else {
-            next.prev = null
-        }
-
-        _size--
-        return item!!
-    }
-
-    /**
-     * 解除尾部连接
-     * */
-    private fun unlinkLast(): T {
-        val l = last ?: throw NoSuchElementException()
-        val item = l.item
-        val prev = l.prev
-        // 快速GC
-        l.item = null
-        l.prev = null
-        last = prev
-        if (prev == null) {
-            first = null
-        } else {
-            prev.next = null
-        }
-        _size--
-        return item!!
     }
 
     /**
