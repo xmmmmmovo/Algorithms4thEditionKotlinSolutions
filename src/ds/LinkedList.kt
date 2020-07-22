@@ -587,7 +587,7 @@ class LinkedList<T> : MutableList<T> {
         /**
          * 下一节点数据
          * */
-        override fun next(): T {
+        override fun next(): T {777777
             if (!hasNext()) {
                 throw NoSuchElementException()
             }

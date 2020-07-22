@@ -4,26 +4,34 @@ import ds.CircularLinkedList
 import ds.Deque
 
 class JosephusSolutions(
-    private var totalPeople: Int = 0,
-    private var intervalPeople: Int = 0,
-    private var remainPeople: Int = 1
+        private var totalPeople: Int = 0,
+        private var intervalPeople: Int = 0,
+        private var remainPeople: Int = 1
 ) {
     init {
+        checkArguments()
+    }
+
+    private fun checkArguments() {
         if (
-            totalPeople <= 0 || remainPeople <= 0 || intervalPeople <= 0
+                totalPeople <= 0 || remainPeople <= 0 || intervalPeople <= 0
         ) {
             throw IllegalArgumentException("人数不能小于等于0！")
         }
+
+        if (totalPeople < remainPeople)
+            throw IllegalArgumentException("总人数不能小于剩余人数！")
     }
 
     fun changePeopleNumbers(
-        totalPeople: Int,
-        intervalPeople: Int,
-        remainPeople: Int
+            totalPeople: Int,
+            intervalPeople: Int,
+            remainPeople: Int
     ) {
         this.totalPeople = totalPeople
         this.intervalPeople = intervalPeople
         this.remainPeople = remainPeople
+        checkArguments()
     }
 
     /**
@@ -55,18 +63,33 @@ class JosephusSolutions(
         }.toString()
     }
 
-    fun likedListForceSolution(): String {
+    fun linkedListForceSolution(): String {
         val sb = StringBuilder()
         val cl = CircularLinkedList<Int>().apply {
+            for (i in 1..totalPeople)
+                add(i)
         }
+        val iter = cl.iterator()
 
-
+        var cnt = 0
+        while (iter.hasNext() && cl.size != remainPeople) {
+            iter.next()
+            cnt++
+            if (cnt == intervalPeople) {
+                iter.remove()
+                cnt = 0
+            }
+        }
 
         return sb.apply {
             cl.forEachIndexed { index, i ->
                 append("${i}号")
-                if (index != cl.size - 1) append(", ")
+                if (index != cl.size - 1) append(", ") else return@apply
             }
         }.toString()
+    }
+
+    fun mathFastSolution() {
+
     }
 }

@@ -4,15 +4,15 @@ package ds
  * 循环链表
  * 此类仅用于约瑟夫环问题 所以api设计很简单
  * */
-class CircularLinkedList<T> : MutableCollection<T> {
+class CircularLinkedList<T> : MutableIterable<T> {
     private var _size = 0
     private var first: Node<T>? = null
     private var last: Node<T>? = null
 
-    override val size
+    val size
         get() = _size
 
-    override fun clear() {
+    fun clear() {
         var n = first
         while (n != null) {
             val next = n.next
@@ -27,47 +27,15 @@ class CircularLinkedList<T> : MutableCollection<T> {
         _size = 0
     }
 
-    override fun contains(element: T): Boolean {
-        TODO("Not yet implemented")
-    }
+    fun isEmpty(): Boolean = _size == 0
 
-    override fun containsAll(elements: Collection<T>): Boolean {
-        TODO("Not yet implemented")
-    }
-
-    override fun isEmpty(): Boolean {
-        TODO("Not yet implemented")
-    }
-
-    override fun add(element: T): Boolean {
+    fun add(element: T): Boolean {
         linkedLast(element)
         return true
     }
 
-    override fun addAll(elements: Collection<T>): Boolean =
-        elements.all {
-            add(it)
-        }
-
-
-    override fun remove(element: T): Boolean {
-        TODO("Not yet implemented")
-    }
-
-    override fun removeAll(elements: Collection<T>): Boolean {
-        TODO("Not yet implemented")
-    }
-
-    override fun retainAll(elements: Collection<T>): Boolean {
-        TODO("Not yet implemented")
-    }
-
     override fun iterator(): MutableIterator<T> {
         return IteratorImpl(0)
-    }
-
-    fun iterator(index: Int): MutableIterator<T> {
-        return IteratorImpl(index)
     }
 
     private fun getNode(index: Int): Node<T> {
@@ -100,6 +68,8 @@ class CircularLinkedList<T> : MutableCollection<T> {
         } else {
             l.next = nNode
         }
+        first!!.prev = nNode
+        nNode.next = first
         _size++
     }
 
@@ -107,50 +77,91 @@ class CircularLinkedList<T> : MutableCollection<T> {
      * 解连接
      * */
     private fun unlink(node: Node<T>): T {
-        val np = node.prev
-        val nn = node.next
-        val ne = node.item
+        val npre = node.prev
+        val nnext = node.next
+        val nitem = node.item
 
-        if (np == null) {
-            first = nn
+        if (npre == last && nnext == first) {
+            last = null
+            first = null
         } else {
-            np.next = nn
-            node.prev = null
-        }
-
-        if (nn == null) {
-            last = np
-        } else {
-            nn.prev = np
+            if (node == first)
+                first = nnext
+            if (node == last)
+                last = npre
+            npre!!.next = nnext
+            nnext!!.prev = npre
             node.next = null
+            node.prev = null
         }
 
         node.item = null
         _size--
-        return ne!!
+        return nitem!!
+    }
+
+    /**
+     * 转字符串方法
+     * */
+    override fun toString(): String {
+        when (_size) {
+            0 -> return "[]"
+            else -> {
+                val sb = StringBuilder()
+                sb.append("[")
+                var n = first
+                while (n != last) {
+                    sb.append("${n!!.item}, ")
+                    n = n.next
+                }
+                return sb.append("${n!!.item}]").toString()
+            }
+        }
     }
 
     companion object {
         private data class Node<T>(
-            var item: T?,
-            var prev: Node<T>?,
-            var next: Node<T>?
+                var item: T?,
+                var prev: Node<T>?,
+                var next: Node<T>?
         )
+
+        /**
+         * 查看位置是否合法
+         * */
+        internal fun checkPositionIndex(index: Int, size: Int) {
+            if (index < 0 || size == 0) {
+                throw IndexOutOfBoundsException("index: $index, size: $size")
+            }
+        }
     }
 
     private inner class IteratorImpl(
-        private var index: Int = 0
+            private var index: Int = 0
     ) : MutableIterator<T> {
-        private var current: Node<T>? = getNode(index)
+        private var current: Node<T>? = null
+        private var lastReturned: Node<T>? = null
 
-        override fun hasNext(): Boolean = index != 0
+        init {
+            checkPositionIndex(index, size)
+            current = getNode(index)
+        }
+
+        override fun hasNext(): Boolean = current != null
 
         override fun next(): T {
-            TODO("Not yet implemented")
+            if (!hasNext()) {
+                throw NoSuchElementException()
+            }
+            lastReturned = current
+            current = current?.next
+            index++
+            return lastReturned?.item ?: throw NoSuchElementException()
         }
 
         override fun remove() {
-            TODO("Not yet implemented")
+            unlink(lastReturned ?: throw IllegalStateException())
+            index--
         }
 
     }

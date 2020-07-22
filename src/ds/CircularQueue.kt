@@ -1,6 +1,9 @@
 package ds
 
-class CircularQueue<T> : Collection<T> {
+/**
+ * TODO: 循环队列
+ * */
+class CircularQueue<T>(val cap: Int = 10) : Collection<T> {
     private val list = mutableListOf<T>()
 
     override val size: Int
