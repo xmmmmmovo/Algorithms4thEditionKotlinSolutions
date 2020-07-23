@@ -29,4 +29,6 @@ fun main() {
     println(joo.queueForceSolution())
     println(jo.linkedListForceSolution())
     println(joo.linkedListForceSolution())
+    println(jo.mathFastSolution())
+    println(joo.mathFastSolution())
 }

@@ -89,7 +89,19 @@ class JosephusSolutions(
         }.toString()
     }
 
-    fun mathFastSolution() {
-
+    fun mathFastSolution(): String {
+        val sb = StringBuilder()
+        val k = MutableList(remainPeople) { it }
+        for (idx in remainPeople + 1..totalPeople) {
+            k.forEachIndexed { index, i ->
+                k[index] = (i + intervalPeople) % idx
+            }
+        }
+        return sb.apply {
+            k.map { it + 1 }.forEachIndexed { index, i ->
+                append("${i}号")
+                if (index != k.size - 1) append(", ")
+            }
+        }.toString()
     }
 }
