@@ -1,6 +1,8 @@
 package ds
 
 /**
+ * @Author xmmmmmovo
+ * @Version 1.0
  * 循环链表
  * 此类仅用于约瑟夫环问题 所以api设计很简单
  * */

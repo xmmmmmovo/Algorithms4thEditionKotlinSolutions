@@ -3,6 +3,11 @@ package algorithms
 import ds.CircularLinkedList
 import ds.Deque
 
+/*
+ * 约瑟夫环实现
+ *  @Author xmmmmmovo
+ *  @Version 1.0
+ **/
 class JosephusSolutions(
         private var totalPeople: Int = 0,
         private var intervalPeople: Int = 0,
@@ -24,9 +29,9 @@ class JosephusSolutions(
     }
 
     fun changePeopleNumbers(
-            totalPeople: Int,
-            intervalPeople: Int,
-            remainPeople: Int
+            totalPeople: Int = this.totalPeople,
+            intervalPeople: Int = this.intervalPeople,
+            remainPeople: Int = this.remainPeople
     ) {
         this.totalPeople = totalPeople
         this.intervalPeople = intervalPeople

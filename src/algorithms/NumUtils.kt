@@ -1,6 +1,10 @@
 package algorithms
 
 import ds.LinkedList
+/*
+ * @Author xmmmmmovo
+ * @Version 1.0
+ **/
 
 /**
  * 蛮力法求四数之和

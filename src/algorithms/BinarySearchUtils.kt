@@ -1,5 +1,10 @@
 package algorithms
 
+/*
+ * @Author xmmmmmovo
+ * @Version W1.0
+ **/
+
 fun <T : Comparable<T>> binarySearch(
     list: List<T>, key: T, lo: Int = 0, hi: Int = list.size - 1
 ): Int {

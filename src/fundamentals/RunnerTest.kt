@@ -21,14 +21,5 @@ fun test1() {
         println(i)
 }
 
-fun main() {
-    val jo = JosephusSolutions(5, 3)
-    val joo = JosephusSolutions(10, 17)
-
-    println(jo.queueForceSolution())
-    println(joo.queueForceSolution())
-    println(jo.linkedListForceSolution())
-    println(joo.linkedListForceSolution())
-    println(jo.mathFastSolution())
-    println(joo.mathFastSolution())
+fun main(){
 }

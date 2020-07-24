@@ -1,5 +1,10 @@
 package algorithms
 
+/*
+ * @Author xmmmmmovo
+ * @Version 1.0
+ **/
+
 /**
  * 二分法查找元素是否在列表中
  * */
