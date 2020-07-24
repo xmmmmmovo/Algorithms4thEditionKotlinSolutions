@@ -4,6 +4,8 @@
 
 [数据下载](http://algs4.cs.princeton.edu/code/algs4-data.zip)
 
+[算法库下载](https://algs4.cs.princeton.edu/code/algs4.jar)
+
 [算法实现](src/algorithms)
 
 [数据结构实现](/src/ds)

@@ -6,7 +6,7 @@ package ds
  *  @Author xmmmmmovo
  *  @Version 1.0
  **/
-class StackDeque<T> : Collection<T> {
+class StackDeque<T> {
     // 左栈
     private val lst = Stack<T>()
 
@@ -20,65 +20,95 @@ class StackDeque<T> : Collection<T> {
     private var tmpIsRight = false
 
 
-    override fun isEmpty(): Boolean =
+    fun isEmpty(): Boolean =
             lst.isEmpty() && rst.isEmpty() && tst.isEmpty()
 
+    /**
+     * 入左队列
+     * */
     fun pushLeft(element: T) {
         lst.push(element)
     }
 
+    /**
+     * 入右队列
+     * */
     fun pushRight(element: T) {
         rst.push(element)
     }
 
+    /**
+     * 出左队列(对应的是入右队列
+     * */
     fun popLeft(): T {
-
+        return when {
+            /*
+            * 这里如果左栈有值的话就说明要么左边插入值了
+            * 要么右边或者中转栈转移到了左栈，无论哪种情况都是栈顶就是最左
+            * 直接出栈就可以
+            * */
+            !lst.isEmpty() -> lst.pop()
+            /**
+             * 这里先判断中转栈内容是否是存的右栈的内容
+             * 判断如果是右栈的内容，再判断中转栈是否是空的
+             * 如果不是就说明右栈已经转移到中转栈中了
+             * 相当于移动到了左栈，所以直接弹出中转栈
+             * */
+            !tst.isEmpty() && tmpIsRight -> tst.pop()
+            /**
+             * 这里先判断中转栈内容是否是存的右栈的内容
+             * 判断如果不是右栈的内容，再判断中转栈是否是空的
+             * 如果不是就说明是左栈移动到了中栈了
+             * 相当于移动到了右栈，所以先弹出到左栈再弹出左栈
+             * */
+            !tst.isEmpty() && !tmpIsRight -> {
+                while (!tst.isEmpty())
+                    lst.push(tst.pop())
+                lst.pop()
+            }
+            /**
+             * 这里如果是中转栈是空的并且右栈不为空
+             * 就直接转移到中转栈再弹出中转栈
+             * */
+            tst.isEmpty() && !rst.isEmpty() -> {
+                while (!rst.isEmpty())
+                    tst.push(rst.pop())
+                tmpIsRight = true // 存的是右栈
+                tst.pop()
+            }
+            /**
+             * 所有栈都没有内容，自然就抛出异常
+             * */
+            else -> throw NoSuchElementException("Stack underflow")
+        }
     }
 
+    /**
+     * 出右队列(对应的是出左队列
+     * */
     fun popRight(): T {
-
+        return when {
+            !rst.isEmpty() -> rst.pop()
+            !tst.isEmpty() && !tmpIsRight -> tst.pop()
+            !tst.isEmpty() && tmpIsRight -> {
+                while (!tst.isEmpty())
+                    rst.push(tst.pop())
+                rst.pop()
+            }
+            tst.isEmpty() && !lst.isEmpty() -> {
+                while (!lst.isEmpty())
+                    tst.push(lst.pop())
+                tmpIsRight = true // 存的是右栈
+                tst.pop()
+            }
+            else -> throw NoSuchElementException("Stack underflow")
+        }
     }
 
-    override val size: Int
+    val size: Int
         get() = lst.size + rst.size + tst.size
 
-    /**
-     * 是否包含[element]
-     * */
-    override fun contains(element: T): Boolean {
-        return indexOf(element) != -1
-    }
-
-    /**
-     * 是否包含所有[elements]
-     * */
-    override fun containsAll(elements: Collection<T>): Boolean =
-            if (elements.isEmpty())
-                false
-            else
-                elements.all {
-                    contains(it)
-                }
-
-    /**
-     * 查看[element]的位置
-     * */
-    private fun indexOf(element: T): Int {
-    }
 
     override fun toString(): String {
-    }
-
-    override fun iterator(): Iterator<T> {
-    }
-
-    private class IteratorImpl<T> : Iterator<T> {
-        override fun hasNext(): Boolean {
-            TODO("Not yet implemented")
-        }
-
-        override fun next(): T {
-            TODO("Not yet implemented")
-        }
     }
 }

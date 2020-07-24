@@ -27,12 +27,12 @@ public class E1d4d31<Item> {
             return sLeft.pop();//左栈有内容时直接弹出
         else if (!sTemp.isEmpty() && TempIsRight)//左栈无内容，中转栈有内容，中转栈是右栈内容时，从中转栈中弹出
             return sTemp.pop();
-        else if (!sTemp.isEmpty() && !TempIsRight)//左栈无内容，中转栈有内容，中转栈是左栈内容时，把中转栈内容全部倒入左栈，然后从左栈弹出
+        else if (!sTemp.isEmpty())//左栈无内容，中转栈有内容，中转栈是左栈内容时，把中转栈内容全部倒入左栈，然后从左栈弹出
         {
             while (!sTemp.isEmpty())
                 sLeft.push(sTemp.pop());
             return sLeft.pop();
-        } else if (sTemp.isEmpty() && !sRight.isEmpty())
+        } else if (!sRight.isEmpty())
             //左栈无内容，中转栈无内容，右栈有内容，把右栈内容全部倒入中转栈，中转栈存入内容标记为右栈，然后从中转栈弹出。
         {
             while (!sRight.isEmpty())
