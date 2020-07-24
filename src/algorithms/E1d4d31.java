@@ -32,7 +32,8 @@ public class E1d4d31<Item> {
             while (!sTemp.isEmpty())
                 sLeft.push(sTemp.pop());
             return sLeft.pop();
-        } else if (sTemp.isEmpty() && !sRight.isEmpty())//左栈无内容，中转栈无内容，右栈有内容，把右栈内容全部倒入中转栈，中转栈存入内容标记为右栈，然后从中转栈弹出。
+        } else if (sTemp.isEmpty() && !sRight.isEmpty())
+            //左栈无内容，中转栈无内容，右栈有内容，把右栈内容全部倒入中转栈，中转栈存入内容标记为右栈，然后从中转栈弹出。
         {
             while (!sRight.isEmpty())
                 sTemp.push(sRight.pop());

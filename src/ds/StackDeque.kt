@@ -6,19 +6,29 @@ package ds
  *  @Author xmmmmmovo
  *  @Version 1.0
  **/
-class StackQueue<T> : Collection<T> {
+class StackDeque<T> : Collection<T> {
+    // 左栈
+    private val lst = Stack<T>()
+
+    // 右栈
+    private val rst = Stack<T>()
+
+    // 中间栈
+    private val tst = Stack<T>()
+
+    // 表示存储的栈位置
+    private var tmpIsRight = false
 
 
-    override fun isEmpty() {
-
-    }
+    override fun isEmpty(): Boolean =
+            lst.isEmpty() && rst.isEmpty() && tst.isEmpty()
 
     fun pushLeft(element: T) {
-
+        lst.push(element)
     }
 
     fun pushRight(element: T) {
-
+        rst.push(element)
     }
 
     fun popLeft(): T {
@@ -30,9 +40,7 @@ class StackQueue<T> : Collection<T> {
     }
 
     override val size: Int
-        get() = {
-
-        }
+        get() = lst.size + rst.size + tst.size
 
     /**
      * 是否包含[element]
@@ -56,7 +64,6 @@ class StackQueue<T> : Collection<T> {
      * 查看[element]的位置
      * */
     private fun indexOf(element: T): Int {
-
     }
 
     override fun toString(): String {
