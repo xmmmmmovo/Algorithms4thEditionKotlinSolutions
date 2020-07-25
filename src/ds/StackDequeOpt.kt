@@ -6,4 +6,5 @@ package ds
  *  @Version 1.0
  **/
 class StackDequeOpt {
+    
 }

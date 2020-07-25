@@ -98,7 +98,7 @@ class StackDeque<T> {
             tst.isEmpty() && lst.isNotEmpty() -> {
                 while (lst.isNotEmpty())
                     tst.push(lst.pop())
-                tmpIsRight = true // 存的是右栈
+                tmpIsRight = false // 存的是左栈
                 tst.pop()
             }
             else -> throw NoSuchElementException("Stack underflow")
@@ -108,27 +108,21 @@ class StackDeque<T> {
     val size: Int
         get() = lst.size + rst.size + tst.size
 
+    fun asList(): List<T> {
+        val list = mutableListOf<T>()
+        lst.forEach {
+            list.add(it)
+        }
+        // 如果非空那就得判断tmp里面存储的是左还是右了
+        // 但是右栈一定要翻转
+        tst.run {
+            if (tmpIsRight) this else reversed()
+        }.forEach { list.add(it) }
+        rst.reversed().forEach {
+            list.add(it)
+        }
+        return list
+    }
 
-    override fun toString(): String =
-            when (size) {
-                0 -> "[]"
-                else -> {
-                    val td = Deque<T>()
-                    val sb = StringBuilder()
-                    sb.append("[")
-                    if (tst.isEmpty()) {
-                        // 如果中间栈为空 那么就变成了简单的双栈实现问题了
-                        lst.forEachIndexed { index, t ->
-                            sb.append("$t${if (index != lst.size - 1 || rst.isNotEmpty()) ", " else ""}")
-                        }
-                        rst.reversed().forEachIndexed { index, t ->
-                            sb.append("$t${if (index != rst.size - 1) ", " else ""}")
-                        }
-                    } else {
-                        // 如果非空那就得判断tmp里面存储的是左还是右了
-
-                    }
-                    sb.append("]").toString()
-                }
-            }
+    override fun toString(): String = asList().toString()
 }

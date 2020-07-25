@@ -46,5 +46,5 @@
   - [双向队列解法](src/algorithms/JosephusSolutions.kt#L46)
   - [循环链表解法](src/algorithms/JosephusSolutions.kt#L71)
   - [数学解法](src/algorithms/JosephusSolutions.kt#L97)
-- **[:star:利用三个栈实现双向队列，使得所有操作O(1)](src/ds/StackDeque.kt)**
-- **[:star:利用六个栈实现双向队列，使得所有操作O(1)](src/ds/StackDequeOpt.kt)**
+- **[:star:利用三个栈实现双向队列，使得所有操作时间复杂度O(1)(均摊后)](src/ds/StackDeque.kt)**
+- **[:star:利用六个栈实现单向队列，使得所有操作时间复杂度O(1)(真正的O(1))](src/ds/StackDequeOpt.kt)**
