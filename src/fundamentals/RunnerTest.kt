@@ -3,7 +3,7 @@ package fundamentals
 import algorithms.JosephusSolutions
 import algorithms.fourSumForce
 import algorithms.threeSumBinaryFast
-import ds.Buffer
+import ds.*
 
 data class tt(var string: String = "")
 
@@ -22,4 +22,18 @@ fun test1() {
 }
 
 fun main(){
+    val sq = StackDeque<String>()
+    sq.pushLeft("a")
+    sq.pushLeft("b")
+    sq.pushLeft("c")
+    sq.pushLeft("d")
+    sq.pushLeft("e")
+    sq.pushRight("f")
+    sq.pushRight("g")
+    println(sq)
+//    val st = Stack<Int>()
+//    st.push(1)
+//    st.push(2)
+//    st.push(3)
+//    println(st)
 }

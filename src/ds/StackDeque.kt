@@ -47,22 +47,22 @@ class StackDeque<T> {
             * 要么右边或者中转栈转移到了左栈，无论哪种情况都是栈顶就是最左
             * 直接出栈就可以
             * */
-            !lst.isEmpty() -> lst.pop()
+            lst.isNotEmpty() -> lst.pop()
             /**
              * 这里先判断中转栈内容是否是存的右栈的内容
              * 判断如果是右栈的内容，再判断中转栈是否是空的
              * 如果不是就说明右栈已经转移到中转栈中了
              * 相当于移动到了左栈，所以直接弹出中转栈
              * */
-            !tst.isEmpty() && tmpIsRight -> tst.pop()
+            tst.isNotEmpty() && tmpIsRight -> tst.pop()
             /**
              * 这里先判断中转栈内容是否是存的右栈的内容
              * 判断如果不是右栈的内容，再判断中转栈是否是空的
              * 如果不是就说明是左栈移动到了中栈了
              * 相当于移动到了右栈，所以先弹出到左栈再弹出左栈
              * */
-            !tst.isEmpty() && !tmpIsRight -> {
-                while (!tst.isEmpty())
+            tst.isNotEmpty() && !tmpIsRight -> {
+                while (tst.isNotEmpty())
                     lst.push(tst.pop())
                 lst.pop()
             }
@@ -70,8 +70,8 @@ class StackDeque<T> {
              * 这里如果是中转栈是空的并且右栈不为空
              * 就直接转移到中转栈再弹出中转栈
              * */
-            tst.isEmpty() && !rst.isEmpty() -> {
-                while (!rst.isEmpty())
+            tst.isEmpty() && rst.isNotEmpty() -> {
+                while (rst.isNotEmpty())
                     tst.push(rst.pop())
                 tmpIsRight = true // 存的是右栈
                 tst.pop()
@@ -88,15 +88,15 @@ class StackDeque<T> {
      * */
     fun popRight(): T {
         return when {
-            !rst.isEmpty() -> rst.pop()
-            !tst.isEmpty() && !tmpIsRight -> tst.pop()
-            !tst.isEmpty() && tmpIsRight -> {
+            rst.isNotEmpty() -> rst.pop()
+            tst.isNotEmpty() && !tmpIsRight -> tst.pop()
+            tst.isNotEmpty() && tmpIsRight -> {
                 while (!tst.isEmpty())
                     rst.push(tst.pop())
                 rst.pop()
             }
-            tst.isEmpty() && !lst.isEmpty() -> {
-                while (!lst.isEmpty())
+            tst.isEmpty() && lst.isNotEmpty() -> {
+                while (lst.isNotEmpty())
                     tst.push(lst.pop())
                 tmpIsRight = true // 存的是右栈
                 tst.pop()
@@ -109,6 +109,26 @@ class StackDeque<T> {
         get() = lst.size + rst.size + tst.size
 
 
-    override fun toString(): String {
-    }
+    override fun toString(): String =
+            when (size) {
+                0 -> "[]"
+                else -> {
+                    val td = Deque<T>()
+                    val sb = StringBuilder()
+                    sb.append("[")
+                    if (tst.isEmpty()) {
+                        // 如果中间栈为空 那么就变成了简单的双栈实现问题了
+                        lst.forEachIndexed { index, t ->
+                            sb.append("$t${if (index != lst.size - 1 || rst.isNotEmpty()) ", " else ""}")
+                        }
+                        rst.reversed().forEachIndexed { index, t ->
+                            sb.append("$t${if (index != rst.size - 1) ", " else ""}")
+                        }
+                    } else {
+                        // 如果非空那就得判断tmp里面存储的是左还是右了
+
+                    }
+                    sb.append("]").toString()
+                }
+            }
 }

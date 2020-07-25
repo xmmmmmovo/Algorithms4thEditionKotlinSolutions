@@ -105,21 +105,20 @@ class CircularLinkedList<T> : MutableIterable<T> {
     /**
      * 转字符串方法
      * */
-    override fun toString(): String {
-        when (_size) {
-            0 -> return "[]"
-            else -> {
-                val sb = StringBuilder()
-                sb.append("[")
-                var n = first
-                while (n != last) {
-                    sb.append("${n!!.item}, ")
-                    n = n.next
+    override fun toString(): String =
+            when (_size) {
+                0 -> "[]"
+                else -> {
+                    val sb = StringBuilder()
+                    sb.append("[")
+                    var n = first
+                    while (n != last) {
+                        sb.append("${n!!.item}, ")
+                        n = n.next
+                    }
+                    sb.append("${n!!.item}]").toString()
                 }
-                return sb.append("${n!!.item}]").toString()
             }
-        }
-    }
 
     companion object {
         private data class Node<T>(
