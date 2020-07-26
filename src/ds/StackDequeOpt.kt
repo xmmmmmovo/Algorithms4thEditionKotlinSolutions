@@ -14,18 +14,11 @@ class StackDequeOpt<T> {
     // 右栈
     private val rst = Stack<T>()
 
-    // 中间栈
-    private val tst = Stack<T>()
+    // 左栈替换栈
+    private val tlst = Stack<T>()
 
     fun isEmpty(): Boolean =
-            lst.isEmpty() && rst.isEmpty() && tst.isEmpty()
-
-    /**
-     * 入左队列
-     * */
-    fun pushLeft(element: T) {
-        TODO("Not yet implemented")
-    }
+            lst.isEmpty() && rst.isEmpty()
 
     /**
      * 入右队列
@@ -41,15 +34,8 @@ class StackDequeOpt<T> {
         TODO("Not yet implemented")
     }
 
-    /**
-     * 出右队列(对应的是出左队列
-     * */
-    fun popRight(): T {
-        TODO("Not yet implemented")
-    }
-
     val size: Int
-        get() = lst.size + rst.size + tst.size
+        get() = lst.size + rst.size
 
     fun asList(): List<T> {
         val list = mutableListOf<T>()

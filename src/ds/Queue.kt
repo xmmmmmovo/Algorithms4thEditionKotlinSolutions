@@ -24,8 +24,8 @@ class Queue<T> : Collection<T> {
     fun enqueue(item: T) {
         val ol = last
         last = Node(
-            item,
-            null
+                item,
+                null
         )
         if (isEmpty()) {
             first = last
@@ -75,12 +75,12 @@ class Queue<T> : Collection<T> {
      * 是否包含所有[elements]
      * */
     override fun containsAll(elements: Collection<T>): Boolean =
-        if (elements.isEmpty())
-            false
-        else
-            elements.all {
-                contains(it)
-            }
+            if (elements.isEmpty())
+                false
+            else
+                elements.all {
+                    contains(it)
+                }
 
     /**
      * 查看[element]的位置
@@ -108,13 +108,13 @@ class Queue<T> : Collection<T> {
 
     companion object {
         private data class Node<T>(
-            val item: T,
-            var next: Node<T>? = null
+                val item: T,
+                var next: Node<T>? = null
         )
     }
 
     private class LinkedIterator<T>(
-        private var current: Node<T>?
+            private var current: Node<T>?
     ) : Iterator<T> {
 
         override fun hasNext(): Boolean {
