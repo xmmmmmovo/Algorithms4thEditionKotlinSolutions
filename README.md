@@ -1,10 +1,8 @@
 # 算法(第四版)个人题解
 
+![kotlin](https://img.shields.io/badge/language-kotlin-orange.svg) ![apache](https://img.shields.io/badge/license-Apache2.0-brightgreen.svg) ![test](https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/workflows/Test/badge.svg)
+
 算法(第四版)个人实现/课后习题/提高题
-
-## 状态
-
-![badge](https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/workflows/Kotlin%20Tests/badge.svg)
 
 ## 下载
 
