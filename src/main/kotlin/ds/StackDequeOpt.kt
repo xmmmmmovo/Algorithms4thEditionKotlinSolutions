@@ -17,6 +17,9 @@ class StackDequeOpt<T> {
     // 左栈替换栈
     private val tlst = Stack<T>()
 
+    // 右栈替换栈
+    private val trst = Stack<T>()
+
     fun isEmpty(): Boolean =
             lst.isEmpty() && rst.isEmpty()
 
@@ -31,6 +34,13 @@ class StackDequeOpt<T> {
      * 出左队列(对应的是入右队列
      * */
     fun popLeft(): T {
+        TODO("Not yet implemented")
+    }
+
+    /**
+     * 根据左栈状态peek
+     * */
+    fun peekLeft(): T {
         TODO("Not yet implemented")
     }
 
