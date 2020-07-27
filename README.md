@@ -2,11 +2,13 @@
 
 算法(第四版)个人实现/课后习题/提高题
 
+## 状态
+
+![badge](https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/workflows/Kotlin%20Tests/badge.svg)
+
 ## 下载
 
 [数据下载](http://algs4.cs.princeton.edu/code/algs4-data.zip)
-
-[算法库下载](https://algs4.cs.princeton.edu/code/algs4.jar)
 
 ## 实现
 
