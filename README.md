@@ -58,3 +58,7 @@
 - [文件工具类](../CompilingPrinciple/algorithm4/src/main/kotlin/utils/FileUtils.kt)
 - [调试工具类](../CompilingPrinciple/algorithm4/src/main/kotlin/utils/LoggerUtils.kt)
 - [范围工具类](../CompilingPrinciple/algorithm4/src/main/kotlin/utils/RangeUtils.kt)
+
+## 为什么用kotlin
+
+只是因为用起来比较爽罢了，起码比Java用起来爽...
