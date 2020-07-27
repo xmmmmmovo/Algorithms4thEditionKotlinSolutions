@@ -1,5 +1,5 @@
 # workflow name
-name: Kotlin Test Workflow
+name: Test
 
 on: [push, pull_request]
 
