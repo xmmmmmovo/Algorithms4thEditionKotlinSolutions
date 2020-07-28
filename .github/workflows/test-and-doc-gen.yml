@@ -47,15 +47,12 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/.cache/dokka
-          key: ${{ runner.os }}-dokka
+          key: ${{ runner.os }}-dokka-${{ hashFiles('**/*') }}
           restore-keys: ${{ runner.os }}-dokka
 
       # 生成文档
       - name: Generate documentation
         run: ./gradlew dokka
-      
-      - name: Generate documentation
-        run: ls ~/.cache/
 
       # 部署到ghpage
       - name: Deploy to gh-pages
