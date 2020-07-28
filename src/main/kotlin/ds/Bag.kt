@@ -1,3 +1,6 @@
+/*
+ * Copyright (c) 2020. xmmmmmovo
+ */
 package ds
 
 class Bag<T> : Collection<T> {

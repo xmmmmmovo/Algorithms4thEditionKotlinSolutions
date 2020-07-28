@@ -1,3 +1,6 @@
+/*
+ * Copyright (c) 2020. xmmmmmovo
+ */
 package ds
 
 import edu.princeton.cs.algs4.StdDraw

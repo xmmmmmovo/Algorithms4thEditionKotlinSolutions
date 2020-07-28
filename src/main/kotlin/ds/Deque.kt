@@ -1,3 +1,6 @@
+/*
+ * Copyright (c) 2020. xmmmmmovo
+ */
 package ds
 
 import java.util.Deque

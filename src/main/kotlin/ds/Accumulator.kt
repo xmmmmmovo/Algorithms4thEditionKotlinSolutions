@@ -1,15 +1,45 @@
+/*
+ * Copyright (c) 2020. xmmmmmovo
+ */
 package ds
 
 import kotlin.math.sqrt
 
 /**
- * 累加器 防抖动版本
- * */
+ * 累加器 已经增加防抖动
+ * @author xmmmmmovo
+ * @date 2020/7/28 16:11
+ * @since version-1.0
+ */
 class Accumulator constructor(
+    /**
+     * 总值
+     * @author xmmmmmovo
+     * @date 2020/7/28 16:15
+     * @since version-1.0
+     */
     private var total: Double = 0.0
 ) {
+    /**
+     * 添加次数
+     * @author xmmmmmovo
+     * @date 2020/7/28 16:12
+     * @since version-1.0
+     */
     private var times: Int = 0
+    /**
+     * 平均数
+     * @author xmmmmmovo
+     * @date 2020/7/28 16:12
+     * @since version-1.0
+     */
     private var mean: Double = 0.0
+    /**
+     * 方差*([times]-1)
+     * @author xmmmmmovo
+     * @date 2020/7/28 16:15
+     * @since version-1.0
+     */
     private var s: Double = 0.0
 
     fun <T : Number> addDataValue(value: T) {
