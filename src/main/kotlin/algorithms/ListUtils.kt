@@ -1,9 +1,7 @@
-package algorithms
-
 /*
- * @Author xmmmmmovo
- * @Version 1.0
- **/
+ * Copyright (c) 2020. xmmmmmovo
+ */
+package algorithms
 
 /**
  * 二分法查找元素是否在列表中

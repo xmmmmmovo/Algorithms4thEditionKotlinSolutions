@@ -1,6 +1,19 @@
+/*
+ * Copyright (c) 2020. xmmmmmovo
+ */
 package algorithms
 
-
+/**
+ * @author xmmmmmovo
+ * @date 2020/7/28 11:46
+ * @description 在一个列表中二分查找到某个值
+ * @param list 列表
+ * @param key 需要查找的值
+ * @param lo 左范围
+ * @param hi 右范围
+ * @return 查找到了就返回下标，没查找到就返回-1
+ * @since version-1.0
+ */
 fun <T : Comparable<T>> binarySearch(
     list: List<T>, key: T, lo: Int = 0, hi: Int = list.size - 1
 ): Int {
