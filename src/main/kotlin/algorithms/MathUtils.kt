@@ -11,8 +11,14 @@ import kotlin.math.abs
 import kotlin.math.min
 
 /**
- * 普通gcd模板
- * */
+ * @author xmmmmmovo
+ * @date 2020/7/28 11:51
+ * @description 普通gcd模板(辗转相除法)
+ * @param a 数字a
+ * @param b 数字b
+ * @return 返回最大公因数
+ * @since version-1.0
+ */
 fun <T : Number> gcd(a: T, b: T): Long {
     if (a == 0) return b.toLong()
     if (b == 0) return a.toLong()
@@ -27,8 +33,14 @@ fun <T : Number> gcd(a: T, b: T): Long {
 }
 
 /**
- * 快速gcd模板
- * */
+ * @author xmmmmmovo
+ * @date 2020/7/28 11:52
+ * @description 快速gcd主函数
+ * @param a 数字a
+ * @param b 数字b
+ * @return 返回最大公因数
+ * @since version-1.0
+ */
 private fun qgcd_(a: Long, b: Long): Long {
     if (a == 0L) return b
     if (b == 0L) return a
