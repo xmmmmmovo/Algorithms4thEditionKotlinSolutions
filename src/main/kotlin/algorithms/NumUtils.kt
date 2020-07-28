@@ -4,14 +4,16 @@
 package algorithms
 
 import ds.LinkedList
-/*
- * @Author xmmmmmovo
- * @Version 1.0
- **/
 
 /**
  * 蛮力法求四数之和
- * */
+ * @author xmmmmmovo
+ * @date 2020/7/28 16:09
+ * @param list 数字列表
+ * @param num 所求的数字
+ * @return 满足条件的个数
+ * @since version-1.0
+ */
 fun fourSumForce(list: List<Int>, num: Int): Int {
     var cnt = 0
 
@@ -26,8 +28,13 @@ fun fourSumForce(list: List<Int>, num: Int): Int {
 }
 
 /**
- * 二分求非重复三数之和
- * */
+ * 二分法[binarySearch]求三数之和
+ * @author xmmmmmovo
+ * @date 2020/7/28 16:09
+ * @param list 数字列表
+ * @return 满足和为0的所有组合的列表
+ * @since version-1.0
+ */
 fun threeSumBinaryFast(list: List<Int>): List<List<Int>> {
     var res = LinkedList<List<Int>>()
     val sl = list.sorted().run {

@@ -11,9 +11,9 @@ import kotlin.math.abs
 import kotlin.math.min
 
 /**
+ * 普通gcd模板(辗转相除法)
  * @author xmmmmmovo
  * @date 2020/7/28 11:51
- * @description 普通gcd模板(辗转相除法)
  * @param a 数字a
  * @param b 数字b
  * @return 返回最大公因数
@@ -33,9 +33,9 @@ fun <T : Number> gcd(a: T, b: T): Long {
 }
 
 /**
+ * 快速gcd主函数
  * @author xmmmmmovo
  * @date 2020/7/28 11:52
- * @description 快速gcd主函数
  * @param a 数字a
  * @param b 数字b
  * @return 返回最大公因数
@@ -55,6 +55,15 @@ private fun qgcd_(a: Long, b: Long): Long {
         return qgcd_(abs(a - b), min(a, b))
 }
 
+/**
+ * 快速gcd对外函数
+ * @author xmmmmmovo
+ * @date 2020/7/28 12:15
+ * @param a 数字a
+ * @param b 数字b
+ * @return 返回最大公因数
+ * @since version-1.0
+ */
 fun <T : Number> qgcd(a: T, b: T): Long {
     if (a == 0) return b.toLong()
     if (b == 0) return a.toLong()
@@ -68,7 +77,10 @@ fun <T : Number> qgcd(a: T, b: T): Long {
  * 加减优先级最低
  * 然后就是乘除
  * 括号优先级最高
- * */
+ * @author xmmmmmovo
+ * @date 2020/7/28 12:16
+ * @since version-1.0
+ */
 val priority = HashMap<String, Int>().apply {
     put("+", 0)
     put("-", 0)
@@ -80,7 +92,12 @@ val priority = HashMap<String, Int>().apply {
 
 /**
  * 中缀转后缀
- * */
+ * @author xmmmmmovo
+ * @date 2020/7/28 16:07
+ * @param expr 表达式
+ * @return 后缀表达式
+ * @since version-1.0
+ */
 private fun infixToPostfix(expr: String): String {
     val sb = StringBuilder()
     val s = Stack<Char>()
@@ -119,7 +136,12 @@ private fun infixToPostfix(expr: String): String {
 
 /**
  * 计算后缀表达式
- * */
+ * @author xmmmmmovo
+ * @date 2020/7/28 16:07
+ * @param expr 后缀表达式
+ * @return 计算结果
+ * @since version-1.0
+ */
 private fun evalPostfix(expr: String): Double {
     val s = Stack<Double>()
     expr.forEach { c: Char ->
@@ -135,8 +157,13 @@ private fun evalPostfix(expr: String): Double {
 }
 
 /**
- * 四则运算(带括号)
- * */
+ * 四则运算主函数
+ * @author xmmmmmovo
+ * @date 2020/7/28 16:07
+ * @param expr 表达式
+ * @return 计算结果
+ * @since version-1.0
+ */
 fun evalIntArithmetic(expr: String): Double =
     evalPostfix(
         infixToPostfix(
@@ -146,7 +173,12 @@ fun evalIntArithmetic(expr: String): Double =
 
 /**
  * 括号是否匹配
- * */
+ * @author xmmmmmovo
+ * @date 2020/7/28 16:08
+ * @param expr 表达式
+ * @return 返回是否匹配
+ * @since version-1.0
+ */
 fun isBanlanced(expr: String): Boolean {
     val s = Stack<Char>()
 

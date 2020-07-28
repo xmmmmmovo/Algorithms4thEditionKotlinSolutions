@@ -6,20 +6,34 @@ package algorithms
 import ds.CircularLinkedList
 import ds.Deque
 
-/*
+/**
  * 约瑟夫环实现
- *  @Author xmmmmmovo
- *  @Version 1.0
- **/
+ * @author xmmmmmovo
+ * @date 2020/7/28 12:10
+ * @since version-1.0
+ */
 class JosephusSolutions(
         private var totalPeople: Int = 0,
         private var intervalPeople: Int = 0,
         private var remainPeople: Int = 1
 ) {
+    /**
+     * 初始化
+     * @author xmmmmmovo
+     * @date 2020/7/28 12:10
+     * @since version-1.0
+     */
     init {
         checkArguments()
     }
 
+    /**
+     * 参数检查
+     * @author xmmmmmovo
+     * @date 2020/7/28 12:10
+     * @throws IllegalArgumentException 参数异常
+     * @since version-1.0
+     */
     private fun checkArguments() {
         if (
                 totalPeople <= 0 || remainPeople <= 0 || intervalPeople <= 0
@@ -31,6 +45,15 @@ class JosephusSolutions(
             throw IllegalArgumentException("总人数不能小于剩余人数！")
     }
 
+    /**
+     * 更改人数
+     * @author xmmmmmovo
+     * @date 2020/7/28 12:11
+     * @param totalPeople 总人数
+     * @param intervalPeople 间隔人数
+     * @param remainPeople 剩余人数
+     * @since version-1.0
+     */
     fun changePeopleNumbers(
             totalPeople: Int = this.totalPeople,
             intervalPeople: Int = this.intervalPeople,
@@ -43,9 +66,12 @@ class JosephusSolutions(
     }
 
     /**
-     * 双向队列暴力求法
-     * 就是嗯求
-     * */
+     * 双向队列求法 就是嗯求
+     * @author xmmmmmovo
+     * @date 2020/7/28 12:12
+     * @return 返回剩余人数列表的字符串形式
+     * @since version-1.0
+     */
     fun queueForceSolution(): String {
         val sb = StringBuilder()
         // 初始化队列
@@ -71,6 +97,13 @@ class JosephusSolutions(
         }.toString()
     }
 
+    /**
+     * 双向链表解法
+     * @author xmmmmmovo
+     * @date 2020/7/28 12:13
+     * @return 返回剩余人数列表的字符串形式
+     * @since version-1.0
+     */
     fun linkedListForceSolution(): String {
         val sb = StringBuilder()
         val cl = CircularLinkedList<Int>().apply {
@@ -97,6 +130,13 @@ class JosephusSolutions(
         }.toString()
     }
 
+    /**
+     * 数学解法
+     * @author xmmmmmovo
+     * @date 2020/7/28 12:12
+     * @return 返回剩余人数列表的字符串形式
+     * @since version-1.0
+     */
     fun mathFastSolution(): String {
         val sb = StringBuilder()
         val k = MutableList(remainPeople) { it }

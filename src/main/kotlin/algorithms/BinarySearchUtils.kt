@@ -4,9 +4,9 @@
 package algorithms
 
 /**
+ * 在一个列表中二分查找到某个值
  * @author xmmmmmovo
  * @date 2020/7/28 11:46
- * @description 在一个列表中二分查找到某个值
  * @param list 列表
  * @param key 需要查找的值
  * @param lo 左范围
