@@ -48,6 +48,7 @@ jobs:
         with:
           path: ~/.cache/dokka
           key: ${{ runner.os }}-dokka
+          restore-keys: ${{ runner.os }}-dokka
 
       # 生成文档
       - name: Generate documentation

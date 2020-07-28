@@ -4,7 +4,9 @@
 
 算法(第四版)个人实现/课后习题/提高题
 
-API文档地址：https://xmmmmmovo.github.io/Algorithms4thEditionKotlinSolutions
+API文档地址：https://blog.fivezha.cn/Algorithms4thEditionKotlinSolutions/
+
+题解博客地址：https://blog.fivezha.cn/categories/algorithm4/
 
 ## 下载
 
