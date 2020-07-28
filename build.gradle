@@ -35,6 +35,7 @@ test {
 }
 
 dokka {
+    // 样式
     outputFormat = 'javadoc'
     outputDirectory = "$buildDir/dokka"
     disableAutoconfiguration = false
@@ -63,7 +64,7 @@ dokka {
         platform = "JVM"
 
         sourceRoot {
-            // Path to a source root
+            // 源文件目录
             path = "src"
         }
 
@@ -74,11 +75,11 @@ dokka {
             // URL showing where the source code can be accessed through the web browser
             url = "https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/blob/master/src/main/kotlin" //remove src/main/kotlin if you use "./" above
 
-            // Suffix which is used to append the line number to the URL. Use #L for GitHub
+            // 指定行数前缀，github是#L
             lineSuffix = "#L"
         }
 
-        // Used for linking to JDK documentation
+        // 用于链接java官方文档
         jdkVersion = 8
 
         // Disable linking to online kotlin-stdlib documentation
