@@ -14,34 +14,31 @@ import kotlin.math.sqrt
 class Accumulator constructor(
     /**
      * 总值
-     * @author xmmmmmovo
-     * @date 2020/7/28 16:15
-     * @since version-1.0
      */
     private var total: Double = 0.0
 ) {
     /**
      * 添加次数
-     * @author xmmmmmovo
-     * @date 2020/7/28 16:12
-     * @since version-1.0
      */
     private var times: Int = 0
+
     /**
      * 平均数
-     * @author xmmmmmovo
-     * @date 2020/7/28 16:12
-     * @since version-1.0
      */
     private var mean: Double = 0.0
+
     /**
      * 方差*([times]-1)
-     * @author xmmmmmovo
-     * @date 2020/7/28 16:15
-     * @since version-1.0
      */
     private var s: Double = 0.0
 
+    /**
+     * 添加新值
+     * @author xmmmmmovo
+     * @date 2020/7/28 16:40
+     * @param value 添加的值
+     * @since version-1.0
+     */
     fun <T : Number> addDataValue(value: T) {
         times += 1
         val dv = value.toDouble()
@@ -51,26 +48,50 @@ class Accumulator constructor(
         mean += (dv - mean) / times
     }
 
+
     /**
-     * 平均数
-     * */
+     * 返回平均数
+     * @author xmmmmmovo
+     * @date 2020/7/28 16:40
+     * @return 返回平均数
+     * @since version-1.0
+     */
     fun mean(): Double = mean
 
     /**
-     * 方差
-     * */
+     * 返回方差
+     * @author xmmmmmovo
+     * @date 2020/7/28 16:40
+     * @return 返回方差
+     * @since version-1.0
+     */
     fun variance(): Double = if (times <= 1) Double.NaN else s / (times - 1)
 
     /**
-     * 平均差
-     * */
+     * 返回标准差
+     * @author xmmmmmovo
+     * @date 2020/7/28 16:40
+     * @return 返回标准差
+     * @since version-1.0
+     */
     fun stddev(): Double = sqrt(variance())
 
     /**
-     * 和
-     * */
+     * 返回总值
+     * @author xmmmmmovo
+     * @date 2020/7/28 16:40
+     * @return 返回总值
+     * @since version-1.0
+     */
     fun total(): Double = total
 
+    /**
+     * 转字符串
+     * @author xmmmmmovo
+     * @date 2020/7/28 16:40
+     * @return 返回字符串
+     * @since version-1.0
+     */
     override fun toString(): String {
         return "Mean ($times times, ${String.format("%.2f", total)} values): " +
                 "${String.format("%7.5f", mean())}"

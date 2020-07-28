@@ -4,8 +4,11 @@
 package ds
 
 /**
- * 栈类
- * */
+ * 栈
+ * @author xmmmmmovo
+ * @date 2020/7/28 16:44
+ * @since version-1.0
+ */
 class Stack<T> : Collection<T> {
     private var first: Node<T>? = null
     private var n: Int = 0

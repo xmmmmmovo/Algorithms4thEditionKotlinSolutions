@@ -3,13 +3,30 @@
  */
 package ds
 
+/**
+ * 简单背包
+ * @author xmmmmmovo
+ * @date 2020/7/28 16:42
+ * @since version-1.0
+ */
 class Bag<T> : Collection<T> {
+    /**
+     * 首节点
+     */
     private var first: Node<T>? = null
+
+    /**
+     * 元素数量
+     */
     private var n: Int = 0
 
     /**
      * 是否为空
-     * */
+     * @author xmmmmmovo
+     * @date 2020/7/28 16:42
+     * @return 判断是否为空
+     * @since version-1.0
+     */
     override fun isEmpty(): Boolean = first == null
 
     /**

@@ -3,12 +3,12 @@
  */
 package ds
 
-/*
- * 使用三个栈实现队列
- * 使得所有操作都是O(1)
- *  @Author xmmmmmovo
- *  @Version 1.0
- **/
+/**
+ * 使用三个栈实现双向队列，使得所有操作为O(1)
+ * @author xmmmmmovo
+ * @date 2020/7/28 16:44
+ * @since version-1.0
+ */
 class StackDeque<T> {
     // 左栈
     private val lst = Stack<T>()

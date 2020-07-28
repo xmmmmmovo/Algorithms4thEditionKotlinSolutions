@@ -5,6 +5,12 @@ package ds
 
 import kotlin.collections.ArrayList
 
+/**
+ * TODO:线性表实现
+ * @author xmmmmmovo
+ * @date 2020/7/28 16:21
+ * @since version-1.0
+ */
 class ArrayList<T> : AbstractList<T>(), MutableList<T>, Cloneable, RandomAccess {
     private var _size = 0
 

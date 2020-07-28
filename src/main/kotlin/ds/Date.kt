@@ -3,6 +3,12 @@
  */
 package ds
 
+/**
+ * 日期类
+ * @author xmmmmmovo
+ * @date 2020/7/28 16:46
+ * @since version-1.0
+ */
 class Date : Comparable<Date> {
     private val year: Int
     private val month: Int

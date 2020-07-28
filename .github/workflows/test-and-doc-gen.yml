@@ -43,12 +43,12 @@ jobs:
         run: ./gradlew test
       
       # 缓存
-      - name: Cache Dokka
-        uses: actions/cache@v2
-        with:
-          path: ~/.cache/dokka
-          key: ${{ runner.os }}-dokka-${{ hashFiles('**/*') }}
-          restore-keys: ${{ runner.os }}-dokka
+      # - name: Cache Dokka
+      #   uses: actions/cache@v2
+      #   with:
+      #     path: ~/.cache/dokka
+      #     key: ${{ runner.os }}-dokka-${{ hashFiles('**/*') }}
+      #     restore-keys: ${{ runner.os }}-dokka
 
       # 生成文档
       - name: Generate documentation

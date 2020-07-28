@@ -5,7 +5,10 @@ package ds
 
 /**
  * 收据类
- * */
+ * @author xmmmmmovo
+ * @date 2020/7/28 16:43
+ * @since version-1.0
+ */
 class Transaction : Comparable<Transaction> {
     private val who: String
     private val time: Date

@@ -3,6 +3,12 @@
  */
 package ds
 
+/**
+ * 计数器类
+ * @author xmmmmmovo
+ * @date 2020/7/28 16:46
+ * @since version-1.0
+ */
 class Counter constructor(
     private val tag: String = "",
     private var count: Int = 0

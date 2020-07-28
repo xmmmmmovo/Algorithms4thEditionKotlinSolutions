@@ -7,7 +7,10 @@ import algorithms.qgcd
 
 /**
  * 分数类
- * */
+ * @author xmmmmmovo
+ * @date 2020/7/28 16:44
+ * @since version-1.0
+ */
 class Rational constructor(
     private var numerator: Long,
     private var denominator: Long = 1L

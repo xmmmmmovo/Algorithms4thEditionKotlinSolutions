@@ -3,6 +3,12 @@
  */
 package ds
 
+/**
+ * 缓冲区类
+ * @author xmmmmmovo
+ * @date 2020/7/28 16:46
+ * @since version-1.0
+ */
 class Buffer {
     private val ls = Stack<Char>()
     private val rs = Stack<Char>()

@@ -8,7 +8,10 @@ import kotlin.math.sqrt
 
 /**
  * 可视化累加器
- * */
+ * @author xmmmmmovo
+ * @date 2020/7/28 16:43
+ * @since version-1.0
+ */
 class VisualAccumulator constructor(
     private val xMax: Int = 100,
     private val yMax: Double = 100.0

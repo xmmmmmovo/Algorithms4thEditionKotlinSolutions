@@ -5,6 +5,12 @@ package ds
 
 import edu.princeton.cs.algs4.StdRandom
 
+/**
+ * 2D点类
+ * @author xmmmmmovo
+ * @date 2020/7/28 16:45
+ * @since version-1.0
+ */
 class Point2D constructor(
     val x: Double = 0.0,
     val y: Double = 0.0

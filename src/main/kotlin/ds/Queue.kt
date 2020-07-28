@@ -4,8 +4,11 @@
 package ds
 
 /**
- * 单项队列类
- * */
+ * 单向队列类
+ * @author xmmmmmovo
+ * @date 2020/7/28 16:44
+ * @since version-1.0
+ */
 class Queue<T> : Collection<T> {
     private var first: Node<T>? = null
     private var last: Node<T>? = null

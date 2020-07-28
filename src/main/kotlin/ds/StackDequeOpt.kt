@@ -5,11 +5,12 @@ package ds
 
 import utils.*
 
-/*
- *  @Description 用六个栈实现队列
- *  @Author xmmmmmovo
- *  @Version 1.0
- **/
+/**
+ * 用六个栈实现单向队列
+ * @author xmmmmmovo
+ * @date 2020/7/28 16:43
+ * @since version-1.0
+ */
 class StackDequeOpt<T> {
     // 左栈
     private val lst = Stack<T>()

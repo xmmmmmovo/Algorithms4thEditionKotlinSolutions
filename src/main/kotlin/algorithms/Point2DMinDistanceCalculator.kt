@@ -1,13 +1,19 @@
 /*
  * Copyright (c) 2020. xmmmmmovo
  */
-package ds
+package algorithms
 
+import ds.Point2D
 import edu.princeton.cs.algs4.StdDraw
 import edu.princeton.cs.algs4.StdRandom
-import kotlin.math.min
 import kotlin.math.sqrt
 
+/**
+ * 平面最近点问题类
+ * @author xmmmmmovo
+ * @date 2020/7/28 16:45
+ * @since version-1.0
+ */
 class Point2DMinDistanceCalculator constructor(
     private val N: Int = 0
 ) {

@@ -7,7 +7,10 @@ import java.util.Deque
 
 /**
  * 双向队列类
- * */
+ * @author xmmmmmovo
+ * @date 2020/7/28 16:45
+ * @since version-1.0
+ */
 class Deque<T> : Collection<T> {
     private val list = LinkedList<T>()
 

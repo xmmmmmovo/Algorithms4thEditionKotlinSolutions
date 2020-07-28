@@ -5,11 +5,12 @@ package ds
 
 import kotlin.NoSuchElementException
 
-/*
- * 双向链表
- * @Author xmmmmmovo
- * @Version 1.0
- **/
+/**
+ * 双向链表类
+ * @author xmmmmmovo
+ * @date 2020/7/28 16:45
+ * @since version-1.0
+ */
 class LinkedList<T> : MutableList<T> {
     private var first: Node<T>? = null
     private var last: Node<T>? = null

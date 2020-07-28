@@ -4,11 +4,12 @@
 package ds
 
 /**
- * @Author xmmmmmovo
- * @Version 1.0
  * 循环链表
  * 此类仅用于约瑟夫环问题 所以api设计很简单
- * */
+ * @author xmmmmmovo
+ * @date 2020/7/28 16:46
+ * @since version-1.0
+ */
 class CircularLinkedList<T> : MutableIterable<T> {
     private var _size = 0
     private var first: Node<T>? = null
@@ -109,25 +110,25 @@ class CircularLinkedList<T> : MutableIterable<T> {
      * 转字符串方法
      * */
     override fun toString(): String =
-            when (_size) {
-                0 -> "[]"
-                else -> {
-                    val sb = StringBuilder()
-                    sb.append("[")
-                    var n = first
-                    while (n != last) {
-                        sb.append("${n!!.item}, ")
-                        n = n.next
-                    }
-                    sb.append("${n!!.item}]").toString()
+        when (_size) {
+            0 -> "[]"
+            else -> {
+                val sb = StringBuilder()
+                sb.append("[")
+                var n = first
+                while (n != last) {
+                    sb.append("${n!!.item}, ")
+                    n = n.next
                 }
+                sb.append("${n!!.item}]").toString()
             }
+        }
 
     companion object {
         private data class Node<T>(
-                var item: T?,
-                var prev: Node<T>?,
-                var next: Node<T>?
+            var item: T?,
+            var prev: Node<T>?,
+            var next: Node<T>?
         )
 
         /**
@@ -141,7 +142,7 @@ class CircularLinkedList<T> : MutableIterable<T> {
     }
 
     private inner class IteratorImpl(
-            private var index: Int = 0
+        private var index: Int = 0
     ) : MutableIterator<T> {
         private var current: Node<T>? = null
         private var lastReturned: Node<T>? = null
