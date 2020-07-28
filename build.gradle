@@ -42,7 +42,7 @@ dokka {
     cacheRoot = 'default'
 
     configuration {
-        moduleName = 'data'
+        moduleName = 'doc'
 
         // Use to include or exclude non public members.
         includeNonPublic = false
