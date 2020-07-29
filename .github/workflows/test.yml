@@ -1,11 +1,14 @@
 # workflow name
-name: pull_request Tests
+name: Test Workflow
 
-on: [pull_request]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   test:
-    name: Kotlin Tests Generation
+    name: Kotlin Tests
     runs-on: ubuntu-latest
     env:
       TZ: Asia/Shanghai
