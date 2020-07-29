@@ -16,10 +16,10 @@ class StackDequeOpt<T> {
     // 右栈
     private val rst = Stack<T>()
 
-    // 左栈替换栈
+    // 左栈替换栈 用于复制时转换
     private val tlst = Stack<T>()
 
-    // 右栈替换栈
+    // 右栈替换栈 用于复制时候入队
     private val trst = Stack<T>()
 
     fun isEmpty(): Boolean =

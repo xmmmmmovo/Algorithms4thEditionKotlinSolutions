@@ -2,7 +2,7 @@
 
 ![kotlin](https://img.shields.io/badge/language-kotlin-orange.svg) ![apache](https://img.shields.io/badge/license-Apache2.0-brightgreen.svg) ![test](https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/workflows/Test%20Workflow/badge.svg) ![doc](https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/workflows/Doc%20Workflow/badge.svg)
 
-算法(第四版)个人实现/课后习题/提高题
+算法(第四版)个人实现/课后习题/部分提高题
 
 API文档地址：https://blog.fivezha.cn/Algorithms4thEditionKotlinSolutions/
 
@@ -71,7 +71,7 @@ API文档地址：https://blog.fivezha.cn/Algorithms4thEditionKotlinSolutions/
 
 如果你发现了代码的一些逻辑错误或者还有其它测试用例，可以在[**Issue**](https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/issues)里面提出，或者直接发起[**Pull request**](https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/pulls)
 
-由于历史原因，本项目测试文件和文档注释都不全，如有兴趣或能力补全可以直接发起[**Pull request**](https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/pulls)
+由于一些原因，本项目测试文件和文档注释都不全，如有兴趣或能力补全可以直接发起[**Pull request**](https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/pulls)，在此表示感谢!
 
 ## 为什么用kotlin
 
