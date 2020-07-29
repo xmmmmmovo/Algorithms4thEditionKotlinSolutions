@@ -18,7 +18,8 @@ dependencies {
     implementation("edu.princeton.cs:algs4:1.0.3")
     testImplementation(
             'org.assertj:assertj-core:3.12.2',
-            'org.junit.jupiter:junit-jupiter-api:5.4.2'
+            'org.junit.jupiter:junit-jupiter-api:5.4.2',
+            'org.junit.jupiter:junit-jupiter-params:5.0.0'
     )
     testRuntime('org.junit.jupiter:junit-jupiter-engine:5.4.2')
 }
@@ -73,7 +74,8 @@ dokka {
             path = "src/main/kotlin" // or simply "./"
 
             // URL showing where the source code can be accessed through the web browser
-            url = "https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/blob/master/src/main/kotlin" //remove src/main/kotlin if you use "./" above
+            url = "https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/blob/master/src/main/kotlin"
+            //remove src/main/kotlin if you use "./" above
 
             // 指定行数前缀，github是#L
             lineSuffix = "#L"

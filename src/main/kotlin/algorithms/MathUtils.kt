@@ -81,14 +81,14 @@ fun <T : Number> qgcd(a: T, b: T): Long {
  * @date 2020/7/28 12:16
  * @since version-1.0
  */
-val priority = HashMap<String, Int>().apply {
-    put("+", 0)
-    put("-", 0)
-    put("*", 1)
-    put("/", 1)
-    put("(", 2)
-    put(")", 2)
-}
+val priority = mapOf(
+    '+' to 0,
+    '-' to 0,
+    '*' to 1,
+    '/' to 1,
+    '(' to 2,
+    ')' to 2
+)
 
 /**
  * 中缀转后缀
@@ -108,7 +108,7 @@ private fun infixToPostfix(expr: String): String {
             '+', '-', '*', '/' -> {
                 while (!s.isEmpty()
                     && s.peek() != '('
-                    && priority[c.toString()]!! <= priority[s.peek().toString()]!!
+                    && priority[c]!! <= priority[s.peek()]!!
                 ) {
                     sb.append(s.pop())
                 }
@@ -176,7 +176,7 @@ fun evalIntArithmetic(expr: String): Double =
  * @author xmmmmmovo
  * @date 2020/7/28 16:08
  * @param expr 表达式
- * @return 返回是否匹配
+ * @return 返回是否匹配(注意空括号也是匹配的)
  * @since version-1.0
  */
 fun isBanlanced(expr: String): Boolean {
@@ -191,7 +191,7 @@ fun isBanlanced(expr: String): Boolean {
         }
     }
 
-    return true
+    return s.isEmpty()
 }
 
 /**

@@ -3,8 +3,6 @@
  */
 package ds
 
-import utils.*
-
 /**
  * 用六个栈实现单向队列
  * @author xmmmmmovo

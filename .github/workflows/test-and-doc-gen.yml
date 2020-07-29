@@ -43,6 +43,7 @@ jobs:
         run: ./gradlew test
       
       # 缓存
+      # 暂时还未找到hash值的解决方案，找到了请pr
       # - name: Cache Dokka
       #   uses: actions/cache@v2
       #   with:
