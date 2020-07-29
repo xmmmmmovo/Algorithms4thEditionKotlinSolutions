@@ -1,7 +1,11 @@
 # workflow name
 name: Doc Workflow
 
-on: [published]
+on:
+  release:
+    types: [published]
+    branches:
+      - master
 
 jobs:
   test:
