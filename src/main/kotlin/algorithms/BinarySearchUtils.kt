@@ -4,7 +4,7 @@
 package algorithms
 
 /**
- * 在一个列表中二分查找到某个值
+ * sadfsdafsadasfasdf
  * @author xmmmmmovo
  * @date 2020/7/28 11:46
  * @param list 列表
