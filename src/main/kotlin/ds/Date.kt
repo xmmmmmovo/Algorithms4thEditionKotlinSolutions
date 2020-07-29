@@ -10,9 +10,9 @@ package ds
  * @since version-1.0
  */
 class Date : Comparable<Date> {
-    private val year: Int
-    private val month: Int
-    private val day: Int
+    private val _year: Int
+    private val _month: Int
+    private val _day: Int
 
     /**
      * 直接输入年月日
@@ -24,9 +24,9 @@ class Date : Comparable<Date> {
     ) {
         if (!isDateValid(d, m, y))
             throw IllegalArgumentException("输入日期错误!")
-        year = y
-        month = m
-        day = d
+        _year = y
+        _month = m
+        _day = d
     }
 
     /**
@@ -39,10 +39,10 @@ class Date : Comparable<Date> {
             if (size < 3) {
                 throw IllegalArgumentException("输入日期错误！")
             }
-            year = get(0).toInt()
-            month = get(1).toInt()
-            day = get(2).toInt()
-            if (!isDateValid(day, month, year))
+            _year = get(0).toInt()
+            _month = get(1).toInt()
+            _day = get(2).toInt()
+            if (!isDateValid(_day, _month, _year))
                 throw IllegalArgumentException("输入日期错误！")
         }
 
@@ -78,31 +78,34 @@ class Date : Comparable<Date> {
         return y % 4 == 0
     }
 
-    fun year() = year
-    fun month() = month
-    fun day() = day
+    val year
+        get() = _year
+    val month
+        get() = _month
+    val day
+        get() = _day
 
     override fun compareTo(other: Date): Int {
-        if (this.year < other.year)
+        if (this._year < other._year)
             return -1
-        if (this.year > other.year)
+        if (this._year > other._year)
             return 1
-        if (this.month < other.month)
+        if (this._month < other._month)
             return -1
-        if (this.month > other.month)
+        if (this._month > other._month)
             return 1
-        if (this.day < other.day)
+        if (this._day < other._day)
             return -1
-        if (this.day > other.day)
+        if (this._day > other._day)
             return 1
         return 0
     }
 
     override fun toString(): String {
-        return "$year/$month/$day"
+        return "$_year/$_month/$_day"
     }
 
     override fun hashCode(): Int {
-        return day + 31 * month + 31 * 12 * year
+        return _day + 31 * _month + 31 * 12 * _year
     }
 }

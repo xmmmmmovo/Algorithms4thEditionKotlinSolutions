@@ -29,41 +29,45 @@ internal class StackDequeOptTest {
         }
     }
 
-    @BeforeEach
-    fun setUp() {
-
-    }
-
-    @AfterEach
-    fun tearDown() {
-    }
-
     @Test
     fun isEmpty() {
+        assertEquals(true, sdo.isEmpty())
+        sdo.pushRight(1)
+        assertEquals(false, sdo.isEmpty())
+        sdo.popLeft()
+        assertEquals(true, sdo.isEmpty())
     }
 
     @Test
     fun pushRight() {
-    }
-
-    @Test
-    fun popLeft() {
+        sdo.pushRight(1)
+        sdo.pushRight(2)
+        sdo.pushRight(3)
+        assertEquals(1, sdo.popLeft())
+        assertEquals(2, sdo.popLeft())
+        assertEquals(3, sdo.popLeft())
     }
 
     @Test
     fun peekLeft() {
+        sdo.pushRight(1)
+        sdo.pushRight(2)
+        sdo.pushRight(3)
+        assertEquals(1, sdo.peekLeft())
+        sdo.popLeft()
+        assertEquals(2, sdo.peekLeft())
     }
 
     @Test
     fun getSize() {
-    }
-
-    @Test
-    fun asList() {
-    }
-
-    @Test
-    fun testToString() {
-
+        assertEquals(0, sdo.size)
+        sdo.pushRight(1)
+        assertEquals(1, sdo.size)
+        sdo.popLeft()
+        assertEquals(0, sdo.size)
+        sdo.pushRight(1)
+        sdo.pushRight(2)
+        sdo.pushRight(3)
+        assertEquals(3, sdo.size)
     }
 }

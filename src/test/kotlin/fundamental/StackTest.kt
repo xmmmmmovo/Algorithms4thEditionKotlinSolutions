@@ -33,6 +33,8 @@ internal class StackTest {
 
     @Test
     fun isEmpty() {
+        log.info { "isEmpty testing" }
+
         assertEquals(true, s.isEmpty())
         s.push(1)
         assertEquals(false, s.isEmpty())
@@ -42,6 +44,8 @@ internal class StackTest {
 
     @Test
     fun getSize() {
+        log.info { "getSize testing" }
+
         assertEquals(0, s.size)
         s.push(1)
         assertEquals(1, s.size)
@@ -51,6 +55,8 @@ internal class StackTest {
 
     @Test
     fun contains() {
+        log.info { "contains testing" }
+
         s.push(1)
         assertEquals(true, s.contains(1))
         s.pop()
@@ -59,6 +65,8 @@ internal class StackTest {
 
     @Test
     fun containsAll() {
+        log.info { "containsAll testing" }
+
         s.push(1)
         s.push(2)
         s.push(3)
@@ -72,6 +80,8 @@ internal class StackTest {
 
     @Test
     fun pop() {
+        log.info { "pop testing" }
+
         s.push(1)
         s.push(2)
         s.push(3)
@@ -82,6 +92,8 @@ internal class StackTest {
 
     @Test
     fun peek() {
+        log.info { "peek testing" }
+
         s.push(1)
         s.push(2)
         s.push(3)
@@ -90,17 +102,21 @@ internal class StackTest {
 
     @Test
     fun testClone() {
+        log.info { "testClone testing" }
+
         s.push(1)
         s.push(2)
         val sc = s.clone()
         assertEquals(2, sc.size)
-        sc.pop()
+        assertEquals(2, sc.pop())
         assertEquals(1, sc.size)
         assertEquals(2, s.size)
     }
 
     @Test
     fun testToString() {
+        log.info { "testToString testing" }
+
         assertEquals("[]", s.toString())
         s.push(1)
         assertEquals("[1]", s.toString())
