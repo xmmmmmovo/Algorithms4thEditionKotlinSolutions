@@ -8,9 +8,13 @@ API文档地址：https://blog.fivezha.cn/Algorithms4thEditionKotlinSolutions/
 
 题解博客地址：https://blog.fivezha.cn/categories/algorithm4/
 
-## 下载
+## 资料
 
 [数据下载](http://algs4.cs.princeton.edu/code/algs4-data.zip)
+
+[官方网站](https://algs4.cs.princeton.edu/)
+
+[官方课程](https://www.coursera.org/learn/algorithms-part1)
 
 ## 实现
 
@@ -63,6 +67,11 @@ API文档地址：https://blog.fivezha.cn/Algorithms4thEditionKotlinSolutions/
 - [调试工具类](./src/main/kotlin/utils/LoggerUtils.kt)
 - [范围工具类](./src/main/kotlin/utils/RangeUtils.kt)
 
+## 写在最后
+
+如果你发现了代码的一些逻辑错误或者还有其它测试用例，可以在[**Issue**](https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/issues)里面提出，或者直接发起[**Pull request**](https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/pulls)
+
 ## 为什么用kotlin
 
 只是因为用起来比较爽罢了，起码比Java用起来爽...
+
