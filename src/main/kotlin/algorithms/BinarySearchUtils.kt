@@ -9,8 +9,8 @@ package algorithms
  * @date 2020/7/28 11:46
  * @param list 列表
  * @param key 需要查找的值
- * @param lo 左范围
- * @param hi 右范围
+ * @param lo 左范围 默认为0
+ * @param hi 右范围 默认为list.size - 1
  * @return 查找到了就返回下标，没查找到就返回-1
  * @since version-1.0
  */
