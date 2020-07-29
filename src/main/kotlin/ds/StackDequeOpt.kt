@@ -75,7 +75,9 @@ class StackDequeOpt<T> {
                 rst.push(element)
             }
             !isCopying && sizeDiff == 0 -> {
-
+                rst.push(element)
+                isCopying = true
+                hlst = lst
             }
             isCopying -> {
 

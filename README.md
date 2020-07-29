@@ -24,7 +24,7 @@ API文档地址：https://blog.fivezha.cn/Algorithms4thEditionKotlinSolutions/
 
 **加粗标星号:star:的是在书中标极难的题目**
 
-### [第一章: 基础](/src/fundamentals)
+### [第一章: 基础](./test/kotlin/fundamental)
 
 - [二分搜索](./src/main/kotlin/algorithms/BinarySearchUtils.kt)
 - [累加器](./src/main/kotlin/ds/Accumulator.kt)

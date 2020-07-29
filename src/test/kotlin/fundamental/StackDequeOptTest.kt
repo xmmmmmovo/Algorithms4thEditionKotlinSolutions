@@ -27,7 +27,6 @@ internal class StackDequeOptTest {
         fun after() {
             log.info { "StackDequeOptTest end" }
         }
-
     }
 
     @BeforeEach
