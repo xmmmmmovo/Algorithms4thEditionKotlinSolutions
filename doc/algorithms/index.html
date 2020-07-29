@@ -1,0 +1,148 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>algorithms - doc</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">doc</a>&nbsp;/&nbsp;<a href="./index.html">algorithms</a><br/>
+<br/>
+<h2>Package algorithms</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(JVM) 
+<h4><a href="-josephus-solutions/index.html">JosephusSolutions</a></h4>
+</td>
+<td>
+<p>约瑟夫环实现</p>
+<code><span class="keyword">class </span><span class="identifier">JosephusSolutions</span></code></td>
+</tr>
+<tr>
+<td>
+(JVM) 
+<h4><a href="-point2-d-min-distance-calculator/index.html">Point2DMinDistanceCalculator</a></h4>
+</td>
+<td>
+<p>平面最近点问题类</p>
+<code><span class="keyword">class </span><span class="identifier">Point2DMinDistanceCalculator</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(JVM) 
+<h4><a href="priority.html">priority</a></h4>
+</td>
+<td>
+<p>优先级
+加减优先级最低
+然后就是乘除
+括号优先级最高</p>
+<code><span class="keyword">val </span><span class="identifier">priority</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><span class="identifier">Map</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char/index.html"><span class="identifier">Char</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+(JVM) 
+<h4><a href="binary-search.html">binarySearch</a></h4>
+</td>
+<td>
+<p>在一个列表中二分查找到某个值</p>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html"><span class="identifier">Comparable</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span> <span class="identifier">binarySearch</span><span class="symbol">(</span><span class="identifier" id="algorithms$binarySearch(kotlin.collections.List((algorithms.binarySearch.T)), algorithms.binarySearch.T, kotlin.Int, kotlin.Int)/list">list</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="algorithms$binarySearch(kotlin.collections.List((algorithms.binarySearch.T)), algorithms.binarySearch.T, kotlin.Int, kotlin.Int)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span class="identifier" id="algorithms$binarySearch(kotlin.collections.List((algorithms.binarySearch.T)), algorithms.binarySearch.T, kotlin.Int, kotlin.Int)/lo">lo</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">, </span><span class="identifier" id="algorithms$binarySearch(kotlin.collections.List((algorithms.binarySearch.T)), algorithms.binarySearch.T, kotlin.Int, kotlin.Int)/hi">hi</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;list.size - 1<span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+(JVM) 
+<h4><a href="comple-brackets.html">compleBrackets</a></h4>
+</td>
+<td>
+<p>括号补全
+TODO: 括号补全</p>
+<code><span class="keyword">fun </span><span class="identifier">compleBrackets</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+(JVM) 
+<h4><a href="contains-duplicates-in-sorted.html">containsDuplicatesInSorted</a></h4>
+</td>
+<td>
+<p>查找已排序元素中是否有重复元素</p>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html"><span class="identifier">Comparable</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span> <span class="identifier">containsDuplicatesInSorted</span><span class="symbol">(</span><span class="identifier" id="algorithms$containsDuplicatesInSorted(kotlin.collections.List((algorithms.containsDuplicatesInSorted.T)))/list">list</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+(JVM) 
+<h4><a href="contains-in-list.html">containsInList</a></h4>
+</td>
+<td>
+<p>查找列表中是否存在某元素，利用<a href="binary-search.html">binarySearch</a>二分查找</p>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html"><span class="identifier">Comparable</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span> <span class="identifier">containsInList</span><span class="symbol">(</span><span class="identifier" id="algorithms$containsInList(kotlin.collections.List((algorithms.containsInList.T)), algorithms.containsInList.T)/list">list</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="algorithms$containsInList(kotlin.collections.List((algorithms.containsInList.T)), algorithms.containsInList.T)/key">key</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+(JVM) 
+<h4><a href="eval-int-arithmetic.html">evalIntArithmetic</a></h4>
+</td>
+<td>
+<p>四则运算主函数</p>
+<code><span class="keyword">fun </span><span class="identifier">evalIntArithmetic</span><span class="symbol">(</span><span class="identifier" id="algorithms$evalIntArithmetic(kotlin.String)/expr">expr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a></code></td>
+</tr>
+<tr>
+<td>
+(JVM) 
+<h4><a href="four-sum-force.html">fourSumForce</a></h4>
+</td>
+<td>
+<p>蛮力法求四数之和</p>
+<code><span class="keyword">fun </span><span class="identifier">fourSumForce</span><span class="symbol">(</span><span class="identifier" id="algorithms$fourSumForce(kotlin.collections.List((kotlin.Int)), kotlin.Int)/list">list</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="algorithms$fourSumForce(kotlin.collections.List((kotlin.Int)), kotlin.Int)/num">num</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+(JVM) 
+<h4><a href="gcd.html">gcd</a></h4>
+</td>
+<td>
+<p>普通gcd模板(辗转相除法)</p>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">&gt;</span> <span class="identifier">gcd</span><span class="symbol">(</span><span class="identifier" id="algorithms$gcd(algorithms.gcd.T, algorithms.gcd.T)/a">a</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span class="identifier" id="algorithms$gcd(algorithms.gcd.T, algorithms.gcd.T)/b">b</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+(JVM) 
+<h4><a href="is-banlanced.html">isBanlanced</a></h4>
+</td>
+<td>
+<p>括号是否匹配</p>
+<code><span class="keyword">fun </span><span class="identifier">isBanlanced</span><span class="symbol">(</span><span class="identifier" id="algorithms$isBanlanced(kotlin.String)/expr">expr</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+(JVM) 
+<h4><a href="qgcd.html">qgcd</a></h4>
+</td>
+<td>
+<p>快速gcd对外函数</p>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html"><span class="identifier">Number</span></a><span class="symbol">&gt;</span> <span class="identifier">qgcd</span><span class="symbol">(</span><span class="identifier" id="algorithms$qgcd(algorithms.qgcd.T, algorithms.qgcd.T)/a">a</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span class="identifier" id="algorithms$qgcd(algorithms.qgcd.T, algorithms.qgcd.T)/b">b</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+(JVM) 
+<h4><a href="three-sum-binary-fast.html">threeSumBinaryFast</a></h4>
+</td>
+<td>
+<p>二分法<a href="binary-search.html">binarySearch</a>求三数之和</p>
+<code><span class="keyword">fun </span><span class="identifier">threeSumBinaryFast</span><span class="symbol">(</span><span class="identifier" id="algorithms$threeSumBinaryFast(kotlin.collections.List((kotlin.Int)))/list">list</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
