@@ -10,39 +10,67 @@ package ds
  * @since version-1.0
  */
 class StackDeque<T> {
-    // 左栈
+    /**
+     * 左栈
+     */
     private val lst = Stack<T>()
 
-    // 右栈
+    /**
+     * 右栈
+     */
     private val rst = Stack<T>()
 
-    // 中间栈
+    /**
+     * 中间栈
+     */
     private val tst = Stack<T>()
 
-    // 表示存储的栈位置
+    /**
+     * 表示储存的是左栈还是右栈
+     */
     private var tmpIsRight = false
 
 
+    /**
+     * 判断是否为空
+     * @author xmmmmmovo
+     * @date 2020/7/29 17:27
+     * @return 返回是否为空
+     * @since version-1.0
+     */
     fun isEmpty(): Boolean =
-            lst.isEmpty() && rst.isEmpty() && tst.isEmpty()
+        lst.isEmpty() && rst.isEmpty() && tst.isEmpty()
 
     /**
      * 入左队列
-     * */
+     * @author xmmmmmovo
+     * @date 2020/7/29 16:55
+     * @param element 入元素
+     * @since version-1.0
+     */
     fun pushLeft(element: T) {
         lst.push(element)
     }
 
     /**
      * 入右队列
-     * */
+     * @author xmmmmmovo
+     * @date 2020/7/29 16:55
+     * @param element 入元素
+     * @since version-1.0
+     */
     fun pushRight(element: T) {
         rst.push(element)
     }
 
     /**
-     * 出左队列(对应的是入右队列
-     * */
+     * 出左队列
+     * @author xmmmmmovo
+     * @date 2020/7/29 16:55
+     * @return 返回队列第一个元素
+     * @throws NoSuchElementException 没有元素时抛出
+     * @since version-1.0
+     */
     fun popLeft(): T {
         return when {
             /*
@@ -87,8 +115,13 @@ class StackDeque<T> {
     }
 
     /**
-     * 出右队列(对应的是出左队列
-     * */
+     * 出右队列
+     * @author xmmmmmovo
+     * @date 2020/7/29 16:55
+     * @return 返回队列第一个元素
+     * @throws NoSuchElementException 没有元素时抛出
+     * @since version-1.0
+     */
     fun popRight(): T {
         return when {
             rst.isNotEmpty() -> rst.pop()
@@ -108,9 +141,22 @@ class StackDeque<T> {
         }
     }
 
+    /**
+     * 队列长度
+     * @author xmmmmmovo
+     * @date 2020/7/29 17:29
+     * @since version-1.0
+     */
     val size: Int
         get() = lst.size + rst.size + tst.size
 
+    /**
+     * 转换为列表格式
+     * @author xmmmmmovo
+     * @date 2020/7/29 17:29
+     * @return 转换后的列表格式
+     * @since version-1.0
+     */
     fun asList(): List<T> {
         val list = mutableListOf<T>()
         lst.forEach {
@@ -127,5 +173,12 @@ class StackDeque<T> {
         return list
     }
 
+    /**
+     * 转字符串方法
+     * @author xmmmmmovo
+     * @date 2020/7/29 17:29
+     * @return 字符串
+     * @since version-1.0
+     */
     override fun toString(): String = asList().toString()
 }

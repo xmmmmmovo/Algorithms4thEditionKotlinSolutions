@@ -66,8 +66,8 @@ internal class StackDequeTest {
         sd.pushRight(2)
         sd.pushRight(3)
         assertEquals(1, sd.popLeft())
-        assertEquals(3, sd.popLeft())
         assertEquals(2, sd.popLeft())
+        assertEquals(3, sd.popLeft())
     }
 
     @Test
@@ -78,7 +78,7 @@ internal class StackDequeTest {
         sd.pushLeft(2)
         sd.pushLeft(3)
         assertEquals(3, sd.popLeft())
-        assertEquals(3, sd.popLeft())
+        assertEquals(2, sd.popLeft())
         assertEquals(1, sd.popLeft())
     }
 
