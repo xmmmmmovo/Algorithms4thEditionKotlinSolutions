@@ -37,6 +37,7 @@ internal class MathUtilsKtTest {
         "12, 8, 4"
     )
     fun gcd(a: Long, b: Long, res: Long) {
+        log.info { "a:$a, b:$b testing" }
         assertEquals(res, algorithms.gcd(a, b))
     }
 
@@ -48,6 +49,7 @@ internal class MathUtilsKtTest {
         "0, 0, 0"
     )
     fun qgcd(a: Long, b: Long, res: Long) {
+        log.info { "a:$a, b:$b testing" }
         assertEquals(res, algorithms.qgcd(a, b))
     }
 
@@ -61,6 +63,7 @@ internal class MathUtilsKtTest {
         "), 2"
     )
     fun getPriority(c: Char, res: Int) {
+        log.info { "c:$c testing" }
         assertEquals(res, priority[c])
     }
 
@@ -71,6 +74,7 @@ internal class MathUtilsKtTest {
         "1+2* 3 + (4*5+6)*7, 189.0"
     )
     fun evalIntArithmetic(expr: String, res: Double) {
+        log.info { "expr:$expr testing" }
         assertEquals(res, algorithms.evalIntArithmetic(expr))
     }
 
@@ -88,8 +92,7 @@ internal class MathUtilsKtTest {
         "})], false"
     )
     fun isBanlanced(expr: String, res: Boolean) {
-        log.info { expr }
-        log.info { res.toString() }
+        log.info { "expr:$expr testing" }
         assertEquals(res, algorithms.isBanlanced(expr))
     }
 }
