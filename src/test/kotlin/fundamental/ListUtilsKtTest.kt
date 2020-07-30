@@ -52,8 +52,8 @@ internal class ListUtilsKtTest {
 
     @Test
     fun minPair() {
-        assertEquals(Pair(1, 2), algorithms.minPair(list))
-        assertEquals(Pair(1, 1), algorithms.minPair(dlist))
+        assertEquals(Pair(1.0, 2.0), algorithms.minPair(list))
+        assertEquals(Pair(1.0, 1.0), algorithms.minPair(dlist))
     }
 
     @Test
