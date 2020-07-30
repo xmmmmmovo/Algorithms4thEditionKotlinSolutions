@@ -4,7 +4,7 @@
 
 算法(第四版)个人实现/课后习题/部分提高题
 
-API文档地址：https://blog.fivezha.cn/Algorithms4thEditionKotlinSolutions/doc
+API文档地址：http://algs4.fivezha.cn/doc/
 
 题解博客地址：https://blog.fivezha.cn/categories/algorithm4/
 

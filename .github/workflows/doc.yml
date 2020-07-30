@@ -55,8 +55,8 @@ jobs:
       - name: Generate documentation
         run: ./gradlew dokka
 
-      - name: cp cname
-        run: cp ./CNAME ./build/dokka/CNAME
+      # - name: cp cname
+      #   run: cp ./CNAME ./build/dokka/CNAME
 
       # 部署到ghpage
       - name: Deploy to gh-pages
