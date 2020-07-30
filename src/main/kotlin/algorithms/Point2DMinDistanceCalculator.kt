@@ -15,9 +15,19 @@ import kotlin.math.sqrt
  * @since version-1.0
  */
 class Point2DMinDistanceCalculator constructor(
+    /**
+     * 点个数
+     */
     private val N: Int = 0
 ) {
+    /**
+     * 最近点对
+     */
     private var minPointPair = Pair(Point2D(0.0, 0.0), Point2D(0.0, 0.0))
+
+    /**
+     * 随即最近点s
+     */
     private val list = Array(N) {
         Point2D(
             StdRandom.uniform(0.0, N.toDouble()),
@@ -25,6 +35,12 @@ class Point2DMinDistanceCalculator constructor(
         )
     }
 
+    /**
+     * 构造函数 初始化画布
+     * @author xmmmmmovo
+     * @date 2020/7/30 9:05
+     * @since version-1.0
+     */
     init {
         StdDraw.setXscale(0.0, N.toDouble())
         StdDraw.setYscale(0.0, list.maxBy { it.y }!!.y + 0.3)
@@ -34,21 +50,51 @@ class Point2DMinDistanceCalculator constructor(
     }
 
 
+    /**
+     * 计算距离
+     * @author xmmmmmovo
+     * @date 2020/7/30 9:05
+     * @param lp 左点
+     * @param rp 右点
+     * @return 返回距离
+     * @since version-1.0
+     */
     private fun getDistance(lp: Point2D, rp: Point2D): Double {
         return sqrt(((rp.x - lp.x) * (rp.x - lp.x)) + ((rp.y - lp.y) * (rp.y - lp.y)))
     }
 
+
+    /**
+     * 最近点对
+     * @author xmmmmmovo
+     * @date 2020/7/30 9:07
+     * @return 返回最近点对
+     * @since version-1.0
+     */
     fun getMinPointPair(): Pair<Point2D, Point2D> {
         return minPointPair
     }
 
 
+    /**
+     * 显示最近点
+     * @author xmmmmmovo
+     * @date 2020/7/30 9:07
+     * @since version-1.0
+     */
     fun showPoints() {
         list.forEach {
             StdDraw.point(it.x, it.y)
         }
     }
 
+    /**
+     * 蛮力法求最近点
+     * @author xmmmmmovo
+     * @date 2020/7/30 9:07
+     * @return 最近点距离
+     * @since version-1.0
+     */
     fun minDistanceForce(): Double {
         var minDistance = Double.MAX_VALUE
 
@@ -88,7 +134,9 @@ class Point2DMinDistanceCalculator constructor(
         return 0.0
     }
 
-    // TODO:分治法解最近点距离
+    /**
+     * TODO:分治法解最近点距离
+     */
     fun minDistanceDivide(): Double {
         if (N == 0) {
             return 0.0
