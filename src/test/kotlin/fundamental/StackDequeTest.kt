@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Assertions.*
 import org.junit.platform.commons.logging.LoggerFactory
 
 internal class StackDequeTest {
-    val sd = StackDeque<Int>()
+    private val sd = StackDeque<Int>()
 
     companion object {
         private val log = LoggerFactory.getLogger(StackDequeTest::class.java)

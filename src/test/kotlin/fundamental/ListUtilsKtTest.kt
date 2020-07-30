@@ -14,8 +14,8 @@ import org.junit.platform.commons.logging.LoggerFactory
 import utils.readIntList
 
 internal class ListUtilsKtTest {
-    val list = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-    val dlist = listOf(1, 1, 2, 2, 1)
+    private val list = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    private val dlist = listOf(1, 1, 2, 2, 1)
 
     companion object {
         private val log = LoggerFactory.getLogger(ListUtilsKtTest::class.java)
@@ -41,23 +41,31 @@ internal class ListUtilsKtTest {
         "-1, false"
     )
     fun containsInList(key: Int, res: Boolean) {
+        log.info { "containsInList testing" }
+
         assertEquals(res, algorithms.containsInList(list, key))
     }
 
     @Test
     fun containsDuplicatesInSorted() {
+        log.info { "containsDuplicatesInSorted testing" }
+
         assertEquals(false, algorithms.containsDuplicatesInSorted(list))
         assertEquals(true, algorithms.containsDuplicatesInSorted(dlist))
     }
 
     @Test
     fun minPair() {
+        log.info { "minPair testing" }
+
         assertEquals(Pair(1.0, 2.0), algorithms.minPair(list))
         assertEquals(Pair(1.0, 1.0), algorithms.minPair(dlist))
     }
 
     @Test
     fun maxPair() {
+        log.info { "maxPair testing" }
+
         assertEquals(Pair(1, 10), algorithms.maxPair(list))
         assertEquals(Pair(1, 2), algorithms.maxPair(dlist))
     }

@@ -13,7 +13,7 @@ import org.junit.jupiter.api.BeforeAll
 import org.junit.platform.commons.logging.LoggerFactory
 
 internal class StackTest {
-    val s = Stack<Int>()
+    private val s = Stack<Int>()
 
     companion object {
         private val log = LoggerFactory.getLogger(StackTest::class.java)
