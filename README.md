@@ -2,7 +2,7 @@
 
 ![kotlin](https://img.shields.io/badge/language-kotlin-orange.svg) ![apache](https://img.shields.io/badge/license-Apache2.0-brightgreen.svg) ![test](https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/workflows/Test%20Workflow/badge.svg) ![doc](https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/workflows/Doc%20Workflow/badge.svg)
 
-算法(第四版)个人实现/课后习题/部分提高题
+算法(第四版)个人实现/部分课后习题/部分提高题
 
 API文档地址：http://algs4.fivezha.cn/doc/
 
@@ -36,28 +36,29 @@ API文档地址：http://algs4.fivezha.cn/doc/
 - [日期类](src/main/kotlin/ds/Date.kt)
 - [账单类](src/main/kotlin/ds/Transaction.kt)
 - [gcd](src/main/kotlin/algorithms/MathUtils.kt#L13)
-- [快速gcd](src/main/kotlin/algorithms/MathUtils.kt#L29)
+- [快速gcd](src/main/kotlin/algorithms/MathUtils.kt#L35)
 - [分数类](src/main/kotlin/ds/Rational.kt)
 - [背包](src/main/kotlin/ds/Bag.kt)
 - [栈](src/main/kotlin/ds/Stack.kt)
 - [队列](src/main/kotlin/ds/Queue.kt)
-- [括号匹配](src/main/kotlin/algorithms/MathUtils.kt#L135)
-- [简单计算器](src/main/kotlin/algorithms/MathUtils.kt#L125)
-  - [中缀转后缀](src/main/kotlin/algorithms/MathUtils.kt#L69)
-  - [计算后缀](src/main/kotlin/algorithms/MathUtils.kt#L108)
+- [括号匹配](src/main/kotlin/algorithms/MathUtils.kt#L174)
+- [简单计算器](src/main/kotlin/algorithms/MathUtils.kt#L159)
+  - [中缀转后缀](src/main/kotlin/algorithms/MathUtils.kt#L75)
+  - [计算后缀](src/main/kotlin/algorithms/MathUtils.kt#L137)
 - [双向链表](src/main/kotlin/ds/LinkedList.kt)
 - [双向队列](src/main/kotlin/ds/Deque.kt)
 - [缓冲区Buffer](src/main/kotlin/ds/Buffer.kt)
-- [四数之和](src/main/kotlin/algorithms/NumUtils.kt#L12)
-- [三数之和](src/main/kotlin/algorithms/NumUtils.kt#L28)
-  - [查找已排序列表中是否有重复元素](src/main/kotlin/algorithms/ListUtils.kt#L18)
+- [四数之和](src/main/kotlin/algorithms/NumUtils.kt#L7)
+- [三数之和](src/main/kotlin/algorithms/NumUtils.kt#L29)
+  - [查找已排序列表中是否有重复元素](src/main/kotlin/algorithms/ListUtils.kt#L20)
 - [循环链表](src/main/kotlin/ds/CircularLinkedList.kt)
 - [约瑟夫环问题](src/main/kotlin/algorithms/JosephusSolutions.kt)
-  - [双向队列解法](src/main/kotlin/algorithms/JosephusSolutions.kt#L46)
-  - [循环链表解法](src/main/kotlin/algorithms/JosephusSolutions.kt#L71)
-  - [数学解法](src/main/kotlin/algorithms/JosephusSolutions.kt#L97)
+  - [双向队列解法](src/main/kotlin/algorithms/JosephusSolutions.kt#L67)
+  - [循环链表解法](src/main/kotlin/algorithms/JosephusSolutions.kt#L99)
+  - [数学解法](src/main/kotlin/algorithms/JosephusSolutions.kt#L132)
 - **[:star:利用三个栈实现双向队列，使得所有操作时间复杂度O(1)(均摊后虚假的O(1))](src/main/kotlin/ds/StackDeque.kt)**
 - **[:star:利用六个栈实现单向队列，使得所有操作时间复杂度O(1)(真正的O(1))](src/main/kotlin/ds/StackDequeOpt.kt)**
+- [生日问题](src/main/kotlin/algorithms/MathUtils.kt#L207)
 
 ### 排序
 

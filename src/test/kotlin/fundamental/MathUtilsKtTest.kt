@@ -11,6 +11,8 @@ import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.CsvSource
 import org.junit.platform.commons.logging.LoggerFactory
+import kotlin.math.abs
+import kotlin.math.sqrt
 
 internal class MathUtilsKtTest {
 
@@ -94,5 +96,19 @@ internal class MathUtilsKtTest {
     fun isBanlanced(expr: String, res: Boolean) {
         log.info { "expr:$expr testing" }
         assertEquals(res, algorithms.isBanlanced(expr))
+    }
+
+    @Test
+    fun firstRandomDuplicate() {
+        log.info { "firstRandomDuplicate testing" }
+
+        val side = 100000
+        var ts = 0L
+        var dts = 0L
+        for (N in 1..side) {
+            dts += sqrt((Math.PI * N) / 2).toLong()
+            ts += algorithms.firstRandomDuplicate(N)
+        }
+        assertEquals(1.0, (abs(dts - ts) / side.toDouble()), 1.0)
     }
 }
