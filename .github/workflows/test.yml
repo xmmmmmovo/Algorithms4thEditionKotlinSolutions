@@ -49,7 +49,7 @@ jobs:
         run: ./gradlew test      
         
       # 上传测试
-      - name: Test with gradle
+      - name: generate codecov report
         run: ./gradlew jacocoTestReport
       
       - name: Code Coverage
