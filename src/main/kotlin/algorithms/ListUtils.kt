@@ -3,8 +3,8 @@
  */
 package algorithms
 
-import utils.compareTo
-import utils.minus
+import ext.compareTo
+import ext.minus
 
 /**
  * 查找列表中是否存在某元素，利用[binarySearch]二分查找

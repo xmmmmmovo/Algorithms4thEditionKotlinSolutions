@@ -62,6 +62,10 @@ API文档地址：http://algs4.fivezha.cn/doc/
 - **[:star:利用六个栈实现单向队列，使得所有操作时间复杂度O(1)(真正的O(1))](src/main/kotlin/ds/StackDequeOpt.kt)**
 - [生日问题](src/main/kotlin/algorithms/MathUtils.kt#L207)
 
+### 一些类扩展和函数扩展
+
+- [Number类扩展](src/main/kotlin/ext/NumberExt.kt)
+
 ### 一些工具类
 
 - [文件工具类](src/main/kotlin/utils/FileUtils.kt)
