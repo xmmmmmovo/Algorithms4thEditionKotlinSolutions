@@ -31,6 +31,8 @@ internal class StackDequeOptTest {
 
     @Test
     fun isEmpty() {
+        log.info { "isEmpty testing" }
+
         assertEquals(true, sdo.isEmpty())
         sdo.pushRight(1)
         assertEquals(false, sdo.isEmpty())
@@ -40,6 +42,8 @@ internal class StackDequeOptTest {
 
     @Test
     fun pushRight() {
+        log.info { "pushRight testing" }
+
         sdo.pushRight(1)
         sdo.pushRight(2)
         sdo.pushRight(3)
@@ -50,6 +54,8 @@ internal class StackDequeOptTest {
 
     @Test
     fun peekLeft() {
+        log.info { "peekLeft testing" }
+
         sdo.pushRight(1)
         sdo.pushRight(2)
         sdo.pushRight(3)
@@ -60,6 +66,8 @@ internal class StackDequeOptTest {
 
     @Test
     fun getSize() {
+        log.info { "getSize testing" }
+
         assertEquals(0, sdo.size)
         sdo.pushRight(1)
         assertEquals(1, sdo.size)

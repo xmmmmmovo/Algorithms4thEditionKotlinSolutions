@@ -13,6 +13,16 @@ import org.junit.platform.commons.logging.LoggerFactory
 internal class NumUtilsKtTest {
     private val list1 = listOf(1, 2, 3, 4, 5)
     private val list2 = listOf(-1, 2, -1, 1)
+    private val matrix = listOf(
+        listOf(1, 2, 3),
+        listOf(2, 2, 3),
+        listOf(1, 2, 3)
+    )
+    private val matrix2 = listOf(
+        listOf(2, 2, 3),
+        listOf(2, 3, 1),
+        listOf(1, 2, 3)
+    )
 
     companion object {
         private val log = LoggerFactory.getLogger(NumUtilsKtTest::class.java)
@@ -32,6 +42,8 @@ internal class NumUtilsKtTest {
 
     @Test
     fun threeSumForce() {
+        log.info { "threeSumForce testing" }
+
         assertEquals(listOf<LinkedList<Int>>(), algorithms.threeSumForce(list1, 0))
         assertEquals(listOf<LinkedList<Int>>(), algorithms.threeSumForce(list1, 3))
         assertEquals(
@@ -47,6 +59,8 @@ internal class NumUtilsKtTest {
 
     @Test
     fun threeSumBinaryFast() {
+        log.info { "threeSumBinaryFast testing" }
+
         assertEquals(listOf<LinkedList<Int>>(), algorithms.threeSumForce(list1, 0))
         assertEquals(listOf<LinkedList<Int>>(), algorithms.threeSumForce(list1, 3))
         assertEquals(
@@ -58,5 +72,12 @@ internal class NumUtilsKtTest {
         assertEquals(listOf(
             LinkedList<Int>().apply { add(-1); add(2); add(-1) }
         ), algorithms.threeSumForce(list2, 0))
+    }
+
+    @Test
+    fun matrixPartialMinElem() {
+        log.info { "matrixPartialMinElem testing" }
+
+        algorithms.matrixPartialMinElem(matrix)
     }
 }

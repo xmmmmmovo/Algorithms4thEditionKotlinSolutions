@@ -82,7 +82,7 @@ fun partialMinElem(list: List<Int>): Int {
          */
         when {
             list[mid - 1] > list[mid] && list[mid] < list[mid + 1] -> {
-                return list[mid]
+                return mid
             }
             list[mid - 1] < list[mid] && list[mid] < list[mid + 1] -> {
                 hi = mid - 1
@@ -110,4 +110,5 @@ fun partialMinElem(list: List<Int>): Int {
  * @since version-1.0
  */
 fun doubleToneSearch() {
+
 }

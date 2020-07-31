@@ -1,6 +1,6 @@
 # 算法(第四版)个人题解
 
-![kotlin](https://img.shields.io/badge/language-kotlin-orange.svg) ![apache](https://img.shields.io/badge/license-Apache2.0-brightgreen.svg) ![test](https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/workflows/Test%20Workflow/badge.svg) ![doc](https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/workflows/Doc%20Workflow/badge.svg)
+![kotlin](https://img.shields.io/badge/language-kotlin-orange.svg) ![apache](https://img.shields.io/badge/license-Apache2.0-brightgreen.svg) ![test](https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/workflows/Test%20Workflow/badge.svg)
 
 算法(第四版)个人实现/部分课后习题/部分提高题
 
@@ -26,7 +26,7 @@ API文档地址：http://algs4.fivezha.cn/doc/
 
 **加粗标星号:star:的是在书中标极难的题目**
 
-### [第一章: 基础](test/kotlin/fundamental)
+### [第一章: 基础(未完成)](src/test/kotlin/fundamental)
 
 - [二分搜索](src/main/kotlin/algorithms/BinarySearchUtils.kt)
 - [累加器](src/main/kotlin/ds/Accumulator.kt)
@@ -54,11 +54,11 @@ API文档地址：http://algs4.fivezha.cn/doc/
 - [最接近的一对](src/main/kotlin/algorithms/ListUtils.kt#L35)
 - [最遥远的一对](src/main/kotlin/algorithms/ListUtils.kt#L60)
 - [数组的局部最小元素]
-- [矩阵的最小元素]
+- [矩阵的局部最小元素]
 - [双调查栈]
 - [仅用加减实现的二分查找]
 - [扔鸡蛋]
-- [仍两个鸡蛋]
+- [扔两个鸡蛋]
 - [三点共线]
 - [循环链表](src/main/kotlin/ds/CircularLinkedList.kt)
 - [约瑟夫环问题](src/main/kotlin/algorithms/JosephusSolutions.kt)
@@ -68,6 +68,16 @@ API文档地址：http://algs4.fivezha.cn/doc/
 - **[:star:利用三个栈实现双向队列，使得所有操作时间复杂度O(1)(均摊后虚假的O(1))](src/main/kotlin/ds/StackDeque.kt)**
 - **[:star:利用六个栈实现单向队列，使得所有操作时间复杂度O(1)(真正的O(1))](src/main/kotlin/ds/StackDequeOpt.kt)**
 - [生日问题](src/main/kotlin/algorithms/MathUtils.kt#L207)
+
+### 第二章: 排序(未完成)
+
+### 第三章: 查找(未完成)
+
+### 第四章: 图(未完成)
+
+### 第五章: 字符串(未完成)
+
+### 第六章: 背景(未完成)
 
 ### 一些扩展函数和扩展属性
 
