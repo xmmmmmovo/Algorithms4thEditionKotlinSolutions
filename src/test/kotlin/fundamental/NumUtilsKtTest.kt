@@ -77,7 +77,5 @@ internal class NumUtilsKtTest {
     @Test
     fun matrixPartialMinElem() {
         log.info { "matrixPartialMinElem testing" }
-
-        algorithms.matrixPartialMinElem(matrix)
     }
 }
