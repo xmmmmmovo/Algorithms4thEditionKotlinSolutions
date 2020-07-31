@@ -8,7 +8,7 @@ API文档地址：http://algs4.fivezha.cn/doc/
 
 题解博客地址：https://blog.fivezha.cn/categories/algorithm4/
 
-现在已完成至1.5
+现在已完成至1.4算法分析, 1.5并查集(未完成)
 
 ## 资料
 
@@ -62,7 +62,7 @@ API文档地址：http://algs4.fivezha.cn/doc/
 - **[:star:利用六个栈实现单向队列，使得所有操作时间复杂度O(1)(真正的O(1))](src/main/kotlin/ds/StackDequeOpt.kt)**
 - [生日问题](src/main/kotlin/algorithms/MathUtils.kt#L207)
 
-### 一些类扩展和函数扩展
+### 一些扩展函数和扩展属性
 
 - [Number类扩展](src/main/kotlin/ext/NumberExt.kt)
 
@@ -74,6 +74,8 @@ API文档地址：http://algs4.fivezha.cn/doc/
 - [计时类](src/main/kotlin/utils/StopwatchCPU.kt)
 
 ## 写在最后
+
+你可能觉得这份题解不全(不包括未写章节)，是不全，因为本人做题的原则就是**只做自己觉得需要做的**，对于一些看一眼大概就有思路或者用处不大的题目就一律跳过了。
 
 如果你发现了代码的一些逻辑错误或者还有其它测试用例，可以在[**Issue**](https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/issues)里面提出，或者直接发起[**Pull request**](https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/pulls)
 

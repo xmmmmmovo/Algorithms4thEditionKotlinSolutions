@@ -56,24 +56,5 @@ fun threeSumBinaryFast(list: List<Int>): List<List<Int>> {
     return res
 }
 
-/**
- * 局部最小元素
- * @author xmmmmmovo
- * @date 2020/7/30 19:36
- * @param list 数字列表
- * @return 最小元素数字
- * @throws IllegalArgumentException 数组元素小于3个时抛出异常
- * @since version-1.0
- */
-fun PartialMinElem(list: List<Int>): Int {
-    if (list.size < 3) throw IllegalArgumentException("数组元素小于3个！")
-    var lo = 0
-    var hi = list.size - 1
-
-    while (lo <= hi) {
-        // 取mid
-        val mid = lo + (hi - lo) / 2
-    }
-
-    return Double.NaN.toInt()
+fun matrixPartialMinElem() {
 }

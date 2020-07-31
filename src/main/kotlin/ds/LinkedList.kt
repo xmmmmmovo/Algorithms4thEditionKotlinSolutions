@@ -593,7 +593,7 @@ class LinkedList<T> : MutableList<T> {
         /**
          * 下一节点数据
          * */
-        override fun next(): T {777777
+        override fun next(): T {
             if (!hasNext()) {
                 throw NoSuchElementException()
             }
@@ -607,7 +607,6 @@ class LinkedList<T> : MutableList<T> {
          * 删除当前节点
          * */
         override fun remove() {
-            val lastNext = lastReturned?.next
             unlink(lastReturned ?: throw IllegalStateException())
             index--
         }

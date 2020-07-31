@@ -59,8 +59,4 @@ internal class NumUtilsKtTest {
             LinkedList<Int>().apply { add(-1); add(2); add(-1) }
         ), algorithms.threeSumForce(list2, 0))
     }
-
-    @Test
-    fun partialMinElem() {
-    }
 }
