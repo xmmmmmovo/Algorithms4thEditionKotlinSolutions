@@ -66,8 +66,8 @@ fun partialMinElem(list: List<Int>): Int {
     var lo = 0
     var hi = list.size - 1
     // 两边需要单独测试
-    if (list[lo] < list[lo + 1]) return list[lo]
-    if (list[hi] < list[hi - 1]) return list[hi]
+    if (list[lo] < list[lo + 1]) return lo
+    if (list[hi] < list[hi - 1]) return hi
 
     while (lo <= hi) {
         // 取mid

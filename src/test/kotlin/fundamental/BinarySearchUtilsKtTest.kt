@@ -51,7 +51,7 @@ internal class BinarySearchUtilsKtTest {
         log.info { "partialMinElem testing" }
 
         assertEquals(0, algorithms.partialMinElem(l1))
-        assertEquals(6, algorithms.partialMinElem(l2))
+        assertEquals(1, algorithms.partialMinElem(l2))
         assertEquals(3, algorithms.partialMinElem(l3))
     }
 }
