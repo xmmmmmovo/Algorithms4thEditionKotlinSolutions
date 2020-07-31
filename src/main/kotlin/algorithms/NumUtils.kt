@@ -71,7 +71,8 @@ fun PartialMinElem(list: List<Int>): Int {
     var hi = list.size - 1
 
     while (lo <= hi) {
-
+        // 取mid
+        val mid = lo + (hi - lo) / 2
     }
 
     return Double.NaN.toInt()

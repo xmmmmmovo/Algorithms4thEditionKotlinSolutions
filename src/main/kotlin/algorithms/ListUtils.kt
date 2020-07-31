@@ -3,6 +3,9 @@
  */
 package algorithms
 
+import utils.compareTo
+import utils.minus
+
 /**
  * 查找列表中是否存在某元素，利用[binarySearch]二分查找
  * @author xmmmmmovo
@@ -42,9 +45,9 @@ fun <T : Comparable<T>> containsDuplicatesInSorted(list: List<T>): Boolean {
  * @throws IllegalArgumentException 如果列表元素小于2个就会抛出
  * @since version-1.0
  */
-fun minPair(list: List<Number>): Pair<Double, Double> {
+fun <T : Number> minPair(list: List<T>): Pair<T, T> {
     if (list.size < 2) throw IllegalArgumentException("列表元素过少！")
-    val sl = (list as List<Double>).sorted()
+    val sl = list.sortedBy { it.toDouble() }
     var min = sl[0]
     var smin = sl[1]
     var diff = sl[1] - sl[0]
