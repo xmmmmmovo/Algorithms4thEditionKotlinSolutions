@@ -42,6 +42,17 @@ fun <T : Comparable<T>> binarySearch(
 }
 
 /**
+ * 斐波那契二分搜索
+ * @author xmmmmmovo
+ * @date 2020/7/31 16:09
+ * @param
+ * @return
+ * @since version-1.0
+ */
+fun fibonacciBinarySearch() {
+}
+
+/**
  * 局部最小元素
  * @author xmmmmmovo
  * @date 2020/7/30 19:36
@@ -87,4 +98,16 @@ fun partialMinElem(list: List<Int>): Int {
     }
 
     return -1
+}
+
+/**
+ * 双调查栈
+ * @author xmmmmmovo
+ * @date 2020/7/31 15:42
+ * @param
+ * @return
+ * @throws
+ * @since version-1.0
+ */
+fun doubleToneSearch() {
 }

@@ -53,6 +53,13 @@ API文档地址：http://algs4.fivezha.cn/doc/
   - [查找已排序列表中是否有重复元素](src/main/kotlin/algorithms/ListUtils.kt#L20)
 - [最接近的一对](src/main/kotlin/algorithms/ListUtils.kt#L35)
 - [最遥远的一对](src/main/kotlin/algorithms/ListUtils.kt#L60)
+- [数组的局部最小元素]
+- [矩阵的最小元素]
+- [双调查栈]
+- [仅用加减实现的二分查找]
+- [扔鸡蛋]
+- [仍两个鸡蛋]
+- [三点共线]
 - [循环链表](src/main/kotlin/ds/CircularLinkedList.kt)
 - [约瑟夫环问题](src/main/kotlin/algorithms/JosephusSolutions.kt)
   - [双向队列解法](src/main/kotlin/algorithms/JosephusSolutions.kt#L67)

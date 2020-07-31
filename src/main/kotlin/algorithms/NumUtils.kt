@@ -56,5 +56,19 @@ fun threeSumBinaryFast(list: List<Int>): List<List<Int>> {
     return res
 }
 
-fun matrixPartialMinElem() {
+/**
+ * 矩阵局部最小元素
+ * @author xmmmmmovo
+ * @date 2020/7/30 19:36
+ * @param matrix 矩阵
+ * @return 最小元素数字
+ * @throws IllegalArgumentException 矩阵为空的时候抛出异常
+ * @since version-1.0
+ */
+fun <T : Number> matrixPartialMinElem(matrix: List<List<T>>): T {
+    if (matrix.isEmpty()) throw IllegalArgumentException("矩阵不能为空！")
+
+
+
+    return matrix[0][0]
 }
