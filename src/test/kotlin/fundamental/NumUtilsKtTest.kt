@@ -52,26 +52,26 @@ internal class NumUtilsKtTest {
                 LinkedList<Int>().apply { add(2); add(3); add(5) }
             ),
             algorithms.threeSumForce(list1, 10))
-        assertEquals(listOf(
-            LinkedList<Int>().apply { add(-1); add(2); add(-1) }
-        ), algorithms.threeSumForce(list2, 0))
+        assertEquals(
+            listOf<LinkedList<Int>>(), algorithms.threeSumForce(list2, 0)
+        )
     }
 
     @Test
     fun threeSumBinaryFast() {
         log.info { "threeSumBinaryFast testing" }
 
-        assertEquals(listOf<LinkedList<Int>>(), algorithms.threeSumForce(list1, 0))
-        assertEquals(listOf<LinkedList<Int>>(), algorithms.threeSumForce(list1, 3))
+        assertEquals(listOf<LinkedList<Int>>(), algorithms.threeSumBinaryFast(list1, 0))
+        assertEquals(listOf<LinkedList<Int>>(), algorithms.threeSumBinaryFast(list1, 3))
         assertEquals(
             listOf(
                 LinkedList<Int>().apply { add(1); add(4); add(5) },
                 LinkedList<Int>().apply { add(2); add(3); add(5) }
             ),
-            algorithms.threeSumForce(list1, 10))
-        assertEquals(listOf(
-            LinkedList<Int>().apply { add(-1); add(2); add(-1) }
-        ), algorithms.threeSumForce(list2, 0))
+            algorithms.threeSumBinaryFast(list1, 10))
+        assertEquals(
+            listOf<LinkedList<Int>>(), algorithms.threeSumBinaryFast(list2, 0)
+        )
     }
 
     @Test

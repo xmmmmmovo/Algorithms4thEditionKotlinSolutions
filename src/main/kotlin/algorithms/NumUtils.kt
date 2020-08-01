@@ -16,12 +16,17 @@ import ds.LinkedList
  */
 fun threeSumForce(list: List<Int>, num: Int): List<List<Int>> {
     val res = LinkedList<List<Int>>()
-
-    for (a in list.indices)
-        for (b in a + 1 until list.size)
-            for (c in b + 1 until list.size)
-                if (list[a] + list[b] + list[c] == num) {
-                    res.add(listOf(list[a], list[b], list[c]))
+    val sl = list.sorted().run {
+        if (containsDuplicatesInSorted(this))
+            distinct()
+        else
+            this
+    }
+    for (a in sl.indices)
+        for (b in a + 1 until sl.size)
+            for (c in b + 1 until sl.size)
+                if (sl[a] + sl[b] + sl[c] == num) {
+                    res.add(listOf(sl[a], sl[b], sl[c]))
                 }
     return res
 }
@@ -35,7 +40,7 @@ fun threeSumForce(list: List<Int>, num: Int): List<List<Int>> {
  * @throws IllegalArgumentException 数组元素小于3个时抛出异常
  * @since version-1.0
  */
-fun threeSumBinaryFast(list: List<Int>): List<List<Int>> {
+fun threeSumBinaryFast(list: List<Int>, num: Int): List<List<Int>> {
     val res = LinkedList<List<Int>>()
     val sl = list.sorted().run {
         if (containsDuplicatesInSorted(this))
@@ -45,8 +50,8 @@ fun threeSumBinaryFast(list: List<Int>): List<List<Int>> {
     }
     if (list.size < 3) throw IllegalArgumentException("数组非重复元素小于3个!")
     for (i in sl.indices) {
-        for (j in i until sl.size) {
-            val k = binarySearch(sl, -(sl[i] + sl[j]), j + 1)
+        for (j in i + 1 until sl.size) {
+            val k = binarySearch(sl, num - (sl[i] + sl[j]), j + 1)
             if (k != -1) {
                 res.add(listOf(sl[i], sl[j], sl[k]))
             }
