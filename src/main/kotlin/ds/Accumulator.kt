@@ -11,12 +11,12 @@ import kotlin.math.sqrt
  * @date 2020/7/28 16:11
  * @since version-1.0
  */
-class Accumulator constructor(
+class Accumulator {
     /**
      * 总值
      */
     private var total: Double = 0.0
-) {
+
     /**
      * 添加次数
      */
@@ -40,7 +40,7 @@ class Accumulator constructor(
      * @since version-1.0
      */
     fun <T : Number> addDataValue(value: T) {
-        times += 1
+        times++
         val dv = value.toDouble()
         total += dv
 

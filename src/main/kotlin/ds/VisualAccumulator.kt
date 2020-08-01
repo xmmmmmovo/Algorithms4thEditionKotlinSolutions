@@ -13,12 +13,30 @@ import kotlin.math.sqrt
  * @since version-1.0
  */
 class VisualAccumulator constructor(
+    /**
+     * X轴最大
+     */
     private val xMax: Int = 100,
+    /**
+     * Y轴最大值
+     */
     private val yMax: Double = 100.0
 ) {
+    /**
+     * 添加次数
+     */
     private var times: Int = 0
+    /**
+     * 总值
+     */
     private var total: Double = 0.0
+    /**
+     * 平均数
+     */
     private var mean: Double = 0.0
+    /**
+     * 方差*([times]-1)
+     */
     private var s: Double = 0.0
 
     init {
@@ -27,13 +45,20 @@ class VisualAccumulator constructor(
         StdDraw.setPenRadius(.01)
     }
 
+    /**
+     * 添加新值
+     * @author xmmmmmovo
+     * @date 2020/7/28 16:40
+     * @param value 添加的值
+     * @since version-1.0
+     */
     fun <T : Number> addDataValue(value: T) {
-        times += 1
+        times++
         val dv = value.toDouble()
         total += dv
 
-        mean += (dv - mean) / times
         s += 1.0 * (times - 1) / times * (dv - mean) * (dv - mean)
+        mean += (dv - mean) / times
 
         StdDraw.setPenColor(StdDraw.DARK_GRAY)
         StdDraw.point(times.toDouble(), value.toDouble())

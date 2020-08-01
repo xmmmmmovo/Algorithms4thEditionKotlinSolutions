@@ -22,7 +22,7 @@ jobs:
       - name: Checkout Repository master branch
         uses: actions/checkout@master
 
-      # 验证wrapper
+      # 校检wrapper
       - name: validate wrapper
         uses: gradle/wrapper-validation-action@v1
 
@@ -48,10 +48,11 @@ jobs:
       - name: Test with gradle
         run: ./gradlew test      
         
-      # 上传测试
-      - name: generate codecov report
+      # 上生成测试报告
+      - name: Generate codecov report
         run: ./gradlew jacocoTestReport
       
+      # 上传测试数据
       - name: Code Coverage
         uses: codecov/codecov-action@v1
         with:

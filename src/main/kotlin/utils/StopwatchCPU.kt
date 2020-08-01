@@ -35,4 +35,8 @@ class StopwatchCPU {
         val now: Long = threadTimer.currentThreadCpuTime
         return (now - start) / NANOSECONDS_PER_SECOND
     }
+
+    override fun toString(): String {
+        return "${elapsedTime()}秒"
+    }
 }

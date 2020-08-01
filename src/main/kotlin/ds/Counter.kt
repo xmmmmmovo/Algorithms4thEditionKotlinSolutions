@@ -24,7 +24,8 @@ class Counter constructor(
     /**
      * 结尾多少count
      * */
-    fun tally(): Int = count
+    val tally: Int
+        get() = count
 
     override fun compareTo(other: Counter): Int {
         if (this.count < other.count)
@@ -33,6 +34,12 @@ class Counter constructor(
             return 1
         return 0
     }
+
+    override fun equals(other: Any?): Boolean =
+        when (other) {
+            is Counter -> this.tally == other.tally
+            else -> false
+        }
 
     override fun toString(): String {
         return "$tag $count times"
