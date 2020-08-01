@@ -43,14 +43,14 @@ class VisualAccumulator constructor(
     private var s: Double = 0.0
 
     init {
-        try {
+        val os = System.getProperty("os.name")
+        if (os.toLowerCase().startsWith("win")) {
             StdDraw.setXscale(0.0, xMax.toDouble())
             StdDraw.setYscale(0.0, yMax)
             StdDraw.setPenRadius(.01)
-        } catch (e: Exception) {
-            println("No GUI!")
         }
     }
+
 
     /**
      * 添加新值
@@ -67,15 +67,14 @@ class VisualAccumulator constructor(
         s += 1.0 * (times - 1) / times * (dv - mean) * (dv - mean)
         mean += (dv - mean) / times
 
-        try {
+        val os = System.getProperty("os.name")
+        if (os.toLowerCase().startsWith("win")) {
             StdDraw.setPenColor(StdDraw.DARK_GRAY)
             StdDraw.point(times.toDouble(), value.toDouble())
             StdDraw.setPenColor(StdDraw.RED)
             StdDraw.point(times.toDouble(), mean())
             StdDraw.setPenColor(StdDraw.BLUE)
             StdDraw.point(times.toDouble(), stddev())
-        } catch (e: Exception) {
-            println("No GUI!")
         }
     }
 
