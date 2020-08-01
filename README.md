@@ -30,7 +30,6 @@ API文档地址：http://algs4.fivezha.cn/doc/
 
 - [二分搜索](src/main/kotlin/algorithms/BinarySearchUtils.kt)
 - [累加器](src/main/kotlin/ds/Accumulator.kt)
-- [可视化累加器](src/main/kotlin/ds/VisualAccumulator.kt)
 - [计数器](src/main/kotlin/ds/Counter.kt)
 - [平面点](src/main/kotlin/ds/Point2D.kt)
 - [日期类](src/main/kotlin/ds/Date.kt)

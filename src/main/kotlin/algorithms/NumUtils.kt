@@ -83,7 +83,7 @@ fun <T : Number> matrixPartialMinElem(matrix: List<List<T>>): Pair<Int, Int> {
         var minr = mr
         var minc = mr
 
-//        if (mr != lor && matrix[lor])
+//        if (mr != lor && matrix[lor] matrix[mr])
     }
 
     return Pair(-1, -1)
