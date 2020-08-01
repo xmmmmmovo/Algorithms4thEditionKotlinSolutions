@@ -19,9 +19,16 @@ internal class NumUtilsKtTest {
         listOf(1, 2, 3)
     )
     private val matrix2 = listOf(
-        listOf(2, 2, 3),
-        listOf(2, 3, 1),
-        listOf(1, 2, 3)
+        listOf(4, 2, 1),
+        listOf(5, 6, 7),
+        listOf(10, 9, 8)
+    )
+    private val matrix3 = listOf(
+        listOf(26, 3, 4, 10, 11),
+        listOf(5, 1, 6, 12, 13),
+        listOf(7, 8, 9, 14, 15),
+        listOf(16, 17, 18, 27, 20),
+        listOf(21, 22, 23, 24, 25)
     )
 
     companion object {
@@ -77,5 +84,9 @@ internal class NumUtilsKtTest {
     @Test
     fun matrixPartialMinElem() {
         log.info { "matrixPartialMinElem testing" }
+
+        assertEquals(Pair(2, 0), algorithms.matrixPartialMinElem(matrix))
+        assertEquals(Pair(0, 2), algorithms.matrixPartialMinElem(matrix2))
+        assertEquals(Pair(1, 1), algorithms.matrixPartialMinElem(matrix3))
     }
 }

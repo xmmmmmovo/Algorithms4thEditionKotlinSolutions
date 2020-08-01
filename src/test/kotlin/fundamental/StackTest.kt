@@ -111,6 +111,8 @@ internal class StackTest {
         assertEquals(2, sc.pop())
         assertEquals(1, sc.size)
         assertEquals(2, s.size)
+        val s2 = Stack(s)
+        assertEquals(s.size, s2.size)
     }
 
     @Test

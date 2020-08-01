@@ -3,6 +3,7 @@
  */
 package algorithms
 
+import ext.compareTo
 import kotlin.math.acos
 
 /**
@@ -61,15 +62,15 @@ fun fibonacciBinarySearch() {
  * @throws IllegalArgumentException 数组元素小于3个时抛出异常
  * @since version-1.0
  */
-fun partialMinElem(list: List<Int>): Int {
+fun partialMinElem(list: List<Number>, _lo: Int = 0, _hi: Int = list.size - 1): Int {
     if (list.size < 3) throw IllegalArgumentException("数组元素小于3个！")
-    var lo = 0
-    var hi = list.size - 1
+    var lo = _lo
+    var hi = _hi
     // 两边需要单独测试
     if (list[lo] < list[lo + 1]) return lo
     if (list[hi] < list[hi - 1]) return hi
 
-    while (lo <= hi) {
+    while (lo in _lo..hi && hi <= _hi) {
         // 取mid
         val mid = lo + (hi - lo) / 2
         /**
@@ -81,6 +82,12 @@ fun partialMinElem(list: List<Int>): Int {
          * 总之就是往小的地方走
          */
         when {
+            mid == _lo ->
+                if (list[mid] < list[mid + 1]) return mid
+                else lo = mid + 1
+            mid == _hi ->
+                if (list[mid] < list[mid - 1]) return mid
+                else hi = mid - 1
             list[mid - 1] > list[mid] && list[mid] < list[mid + 1] -> {
                 return mid
             }
@@ -97,6 +104,7 @@ fun partialMinElem(list: List<Int>): Int {
         }
     }
 
+    // 当所有元素都是一样的时候才没有最小值，返回-1
     return -1
 }
 

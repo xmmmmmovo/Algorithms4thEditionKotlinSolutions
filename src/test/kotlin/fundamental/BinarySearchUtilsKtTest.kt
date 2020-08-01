@@ -15,6 +15,7 @@ internal class BinarySearchUtilsKtTest {
     val l1 = listOf(1, 2, 3, 4, 5, 6, 7)
     val l2 = listOf(10, 2, 5, 4, 7, 6, 1, 3, 10)
     val l3 = listOf(4, 3, 2, 1, 4)
+    val samelist = listOf(1, 1, 1, 1, 1)
 
     companion object {
         private val log = LoggerFactory.getLogger(BinarySearchUtilsKtTest::class.java)
@@ -53,5 +54,6 @@ internal class BinarySearchUtilsKtTest {
         assertEquals(0, algorithms.partialMinElem(l1))
         assertEquals(1, algorithms.partialMinElem(l2))
         assertEquals(3, algorithms.partialMinElem(l3))
+        assertEquals(-1, algorithms.partialMinElem(samelist))
     }
 }

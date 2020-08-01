@@ -4,6 +4,7 @@
 package algorithms
 
 import ds.LinkedList
+import ext.compareTo
 
 /**
  * 蛮力法求三数之和
@@ -74,16 +75,33 @@ fun <T : Number> matrixPartialMinElem(matrix: List<List<T>>): Pair<Int, Int> {
     if (matrix.isEmpty()) throw IllegalArgumentException("矩阵不能为空！")
     var lor = 0
     var hir = matrix.size - 1
-    var loc = 0
-    var hic = matrix.size - 1
 
-    while (lor <= hir && loc <= hic) {
+    while (lor <= hir) {
         val mr = lor + (hir - lor) / 2
-        val mc = loc + (hic - loc) / 2
-        var minr = mr
-        var minc = mr
+        val kc = partialMinElem(matrix[mr])
 
-//        if (mr != lor && matrix[lor] matrix[mr])
+        when {
+            kc == -1 -> {
+                lor++
+            }
+            mr == 0 ->
+                if (matrix[mr + 1][kc] > matrix[mr][kc])
+                    return Pair(mr, kc)
+                else
+                    lor = mr + 1
+            mr == matrix.size - 1 ->
+                if (matrix[mr][kc] < matrix[mr - 1][kc])
+                    return Pair(mr, kc)
+                else
+                    hir = mr - 1
+            matrix[mr - 1][kc] > matrix[mr][kc] && matrix[mr][kc] < matrix[mr + 1][kc] ->
+                return Pair(mr, kc)
+            matrix[mr - 1][kc] < matrix[mr][kc] && matrix[mr][kc] < matrix[mr + 1][kc] ->
+                hir = mr - 1
+            matrix[mr - 1][kc] < matrix[mr][kc] && matrix[mr][kc] > matrix[mr + 1][kc] ->
+                if (matrix[mr - 1][kc] >= matrix[mr + 1][kc]) lor = mr + 1 else hir = mr - 1
+            else -> lor = mr + 1
+        }
     }
 
     return Pair(-1, -1)
