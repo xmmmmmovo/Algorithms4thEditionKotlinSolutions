@@ -18,37 +18,21 @@ class Point2DMinDistanceCalculator constructor(
     /**
      * 点个数
      */
-    private val N: Int = 0
-) {
-    /**
-     * 最近点对
-     */
-    private var minPointPair = Pair(Point2D(0.0, 0.0), Point2D(0.0, 0.0))
-
+    private val N: Int = 0,
     /**
      * 随即最近点s
      */
-    private val list = Array(N) {
+    private val list: Array<Point2D> = Array(N) {
         Point2D(
             StdRandom.uniform(0.0, N.toDouble()),
             StdRandom.uniform(0.0, N.toDouble())
         )
     }
-
+) {
     /**
-     * 构造函数 初始化画布
-     * @author xmmmmmovo
-     * @date 2020/7/30 9:05
-     * @since version-1.0
+     * 最近点对
      */
-    init {
-        StdDraw.setXscale(0.0, N.toDouble())
-        StdDraw.setYscale(0.0, list.maxBy { it.y }!!.y + 0.3)
-        StdDraw.setPenRadius(.005)
-        StdDraw.setPenRadius(.01)
-        StdDraw.setPenColor(StdDraw.RED)
-    }
-
+    private var _minPointPair = Pair(Point2D(0.0, 0.0), Point2D(0.0, 0.0))
 
     /**
      * 计算距离
@@ -61,31 +45,6 @@ class Point2DMinDistanceCalculator constructor(
      */
     private fun getDistance(lp: Point2D, rp: Point2D): Double {
         return sqrt(((rp.x - lp.x) * (rp.x - lp.x)) + ((rp.y - lp.y) * (rp.y - lp.y)))
-    }
-
-
-    /**
-     * 最近点对
-     * @author xmmmmmovo
-     * @date 2020/7/30 9:07
-     * @return 返回最近点对
-     * @since version-1.0
-     */
-    fun getMinPointPair(): Pair<Point2D, Point2D> {
-        return minPointPair
-    }
-
-
-    /**
-     * 显示最近点
-     * @author xmmmmmovo
-     * @date 2020/7/30 9:07
-     * @since version-1.0
-     */
-    fun showPoints() {
-        list.forEach {
-            StdDraw.point(it.x, it.y)
-        }
     }
 
     /**
@@ -106,30 +65,29 @@ class Point2DMinDistanceCalculator constructor(
             for (rp in list) {
                 if (lp != rp && getDistance(lp, rp) < minDistance) {
                     minDistance = getDistance(lp, rp)
-                    minPointPair = Pair(lp, rp)
+                    _minPointPair = Pair(lp, rp)
                 }
             }
         }
-
-        StdDraw.line(
-            minPointPair.first.x, minPointPair.first.y,
-            minPointPair.second.x, minPointPair.second.y
-        )
 
         return minDistance
     }
 
     private fun divide(l: Int, r: Int): Double {
-        if (r - l == 1) {
-            return getDistance(list[r], list[l])
-        } else if (r - l == 2) {
-            return minOf(
-                getDistance(list[l], list[l + 1]),
-                getDistance(list[l], list[l + 2]),
-                getDistance(list[l + 1], list[l + 2])
-            )
-        } else {
+        when {
+            r - l == 1 -> {
+                return getDistance(list[r], list[l])
+            }
+            r - l == 2 -> {
+                return minOf(
+                    getDistance(list[l], list[l + 1]),
+                    getDistance(list[l], list[l + 2]),
+                    getDistance(list[l + 1], list[l + 2])
+                )
+            }
+            else -> {
 
+            }
         }
         return 0.0
     }

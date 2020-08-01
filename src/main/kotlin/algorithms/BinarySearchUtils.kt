@@ -58,6 +58,8 @@ fun fibonacciBinarySearch() {
  * @author xmmmmmovo
  * @date 2020/7/30 19:36
  * @param list 数字列表
+ * @param _lo 左边界 默认为0
+ * @param _hi 右边界 默认为list.size - 1
  * @return 最小元素数字
  * @throws IllegalArgumentException 数组元素小于3个时抛出异常
  * @since version-1.0
