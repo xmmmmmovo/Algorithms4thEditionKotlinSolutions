@@ -86,7 +86,6 @@ API文档地址：http://algs4.fivezha.cn/doc/
 ### 一些工具类
 
 - [文件工具类](src/main/kotlin/utils/FileUtils.kt)
-- [调试工具类](src/main/kotlin/utils/LoggerUtils.kt)
 - [范围工具类](src/main/kotlin/utils/RangeUtils.kt)
 - [计时类](src/main/kotlin/utils/StopwatchCPU.kt)
 
