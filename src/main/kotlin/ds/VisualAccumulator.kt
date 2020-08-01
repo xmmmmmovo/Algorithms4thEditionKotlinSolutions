@@ -26,23 +26,30 @@ class VisualAccumulator constructor(
      * 添加次数
      */
     private var times: Int = 0
+
     /**
      * 总值
      */
     private var total: Double = 0.0
+
     /**
      * 平均数
      */
     private var mean: Double = 0.0
+
     /**
      * 方差*([times]-1)
      */
     private var s: Double = 0.0
 
     init {
-        StdDraw.setXscale(0.0, xMax.toDouble())
-        StdDraw.setYscale(0.0, yMax)
-        StdDraw.setPenRadius(.01)
+        try {
+            StdDraw.setXscale(0.0, xMax.toDouble())
+            StdDraw.setYscale(0.0, yMax)
+            StdDraw.setPenRadius(.01)
+        } catch (e: Exception) {
+            println("No GUI!")
+        }
     }
 
     /**
@@ -60,12 +67,16 @@ class VisualAccumulator constructor(
         s += 1.0 * (times - 1) / times * (dv - mean) * (dv - mean)
         mean += (dv - mean) / times
 
-        StdDraw.setPenColor(StdDraw.DARK_GRAY)
-        StdDraw.point(times.toDouble(), value.toDouble())
-        StdDraw.setPenColor(StdDraw.RED)
-        StdDraw.point(times.toDouble(), mean())
-        StdDraw.setPenColor(StdDraw.BLUE)
-        StdDraw.point(times.toDouble(), stddev())
+        try {
+            StdDraw.setPenColor(StdDraw.DARK_GRAY)
+            StdDraw.point(times.toDouble(), value.toDouble())
+            StdDraw.setPenColor(StdDraw.RED)
+            StdDraw.point(times.toDouble(), mean())
+            StdDraw.setPenColor(StdDraw.BLUE)
+            StdDraw.point(times.toDouble(), stddev())
+        } catch (e: Exception) {
+            println("No GUI!")
+        }
     }
 
     fun mean(): Double = mean
