@@ -8,7 +8,7 @@ import ext.compareTo
 import kotlin.math.acos
 
 /**
- * 在一个列表中二分查找到某个值
+ * 在一个列表中二分查找到某个值(升序)
  * @author xmmmmmovo
  * @date 2020/7/28 11:46
  * @param list 列表
@@ -54,8 +54,8 @@ fun <T : Comparable<T>> binarySearch(
  * @throws IllegalArgumentException 数组元素小于3个时抛出异常
  * @since version-1.0
  */
-fun partialMinElem(
-    list: List<Number>, _lo: Int = 0, _hi: Int = list.size - 1
+fun <T : Comparable<T>> partialMinElem(
+    list: List<T>, _lo: Int = 0, _hi: Int = list.size - 1
 ): Int {
     var lo = _lo
     var hi = _hi
@@ -109,8 +109,8 @@ fun partialMinElem(
  * @throws IllegalArgumentException 数组元素小于3个时抛出异常
  * @since version-1.0
  */
-fun partialMaxElem(
-    list: List<Number>, _lo: Int = 0, _hi: Int = list.size - 1
+fun <T : Comparable<T>> partialMaxElem(
+    list: List<T>, _lo: Int = 0, _hi: Int = list.size - 1
 ): Int {
     var lo = _lo
     var hi = _hi
@@ -149,35 +149,29 @@ fun partialMaxElem(
  * 双调查找
  * @author xmmmmmovo
  * @date 2020/7/31 15:42
- * @param
- * @return
- * @throws
+ * @param list 数字列表
+ * @param _lo 左边界 默认为0
+ * @param _hi 右边界 默认为list.size - 1
+ * @return 查找元素下标
+ * @throws IllegalArgumentException 查不到最大元素时抛出常
  * @since version-1.0
  */
 fun <T : Comparable<T>> doubleToneSearch(
     list: List<T>, key: T, _lo: Int = 0, _hi: Int = list.size - 1
 ): Int {
-    var lo = _lo
-    var hi = _hi
+    val mi = partialMaxElem(list)
+    if (mi == -1)
+        throw IllegalArgumentException("请输入正确的双调列表！")
+    if (list[mi] == key)
+        return mi
+    val l = binarySearch(list, key, _lo, mi - 1)
+    val r = binarySearch(list.subList(mi + 1, _hi + 1).reversed(), key)
 
-    while (lo <= hi) {
-        val mid = lo + (lo + hi) / 2
-        when {
-            list[mid] == key -> return mid
-            // 往大的地方走
-            list[mid] < key -> {
-                when {
-//                    mid - 1 == _lo ->
-                }
-            }
-            else -> {
-
-            }
-
-        }
+    return when {
+        r == -1 -> l
+        l == -1 -> _hi - r
+        else -> l
     }
-
-    return -1
 }
 
 /**

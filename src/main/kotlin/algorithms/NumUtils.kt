@@ -71,7 +71,7 @@ fun threeSumBinaryFast(list: List<Int>, num: Int): List<List<Int>> {
  * @throws IllegalArgumentException 矩阵为空的时候抛出异常
  * @since version-1.0
  */
-fun <T : Number> matrixPartialMinElem(matrix: List<List<T>>): Pair<Int, Int> {
+fun <T : Comparable<T>> matrixPartialMinElem(matrix: List<List<T>>): Pair<Int, Int> {
     if (matrix.isEmpty()) throw IllegalArgumentException("矩阵不能为空！")
     var lor = 0
     var hir = matrix.size - 1

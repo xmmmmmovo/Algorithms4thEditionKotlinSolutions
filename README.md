@@ -54,7 +54,8 @@ API文档地址：http://algs4.fivezha.cn/doc/
 - [最遥远的一对](src/main/kotlin/algorithms/ListUtils.kt#L60)
 - [数组的局部最小元素](src/main/kotlin/algorithms/BinarySearchUtils.kt#L44)
 - [矩阵的局部最小元素](src/main/kotlin/algorithms/NumUtils.kt#L64)
-- [双调查栈]
+- [双调查栈](src/main/kotlin/algorithms/BinarySearchUtils.kt#L147)
+  - [数组的局部最大值](src/main/kotlin/algorithms/BinarySearchUtils.kt#L100)
 - [仅用加减实现的二分查找]
 - [扔鸡蛋]
 - [扔两个鸡蛋]

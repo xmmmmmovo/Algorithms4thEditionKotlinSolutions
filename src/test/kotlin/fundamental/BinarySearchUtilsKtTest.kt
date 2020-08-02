@@ -67,6 +67,10 @@ internal class BinarySearchUtilsKtTest {
     @Test
     fun doubleToneSearch() {
         log.info { "doubleToneSearch testing" }
-
+        assertEquals(-1, algorithms.doubleToneSearch(l4, 1111))
+        assertEquals(0, algorithms.doubleToneSearch(l4, 1))
+        assertEquals(4, algorithms.doubleToneSearch(l4, 4))
+        assertEquals(1, algorithms.doubleToneSearch(l4, 6))
+        assertEquals(2, algorithms.doubleToneSearch(l4, 10))
     }
 }
