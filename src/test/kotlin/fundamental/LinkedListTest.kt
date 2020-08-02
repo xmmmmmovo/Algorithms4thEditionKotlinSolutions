@@ -182,7 +182,7 @@ internal class LinkedListTest {
         log.info { "getFirst testing" }
         ll.addFirst(1)
         ll.addFirst(2)
-        assertEquals(1, ll.getFirst())
+        assertEquals(2, ll.getFirst())
     }
 
     @Test
@@ -190,7 +190,7 @@ internal class LinkedListTest {
         log.info { "getLast testing" }
         ll.addFirst(1)
         ll.addFirst(2)
-        assertEquals(2, ll.getLast())
+        assertEquals(1, ll.getLast())
     }
 
     @Test
@@ -209,8 +209,8 @@ internal class LinkedListTest {
         log.info { "addFirst testing" }
         ll.addFirst(1)
         ll.addFirst(2)
-        assertEquals(2, ll.removeLast())
         assertEquals(1, ll.removeLast())
+        assertEquals(2, ll.removeLast())
     }
 
     @Test
@@ -219,7 +219,7 @@ internal class LinkedListTest {
         ll.addLast(1)
         ll.addLast(2)
         ll.addLast(3)
-        assertEquals(1, ll.removeFirst())
+        assertEquals(3, ll.removeFirst())
         assertEquals(2, ll.removeFirst())
     }
 
@@ -228,8 +228,8 @@ internal class LinkedListTest {
         log.info { "removeFirst testing" }
         ll.addFirst(1)
         ll.addFirst(2)
-        assertEquals(1, ll.removeFirst())
         assertEquals(2, ll.removeFirst())
+        assertEquals(1, ll.removeFirst())
     }
 
     @Test
