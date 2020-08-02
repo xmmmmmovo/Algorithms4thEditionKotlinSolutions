@@ -50,6 +50,7 @@ internal class LinkedListTest {
     fun addAll() {
         log.info { "addAll testing" }
         ll.addAll(listOf(1, 1, 4, 5, 1, 4))
+        ll.addAll(emptyList())
         assertEquals(1, ll.getFirst())
         assertEquals(4, ll.getLast())
         assertEquals("[1, 1, 4, 5, 1, 4]", ll.toString())
@@ -75,87 +76,119 @@ internal class LinkedListTest {
         assertEquals("[1, 1, 4, 1, 4]", ll.toString())
         assertEquals(5, ll.size)
         ll.remove(1)
+        assertEquals(false, ll.remove(111))
         assertEquals("[1, 4, 1, 4]", ll.toString())
         assertEquals(4, ll.size)
     }
 
     @Test
     fun removeAll() {
-        log.info { "add testing" }
+        log.info { "removeAll testing" }
+        ll.addAll(listOf(1, 2, 3, 4, 5, 6))
 
+        assertEquals(false, ll.removeAll(listOf(1, 2, 10)))
+        assertEquals(true, ll.removeAll(listOf(1, 2, 3)))
+        assertEquals(3, ll.size)
     }
 
     @Test
     fun removeAt() {
-        log.info { "add testing" }
-
+        log.info { "removeAt testing" }
+        ll.addAll(listOf(1, 2, 3, 4, 5, 6))
+        assertEquals(5, ll.removeAt(4))
     }
 
     @Test
     fun retainAll() {
-        log.info { "add testing" }
-
+        log.info { "retainAll testing" }
+        ll.addAll(listOf(1, 2, 3, 4, 5, 6))
+        ll.retainAll(listOf(1, 2, 3))
+        assertEquals(3, ll.size)
+        assertEquals("[4, 5, 6]", ll.toString())
     }
 
     @Test
     fun set() {
-        log.info { "add testing" }
-
+        log.info { "set testing" }
+        ll.addAll(listOf(1, 2, 3, 4, 5, 6))
+        assertEquals(3, ll.set(2, 10))
     }
 
     @Test
     fun contains() {
-        log.info { "add testing" }
-
+        log.info { "contains testing" }
+        ll.addAll(listOf(1, 2, 3, 4, 5, 6))
+        assertEquals(true, ll.contains(3))
+        assertEquals(false, ll.contains(111))
     }
 
     @Test
     fun containsAll() {
-        log.info { "add testing" }
-
+        log.info { "containsAll testing" }
+        ll.addAll(listOf(1, 2, 3, 4, 5, 6))
+        assertEquals(false, ll.containsAll(emptyList()))
+        assertEquals(true, ll.containsAll(listOf(1, 2, 3)))
+        assertEquals(false, ll.containsAll(listOf(1, 2, 111)))
     }
 
     @Test
     fun indexOf() {
-        log.info { "add testing" }
-
+        log.info { "indexOf testing" }
+        ll.addAll(listOf(1, 2, 3, 4, 5, 6))
+        assertEquals(-1, ll.indexOf(1111))
+        assertEquals(2, ll.indexOf(3))
     }
 
     @Test
     fun get() {
-        log.info { "add testing" }
-
+        log.info { "get testing" }
+        ll.addAll(listOf(1, 2, 3, 4, 5, 6))
+        assertEquals(1, ll.get(0))
+        assertEquals(3, ll.get(2))
     }
 
     @Test
     fun isEmpty() {
-        log.info { "add testing" }
-
+        log.info { "isEmpty testing" }
+        assertEquals(true, ll.isEmpty())
+        ll.add(111)
+        assertEquals(false, ll.isEmpty())
     }
 
     @Test
     fun lastIndexOf() {
-        log.info { "add testing" }
-
+        log.info { "lastIndexOf testing" }
+        ll.addAll(listOf(1, 1, 3, 4, 1, 6))
+        assertEquals(-1, ll.lastIndexOf(111))
+        assertEquals(4, ll.lastIndexOf(1))
     }
 
     @Test
     operator fun iterator() {
-        log.info { "add testing" }
+        log.info { "iterator testing" }
+        ll.addAll(listOf(1, 2, 3, 4, 5, 6))
 
+        val it = ll.iterator()
+        if (it.hasNext()) {
+            assertEquals(1, it.next())
+        }
+        assertEquals(2, it.next())
     }
 
     @Test
     fun listIterator() {
-        log.info { "add testing" }
+        log.info { "listIterator testing" }
+        ll.addAll(listOf(1, 2, 3, 4, 5, 6))
+        val it = ll.listIterator()
+        val itt = ll.listIterator(2)
 
-    }
-
-    @Test
-    fun testListIterator() {
-        log.info { "add testing" }
-
-
+        itt.next()
+        itt.set(100)
+        assertEquals(100, ll.get(3))
+        itt.remove()
+        assertEquals(5, ll.get(3))
+        itt.add(11)
+        assertEquals(11, ll.get(2))
     }
 
     @Test

@@ -12,21 +12,44 @@ import kotlin.NoSuchElementException
  * @since version-1.0
  */
 class LinkedList<T> : MutableList<T> {
+    /**
+     * 首节点
+     */
     private var first: Node<T>? = null
-    private var last: Node<T>? = null
-    private var _size: Int = 0
 
     /**
-     * 在尾部插入[element]
-     * */
+     * 尾节点
+     */
+    private var last: Node<T>? = null
+
+    /**
+     * 长度
+     */
+    private var _size: Int = 0
+
+
+    /**
+     * 在尾部添加元素
+     * @author xmmmmmovo
+     * @date 2020/8/2 11:30
+     * @param element 元素值
+     * @return 是否添加成功
+     * @since version-1.0
+     */
     override fun add(element: T): Boolean {
         linkedLast(element)
         return true
     }
 
     /**
-     * 让[element]成为[index]位置的节点
-     * */
+     * 在[index]位置添加元素
+     * @author xmmmmmovo
+     * @date 2020/8/2 11:31
+     * @param index 位置
+     * @param element 元素
+     * @throws IndexOutOfBoundsException 超出边界
+     * @since version-1.0
+     */
     override fun add(index: Int, element: T) {
         checkPositionIndex(index, size)
         if (index == _size) {
@@ -36,9 +59,17 @@ class LinkedList<T> : MutableList<T> {
         }
     }
 
+  
     /**
-     * 让[index]位置成为[elements]的第一个节点位置
-     * */
+     * 在[index]位置插入一个容器
+     * @author xmmmmmovo
+     * @date 2020/8/2 11:32
+     * @param index 位置
+     * @param elements 容器
+     * @return 是否成功插入
+     * @throws IndexOutOfBoundsException 越界
+     * @since version-1.0
+     */
     override fun addAll(index: Int, elements: Collection<T>): Boolean {
         checkPositionIndex(index, size)
 
@@ -83,14 +114,23 @@ class LinkedList<T> : MutableList<T> {
     }
 
     /**
-     * 在尾部添加[elements]
-     * */
+     * 在尾部位置插入一个容器
+     * @author xmmmmmovo
+     * @date 2020/8/2 11:32
+     * @param elements 容器
+     * @return 是否成功插入
+     * @throws IndexOutOfBoundsException 越界
+     * @since version-1.0
+     */
     override fun addAll(elements: Collection<T>): Boolean =
         addAll(_size, elements)
 
     /**
-     * 清除所有节点
-     * */
+     * 清除所有元素
+     * @author xmmmmmovo
+     * @date 2020/8/2 11:32
+     * @since version-1.0
+     */
     override fun clear() {
         var n = first
         while (n != null) {
@@ -107,8 +147,13 @@ class LinkedList<T> : MutableList<T> {
     }
 
     /**
-     * 删除为[element]的节点
-     * */
+     * 删除元素为[element]的元素
+     * @author xmmmmmovo
+     * @date 2020/8/2 11:32
+     * @param element 元素
+     * @return 是否成功删除
+     * @since version-1.0
+     */
     override fun remove(element: T): Boolean {
         var node = first
         while (node != null) {
@@ -123,8 +168,13 @@ class LinkedList<T> : MutableList<T> {
     }
 
     /**
-     * 删除
-     * */
+     * 删除元素为[elements]容器内的所有元素
+     * @author xmmmmmovo
+     * @date 2020/8/2 11:32
+     * @param elements 容器
+     * @return 是否成功删除
+     * @since version-1.0
+     */
     override fun removeAll(elements: Collection<T>): Boolean =
         if (containsAll(elements)) elements.all {
             remove(it)
@@ -132,8 +182,14 @@ class LinkedList<T> : MutableList<T> {
 
 
     /**
-     * 删除[index]位置的节点
-     * */
+     * 删除元素为[index]位置上的节点
+     * @author xmmmmmovo
+     * @date 2020/8/2 11:32
+     * @param index 位置
+     * @return 是否成功删除
+     * @throws IndexOutOfBoundsException 越界
+     * @since version-1.0
+     */
     override fun removeAt(index: Int): T {
         checkElementIndex(index, size)
         val node = getNode(index)
@@ -142,6 +198,14 @@ class LinkedList<T> : MutableList<T> {
         return item ?: throw NoSuchElementException()
     }
 
+    /**
+     * 仅留下[elements]里的元素
+     * @author xmmmmmovo
+     * @date 2020/8/2 11:32
+     * @param elements 元素
+     * @return 是否成功删除
+     * @since version-1.0
+     */
     override fun retainAll(elements: Collection<T>): Boolean =
         if (containsAll(elements)) {
             clear()
@@ -570,10 +634,13 @@ class LinkedList<T> : MutableList<T> {
             return true
         }
     }
-
+  
     /**
-     * 迭代器类
-     * */
+     * 普通迭代器类
+     * @author xmmmmmovo
+     * @date 2020/8/2 11:41
+     * @since version-1.0
+     */
     private open inner class LinkedIterator(
         protected var index: Int = 0
     ) : MutableIterator<T> {
@@ -612,9 +679,13 @@ class LinkedList<T> : MutableList<T> {
         }
     }
 
+
     /**
      * 列表迭代器类
-     * */
+     * @author xmmmmmovo
+     * @date 2020/8/2 11:41
+     * @since version-1.0
+     */
     private open inner class LinkedListIterator(
         index: Int = 0
     ) : LinkedIterator(
@@ -663,8 +734,13 @@ class LinkedList<T> : MutableList<T> {
         }
 
         /**
-         * 设置节点
-         * */
+         * 设置节点元素
+         * @author xmmmmmovo
+         * @date 2020/8/2 11:42
+         * @param element 元素
+         * @throws IllegalStateException 不存在的节点
+         * @since version-1.0
+         */
         override fun set(element: T) {
             if (lastReturned == null)
                 throw IllegalStateException()
