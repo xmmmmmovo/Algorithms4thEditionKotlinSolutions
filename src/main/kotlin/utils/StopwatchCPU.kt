@@ -7,7 +7,12 @@ package utils
 import java.lang.management.ManagementFactory
 import java.lang.management.ThreadMXBean
 
-
+/**
+ * CPU计时类
+ * @author xmmmmmovo
+ * @date 2020/8/2 16:06
+ * @since version-1.0
+ */
 class StopwatchCPU {
     /**
      * 纳秒转换秒进制

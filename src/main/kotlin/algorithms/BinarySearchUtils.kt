@@ -54,13 +54,11 @@ fun <T : Comparable<T>> binarySearch(
  * @throws IllegalArgumentException 数组元素小于3个时抛出异常
  * @since version-1.0
  */
-fun partialMinElem(list: List<Number>, _lo: Int = 0, _hi: Int = list.size - 1): Int {
-    if (list.size < 3) throw IllegalArgumentException("数组元素小于3个！")
+fun partialMinElem(
+    list: List<Number>, _lo: Int = 0, _hi: Int = list.size - 1
+): Int {
     var lo = _lo
     var hi = _hi
-    // 两边需要单独测试
-    if (list[lo] < list[lo + 1]) return lo
-    if (list[hi] < list[hi - 1]) return hi
 
     while (lo <= hi) {
         // 取mid
@@ -109,7 +107,30 @@ fun partialMinElem(list: List<Number>, _lo: Int = 0, _hi: Int = list.size - 1): 
  * @throws
  * @since version-1.0
  */
-fun doubleToneSearch() {
+fun <T : Comparable<T>> doubleToneSearch(
+    list: List<T>, key: T, _lo: Int = 0, _hi: Int = list.size - 1
+): Int {
+    var lo = _lo
+    var hi = _hi
+
+    while (lo <= hi) {
+        val mid = lo + (lo + hi) / 2
+        when {
+            list[mid] == key -> return mid
+            // 往大的地方走
+            list[mid] < key -> {
+                when{
+//                    mid - 1 == _lo ->
+                }
+            }
+            else -> {
+
+            }
+
+        }
+    }
+
+    return -1
 }
 
 /**

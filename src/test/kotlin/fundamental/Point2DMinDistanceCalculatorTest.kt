@@ -14,8 +14,8 @@ import org.junit.jupiter.api.BeforeAll
 import org.junit.platform.commons.logging.LoggerFactory
 
 internal class Point2DMinDistanceCalculatorTest {
-    val list = Array<Point2D>(5) { Point2D(it.toDouble(), it.toDouble()) }
-    val pc = Point2DMinDistanceCalculator(5, list)
+    private val list = Array<Point2D>(5) { Point2D(it.toDouble(), it.toDouble()) }
+    private val pc = Point2DMinDistanceCalculator(5, list)
 
     companion object {
         private val log = LoggerFactory.getLogger(Point2DMinDistanceCalculatorTest::class.java)
