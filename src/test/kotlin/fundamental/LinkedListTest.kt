@@ -219,7 +219,7 @@ internal class LinkedListTest {
         ll.addLast(1)
         ll.addLast(2)
         ll.addLast(3)
-        assertEquals(3, ll.removeFirst())
+        assertEquals(1, ll.removeFirst())
         assertEquals(2, ll.removeFirst())
     }
 
