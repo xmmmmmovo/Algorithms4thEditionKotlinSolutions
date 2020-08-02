@@ -252,11 +252,11 @@ class LinkedList<T> : MutableList<T> {
         checkRangeIndexes(fromIndex, toIndex, size)
         val res = LinkedList<T>()
         var i = fromIndex
-        var n = getNode(fromIndex)
+        var n: Node<T>? = getNode(fromIndex)
         while (i < toIndex) {
-            res.add(n.item!!)
+            res.add(n!!.item!!)
             i++
-            n = n.next!!
+            n = n.next
         }
         return res
     }
