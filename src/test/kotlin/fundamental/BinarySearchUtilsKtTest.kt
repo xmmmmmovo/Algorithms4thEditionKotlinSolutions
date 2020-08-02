@@ -16,6 +16,7 @@ internal class BinarySearchUtilsKtTest {
     private val l1 = listOf(1, 2, 3, 4, 5, 6, 7)
     private val l2 = listOf(10, 2, 5, 4, 7, 6, 1, 3, 10)
     private val l3 = listOf(4, 3, 2, 1, 4)
+    private val l4 = listOf(1, 6, 10, 7, 4)
 
     private val intestlist = readIntFile("./data/tinyT.txt")
     private val wtestlist = readIntFile("./data/tinyW.txt").sorted()
@@ -52,6 +53,15 @@ internal class BinarySearchUtilsKtTest {
         assertEquals(0, algorithms.partialMinElem(l1))
         assertEquals(1, algorithms.partialMinElem(l2))
         assertEquals(3, algorithms.partialMinElem(l3))
+        assertEquals(0, algorithms.partialMinElem(l4))
+    }
+
+    @Test
+    fun partialMaxElem(){
+        log.info { "partialMaxElem testing" }
+
+        assertEquals(6, algorithms.partialMaxElem(l1))
+        assertEquals(2, algorithms.partialMaxElem(l4))
     }
 
     @Test

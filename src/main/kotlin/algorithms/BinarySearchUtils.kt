@@ -72,8 +72,12 @@ fun partialMinElem(
          * 总之就是往小的地方走
          */
         when {
-            mid == _lo && list[mid] < list[mid + 1] -> return mid
-            mid == _hi && list[mid] < list[mid - 1] -> return mid
+            mid == _lo ->
+                if (list[mid] < list[mid + 1]) return mid
+                else lo = mid + 1
+            mid == _hi ->
+                if (list[mid] < list[mid - 1]) return mid
+                else hi = mid - 1
             list[mid - 1] > list[mid] && list[mid] < list[mid + 1] -> {
                 return mid
             }
@@ -119,16 +123,16 @@ fun partialMaxElem(
                 if (list[mid] > list[mid + 1]) return mid
                 else lo = mid + 1
             mid == _hi ->
-                if (list[mid] < list[mid - 1]) return mid
+                if (list[mid] > list[mid - 1]) return mid
                 else hi = mid - 1
-            list[mid - 1] > list[mid] && list[mid] < list[mid + 1] -> {
+            list[mid - 1] < list[mid] && list[mid] > list[mid + 1] -> {
                 return mid
             }
-            list[mid - 1] < list[mid] && list[mid] < list[mid + 1] -> {
+            list[mid - 1] > list[mid] && list[mid] > list[mid + 1] -> {
                 hi = mid - 1
             }
-            list[mid - 1] < list[mid] && list[mid] > list[mid + 1] -> {
-                if (list[mid - 1] >= list[mid + 1]) lo = mid + 1
+            list[mid - 1] > list[mid] && list[mid] < list[mid + 1] -> {
+                if (list[mid - 1] <= list[mid + 1]) lo = mid + 1
                 else hi = mid - 1
             }
             else -> {

@@ -1,6 +1,6 @@
 # 算法(第四版)个人题解
 
-![kotlin](https://img.shields.io/badge/language-kotlin-orange.svg) ![apache](https://img.shields.io/badge/license-Apache2.0-brightgreen.svg) [![codebeat badge](https://codebeat.co/badges/281d83b4-bace-4a2c-b0d3-f71d13d34970)](https://codebeat.co/projects/github-com-xmmmmmovo-algorithms4theditionkotlinsolutions-master) [![test](https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/workflows/Test%20Workflow/badge.svg)](https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/actions?query=workflow%3A%22Test+Workflow%22) [![codecov](https://codecov.io/gh/xmmmmmovo/Algorithms4thEditionKotlinSolutions/branch/master/graph/badge.svg?token=MJ0M8W38F7)](https://codecov.io/gh/xmmmmmovo/Algorithms4thEditionKotlinSolutions)
+![kotlin](https://img.shields.io/badge/language-kotlin-orange.svg) ![apache](https://img.shields.io/badge/license-Apache2.0-brightgreen.svg) [![test](https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/workflows/Test%20Workflow/badge.svg)](https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/actions?query=workflow%3A%22Test+Workflow%22) [![codecov](https://codecov.io/gh/xmmmmmovo/Algorithms4thEditionKotlinSolutions/branch/master/graph/badge.svg?token=MJ0M8W38F7)](https://codecov.io/gh/xmmmmmovo/Algorithms4thEditionKotlinSolutions)
 
 算法(第四版)个人实现/部分课后习题/部分提高题
 
