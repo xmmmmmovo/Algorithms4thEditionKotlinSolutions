@@ -1,6 +1,11 @@
 $dokka.format:html
 $dokka.linkExtension:html
-
+$dokka.location:ext$compareTo(kotlin.Number, kotlin.Number)ext/kotlin.-number/compare-to.html
+$dokka.location:ext$div(kotlin.Number, kotlin.Number)ext/kotlin.-number/div.html
+$dokka.location:ext$minus(kotlin.Number, kotlin.Number)ext/kotlin.-number/minus.html
+$dokka.location:ext$plus(kotlin.Number, kotlin.Number)ext/kotlin.-number/plus.html
+$dokka.location:ext$times(kotlin.Number, kotlin.Number)ext/kotlin.-number/times.html
 algorithms
 ds
+ext
 utils

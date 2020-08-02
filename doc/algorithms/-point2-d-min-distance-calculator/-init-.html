@@ -8,8 +8,13 @@
 <a href="../../index.html">doc</a>&nbsp;/&nbsp;<a href="../index.html">algorithms</a>&nbsp;/&nbsp;<a href="index.html">Point2DMinDistanceCalculator</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
 <br/>
 <h1>&lt;init&gt;</h1>
-(JVM) <a name="algorithms.Point2DMinDistanceCalculator$&lt;init&gt;(kotlin.Int)"></a>
-<code><span class="identifier">Point2DMinDistanceCalculator</span><span class="symbol">(</span><span class="identifier" id="algorithms.Point2DMinDistanceCalculator$<init>(kotlin.Int)/N">N</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">)</span></code>
+(JVM) <a name="algorithms.Point2DMinDistanceCalculator$&lt;init&gt;(kotlin.Int, kotlin.Array((ds.Point2D)))"></a>
+<code><span class="identifier">Point2DMinDistanceCalculator</span><span class="symbol">(</span><span class="identifier" id="algorithms.Point2DMinDistanceCalculator$<init>(kotlin.Int, kotlin.Array((ds.Point2D)))/N">N</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">, </span><span class="identifier" id="algorithms.Point2DMinDistanceCalculator$<init>(kotlin.Int, kotlin.Array((ds.Point2D)))/list">list</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="../../ds/-point2-d/index.html"><span class="identifier">Point2D</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;Array(N) {
+        Point2D(
+            StdRandom.uniform(0.0, N.toDouble()),
+            StdRandom.uniform(0.0, N.toDouble())
+        )
+    }<span class="symbol">)</span></code>
 <p>平面最近点问题类</p>
 <p><strong>Author</strong><br/>
 xmmmmmovo</p>

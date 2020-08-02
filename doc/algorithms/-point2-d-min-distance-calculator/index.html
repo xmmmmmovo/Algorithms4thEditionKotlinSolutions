@@ -26,22 +26,18 @@ version-1.0</p>
 </td>
 <td>
 <p>平面最近点问题类</p>
-<code><span class="identifier">Point2DMinDistanceCalculator</span><span class="symbol">(</span><span class="identifier" id="algorithms.Point2DMinDistanceCalculator$<init>(kotlin.Int)/N">N</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">)</span></code></td>
+<code><span class="identifier">Point2DMinDistanceCalculator</span><span class="symbol">(</span><span class="identifier" id="algorithms.Point2DMinDistanceCalculator$<init>(kotlin.Int, kotlin.Array((ds.Point2D)))/N">N</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">, </span><span class="identifier" id="algorithms.Point2DMinDistanceCalculator$<init>(kotlin.Int, kotlin.Array((ds.Point2D)))/list">list</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="../../ds/-point2-d/index.html"><span class="identifier">Point2D</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">=</span>&nbsp;Array(N) {
+        Point2D(
+            StdRandom.uniform(0.0, N.toDouble()),
+            StdRandom.uniform(0.0, N.toDouble())
+        )
+    }<span class="symbol">)</span></code></td>
 </tr>
 </tbody>
 </table>
 <h3>Functions</h3>
 <table>
 <tbody>
-<tr>
-<td>
-(JVM) 
-<h4><a href="get-min-point-pair.html">getMinPointPair</a></h4>
-</td>
-<td>
-<p>最近点对</p>
-<code><span class="keyword">fun </span><span class="identifier">getMinPointPair</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html"><span class="identifier">Pair</span></a><span class="symbol">&lt;</span><a href="../../ds/-point2-d/index.html"><span class="identifier">Point2D</span></a><span class="symbol">,</span>&nbsp;<a href="../../ds/-point2-d/index.html"><span class="identifier">Point2D</span></a><span class="symbol">&gt;</span></code></td>
-</tr>
 <tr>
 <td>
 (JVM) 
@@ -59,15 +55,6 @@ version-1.0</p>
 <td>
 <p>蛮力法求最近点</p>
 <code><span class="keyword">fun </span><span class="identifier">minDistanceForce</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html"><span class="identifier">Double</span></a></code></td>
-</tr>
-<tr>
-<td>
-(JVM) 
-<h4><a href="show-points.html">showPoints</a></h4>
-</td>
-<td>
-<p>显示最近点</p>
-<code><span class="keyword">fun </span><span class="identifier">showPoints</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 </tbody>
 </table>
