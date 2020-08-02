@@ -50,7 +50,7 @@ fun <T : Comparable<T>> binarySearch(
  * @param list 数字列表
  * @param _lo 左边界 默认为0
  * @param _hi 右边界 默认为list.size - 1
- * @return 最小元素数字
+ * @return 最小元素下标
  * @throws IllegalArgumentException 数组元素小于3个时抛出异常
  * @since version-1.0
  */
@@ -72,8 +72,51 @@ fun partialMinElem(
          * 总之就是往小的地方走
          */
         when {
+            mid == _lo && list[mid] < list[mid + 1] -> return mid
+            mid == _hi && list[mid] < list[mid - 1] -> return mid
+            list[mid - 1] > list[mid] && list[mid] < list[mid + 1] -> {
+                return mid
+            }
+            list[mid - 1] < list[mid] && list[mid] < list[mid + 1] -> {
+                hi = mid - 1
+            }
+            list[mid - 1] < list[mid] && list[mid] > list[mid + 1] -> {
+                if (list[mid - 1] >= list[mid + 1]) lo = mid + 1
+                else hi = mid - 1
+            }
+            else -> {
+                lo = mid + 1
+            }
+        }
+    }
+
+    // 当所有元素都是一样的时候才没有最小值，返回-1
+    return -1
+}
+
+/**
+ * 局部最大元素
+ * @author xmmmmmovo
+ * @date 2020/7/30 19:36
+ * @param list 数字列表
+ * @param _lo 左边界 默认为0
+ * @param _hi 右边界 默认为list.size - 1
+ * @return 最大元素下标
+ * @throws IllegalArgumentException 数组元素小于3个时抛出异常
+ * @since version-1.0
+ */
+fun partialMaxElem(
+    list: List<Number>, _lo: Int = 0, _hi: Int = list.size - 1
+): Int {
+    var lo = _lo
+    var hi = _hi
+
+    while (lo <= hi) {
+        // 取mid
+        val mid = lo + (hi - lo) / 2
+        when {
             mid == _lo ->
-                if (list[mid] < list[mid + 1]) return mid
+                if (list[mid] > list[mid + 1]) return mid
                 else lo = mid + 1
             mid == _hi ->
                 if (list[mid] < list[mid - 1]) return mid
@@ -119,7 +162,7 @@ fun <T : Comparable<T>> doubleToneSearch(
             list[mid] == key -> return mid
             // 往大的地方走
             list[mid] < key -> {
-                when{
+                when {
 //                    mid - 1 == _lo ->
                 }
             }
