@@ -104,7 +104,7 @@ internal class LinkedListTest {
         ll.addAll(listOf(1, 2, 3, 4, 5, 6))
         ll.retainAll(listOf(1, 2, 3))
         assertEquals(3, ll.size)
-        assertEquals("[4, 5, 6]", ll.toString())
+        assertEquals("[1, 2, 3]", ll.toString())
     }
 
     @Test
