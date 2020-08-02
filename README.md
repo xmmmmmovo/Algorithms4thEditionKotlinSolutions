@@ -52,7 +52,7 @@ API文档地址：http://algs4.fivezha.cn/doc/
   - [查找已排序列表中是否有重复元素](src/main/kotlin/algorithms/ListUtils.kt#L20)
 - [最接近的一对](src/main/kotlin/algorithms/ListUtils.kt#L35)
 - [最遥远的一对](src/main/kotlin/algorithms/ListUtils.kt#L60)
-- [数组的局部最小元素]
+- [数组的局部最小元素](src/main/kotlin/algorithms/BinarySearchUtils.kt#L44)
 - [矩阵的局部最小元素](src/main/kotlin/algorithms/NumUtils.kt#L64)
 - [双调查栈]
 - [仅用加减实现的二分查找]

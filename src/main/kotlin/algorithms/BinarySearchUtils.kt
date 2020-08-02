@@ -3,6 +3,7 @@
  */
 package algorithms
 
+import edu.princeton.cs.algs4.In
 import ext.compareTo
 import kotlin.math.acos
 
@@ -43,17 +44,6 @@ fun <T : Comparable<T>> binarySearch(
 }
 
 /**
- * 斐波那契二分搜索
- * @author xmmmmmovo
- * @date 2020/7/31 16:09
- * @param
- * @return
- * @since version-1.0
- */
-fun fibonacciBinarySearch() {
-}
-
-/**
  * 局部最小元素
  * @author xmmmmmovo
  * @date 2020/7/30 19:36
@@ -72,7 +62,7 @@ fun partialMinElem(list: List<Number>, _lo: Int = 0, _hi: Int = list.size - 1): 
     if (list[lo] < list[lo + 1]) return lo
     if (list[hi] < list[hi - 1]) return hi
 
-    while (lo in _lo..hi && hi <= _hi) {
+    while (lo <= hi) {
         // 取mid
         val mid = lo + (hi - lo) / 2
         /**
@@ -111,7 +101,7 @@ fun partialMinElem(list: List<Number>, _lo: Int = 0, _hi: Int = list.size - 1): 
 }
 
 /**
- * 双调查栈
+ * 双调查找
  * @author xmmmmmovo
  * @date 2020/7/31 15:42
  * @param
@@ -120,5 +110,15 @@ fun partialMinElem(list: List<Number>, _lo: Int = 0, _hi: Int = list.size - 1): 
  * @since version-1.0
  */
 fun doubleToneSearch() {
+}
 
+/**
+ * 斐波那契二分搜索
+ * @author xmmmmmovo
+ * @date 2020/7/31 16:09
+ * @param
+ * @return
+ * @since version-1.0
+ */
+fun fibonacciBinarySearch() {
 }

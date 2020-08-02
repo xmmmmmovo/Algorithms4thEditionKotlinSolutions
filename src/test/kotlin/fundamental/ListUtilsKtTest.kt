@@ -11,7 +11,6 @@ import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.CsvSource
 import org.junit.platform.commons.logging.LoggerFactory
-import utils.readIntList
 
 internal class ListUtilsKtTest {
     private val list = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)

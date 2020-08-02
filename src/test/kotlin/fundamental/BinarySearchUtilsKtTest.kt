@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.BeforeAll
 import org.junit.platform.commons.logging.LoggerFactory
+import utils.readIntFile
 
 internal class BinarySearchUtilsKtTest {
     val l1 = listOf(1, 2, 3, 4, 5, 6, 7)
@@ -55,5 +56,13 @@ internal class BinarySearchUtilsKtTest {
         assertEquals(1, algorithms.partialMinElem(l2))
         assertEquals(3, algorithms.partialMinElem(l3))
         assertEquals(-1, algorithms.partialMinElem(samelist))
+    }
+
+    @Test
+    fun doubleToneSearch() {
+        log.info { "doubleToneSearch testing" }
+
+        val fl = readIntFile("./data/tinyT.txt")
+        log.info { fl.toString() }
     }
 }
