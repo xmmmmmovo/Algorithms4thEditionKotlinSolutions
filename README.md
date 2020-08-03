@@ -56,7 +56,9 @@ API文档地址：http://algs4.fivezha.cn/doc/
 - [矩阵的局部最小元素](src/main/kotlin/algorithms/NumUtils.kt#L64)
 - [双调查栈](src/main/kotlin/algorithms/BinarySearchUtils.kt#L147)
   - [数组的局部最大值](src/main/kotlin/algorithms/BinarySearchUtils.kt#L100)
-- [仅用加减实现的二分查找]
+- [仅用加减实现的二分查找](src/main/kotlin/algorithms/BinarySearchUtils.kt#177)
+  - [生成固定长度的斐波那契数列](src/main/kotlin/algorithms/MathUtils.kt#219)
+  - [根据最大值生成斐波那契数列](src/main/kotlin/algorithms/MathUtils.kt#241)
 - [扔鸡蛋]
 - [扔两个鸡蛋]
 - [三点共线]

@@ -4,6 +4,7 @@
 package algorithms
 
 import ds.LinkedList
+import edu.princeton.cs.algs4.StdRandom
 import ext.compareTo
 
 /**
@@ -105,4 +106,26 @@ fun <T : Comparable<T>> matrixPartialMinElem(matrix: List<List<T>>): Pair<Int, I
     }
 
     return Pair(-1, -1)
+}
+
+/**
+ * 生日问题
+ * 验证第一个重复随机数之前生成的整数数量为(ΠN/2)^(1/2)
+ * 具体测试查看Test文件
+ * @author xmmmmmovo
+ * @date 2020/7/30 12:24
+ * @param N 生成的数量
+ * @return 返回第一个重复的随机数时生成的数字数量
+ * @since version-1.0
+ */
+fun firstRandomDuplicate(N: Int): Int {
+    val m = mutableSetOf<Int>()
+    var i = 0
+    while (true) {
+        val rn = StdRandom.uniform(N)
+        if (m.contains(rn))
+            return i
+        m.add(rn)
+        i++
+    }
 }

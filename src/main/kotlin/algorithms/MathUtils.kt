@@ -4,12 +4,10 @@
 package algorithms
 
 import ds.Stack
-import edu.princeton.cs.algs4.StdRandom
-import java.lang.StringBuilder
 import java.lang.UnsupportedOperationException
-import kotlin.collections.HashMap
 import kotlin.math.abs
 import kotlin.math.min
+import kotlin.text.StringBuilder
 
 /**
  * 普通gcd模板(辗转相除法)
@@ -196,86 +194,45 @@ fun isBanlanced(expr: String): Boolean {
 }
 
 /**
- * 生日问题
- * 验证第一个重复随机数之前生成的整数数量为(ΠN/2)^(1/2)
- * 具体测试查看Test文件
+ * 括号补全
  * @author xmmmmmovo
- * @date 2020/7/30 12:24
- * @param N 生成的数量
- * @return 返回第一个重复的随机数时生成的数字数量
+ * @date 2020/8/4 0:50
+ * @param expr 缺陷表达式
+ * @return 返回补全后的表达式
  * @since version-1.0
  */
-fun firstRandomDuplicate(N: Int): Int {
-    val m = mutableSetOf<Int>()
+fun compleBrackets(expr: String): String {
+    if (expr == "") return ""
+    val numStack = Stack<String>()
+    val opStack = Stack<Char>()
+
     var i = 0
-    while (true) {
-        val rn = StdRandom.uniform(N)
-        if (m.contains(rn))
-            return i
-        m.add(rn)
+    while (i < expr.length) {
+        val sbb = StringBuilder()
+        while (expr[i].isDigit()) {
+            sbb.append(expr[i])
+            i++
+        }
+        if (sbb.isNotEmpty()) numStack.push(sbb.toString())
+
+        when {
+            expr[i] == ')' -> {
+                val n2 = numStack.pop()
+                val n1 = numStack.pop()
+                numStack.push("(${n1}${opStack.pop()}${n2})")
+            }
+            else -> {
+                opStack.push(expr[i])
+            }
+        }
         i++
     }
-}
 
-/**
- * 创建斐波那契数列
- * @author xmmmmmovo
- * @date 2020/8/3 1:01
- * @param length 数列长度
- * @return 数列
- * @since version-1.0
- */
-fun makeFibonacciList(length: Int): List<Long> =
-    when (length) {
-        0 -> emptyList()
-        1 -> listOf(1)
-        2 -> listOf(1, 1)
-        else -> {
-            val fl = mutableListOf<Long>(1, 1)
-            for (i in 1 until length - 1) {
-                fl.add(fl[i] + fl[i - 1])
-            }
-            fl
-        }
+    while (opStack.isNotEmpty()) {
+        val n2 = numStack.pop()
+        val n1 = numStack.pop()
+        numStack.push("${n1}${opStack.pop()}${n2}")
     }
 
-/**
- * 创建斐波那契数列
- * @author xmmmmmovo
- * @date 2020/8/3 1:01
- * @param length 最长值
- * @return 数列
- * @since version-1.0
- */
-fun makeFibonacciListUntilLength(length: Int): List<Long> {
-    var v = 1
-    while (v <= length) {
-
-    }
-
-    when (length) {
-        0 -> emptyList()
-        1 -> listOf(1)
-        2 -> listOf(1, 2)
-        else -> {
-            val fl = mutableListOf<Long>()
-            fl.add(1)
-            fl.add(1)
-            for (i in 1 until length) {
-                fl.add(fl[i] + fl[i - 1])
-            }
-            fl
-        }
-    }
-    return emptyList()
-}
-
-
-/**
- * 括号补全
- * TODO: 括号补全
- * */
-fun compleBrackets(): String {
-
-    return ""
+    return numStack.pop()
 }

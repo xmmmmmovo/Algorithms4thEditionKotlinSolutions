@@ -98,31 +98,14 @@ internal class MathUtilsKtTest {
         assertEquals(res, algorithms.isBanlanced(expr))
     }
 
-    @Test
-    fun firstRandomDuplicate() {
-        log.info { "firstRandomDuplicate testing" }
-
-        val side = 100000
-        var ts = 0L
-        var dts = 0L
-        for (N in 1..side) {
-            dts += sqrt((Math.PI * N) / 2).toLong()
-            ts += algorithms.firstRandomDuplicate(N)
-        }
-        assertEquals(1.0, (abs(dts - ts) / side.toDouble()), 1.0)
-    }
-
-    @Test
-    fun makeFibonacciList() {
-        assertEquals(emptyList<Long>(), algorithms.makeFibonacciList(0))
-        assertEquals(listOf(1L), algorithms.makeFibonacciList(1))
-        assertEquals(listOf(1L, 1L), algorithms.makeFibonacciList(2))
-        assertEquals(listOf(1L, 1L, 2L), algorithms.makeFibonacciList(3))
-        assertEquals(listOf(1L, 1L, 2L, 3L), algorithms.makeFibonacciList(4))
-    }
-
-    @Test
-    fun makeFibonacciListUntilLength(){
-
+    @ParameterizedTest
+    @CsvSource(
+        "1+2)*33-44)*555-666))), ((1+2)*((33-44)*(555-666)))",
+        "1-3+11), 1-(3+11)",
+        "1+2)+1), ((1+2)+1)"
+    )
+    fun compleBrackets(expr: String, res: String) {
+        log.info { "compleBrackets testing" }
+        assertEquals(res, algorithms.compleBrackets(expr))
     }
 }

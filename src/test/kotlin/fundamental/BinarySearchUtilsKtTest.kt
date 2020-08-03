@@ -73,13 +73,4 @@ internal class BinarySearchUtilsKtTest {
         assertEquals(1, algorithms.doubleToneSearch(l4, 6))
         assertEquals(2, algorithms.doubleToneSearch(l4, 10))
     }
-
-    @Test
-    fun fibonacciBinarySearch() {
-        log.info { "fibonacciBinarySearch testing" }
-
-//        intestlist.forEach {
-//            assertEquals(wtestlist.indexOf(it), algorithms.fibonacciBinarySearch(wtestlist, it))
-//        }
-    }
 }

@@ -174,26 +174,3 @@ fun <T : Comparable<T>> doubleToneSearch(
         else -> l
     }
 }
-
-/**
- * 斐波那契二分搜索
- * @author xmmmmmovo
- * @date 2020/7/31 16:09
- * @param list 列表
- * @param key 需要查找的值
- * @param _lo 左范围 默认为0
- * @param _hi 右范围 默认为list.size - 1
- * @return 查找到了就返回下标，没查找到就返回-1
- * @since version-1.0
- */
-fun <T : Comparable<T>> fibonacciBinarySearch(
-    list: List<T>, key: T, _lo: Int = 0, _hi: Int = list.size - 1
-): Int {
-    if (list.isEmpty()) return -1
-    if (list.size < 3) return list.indexOf(key)
-
-
-
-
-    return -1
-}

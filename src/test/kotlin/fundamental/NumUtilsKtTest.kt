@@ -9,6 +9,8 @@ import org.junit.jupiter.api.*
 
 import org.junit.jupiter.api.Assertions.*
 import org.junit.platform.commons.logging.LoggerFactory
+import kotlin.math.abs
+import kotlin.math.sqrt
 
 internal class NumUtilsKtTest {
     private val list1 = listOf(1, 2, 3, 4, 5)
@@ -88,5 +90,19 @@ internal class NumUtilsKtTest {
         assertEquals(Pair(2, 0), algorithms.matrixPartialMinElem(matrix))
         assertEquals(Pair(0, 2), algorithms.matrixPartialMinElem(matrix2))
         assertEquals(Pair(1, 1), algorithms.matrixPartialMinElem(matrix3))
+    }
+
+    @Test
+    fun firstRandomDuplicate() {
+        log.info { "firstRandomDuplicate testing" }
+
+        val side = 100000
+        var ts = 0L
+        var dts = 0L
+        for (N in 1..side) {
+            dts += sqrt((Math.PI * N) / 2).toLong()
+            ts += algorithms.firstRandomDuplicate(N)
+        }
+        assertEquals(1.0, (abs(dts - ts) / side.toDouble()), 1.0)
     }
 }
