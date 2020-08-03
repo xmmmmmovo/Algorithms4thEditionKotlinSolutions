@@ -111,4 +111,18 @@ internal class MathUtilsKtTest {
         }
         assertEquals(1.0, (abs(dts - ts) / side.toDouble()), 1.0)
     }
+
+    @Test
+    fun makeFibonacciList() {
+        assertEquals(emptyList<Long>(), algorithms.makeFibonacciList(0))
+        assertEquals(listOf(1L), algorithms.makeFibonacciList(1))
+        assertEquals(listOf(1L, 1L), algorithms.makeFibonacciList(2))
+        assertEquals(listOf(1L, 1L, 2L), algorithms.makeFibonacciList(3))
+        assertEquals(listOf(1L, 1L, 2L, 3L), algorithms.makeFibonacciList(4))
+    }
+
+    @Test
+    fun makeFibonacciListUntilLength(){
+
+    }
 }

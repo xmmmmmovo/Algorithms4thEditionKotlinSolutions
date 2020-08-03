@@ -196,15 +196,6 @@ fun isBanlanced(expr: String): Boolean {
 }
 
 /**
- * 括号补全
- * TODO: 括号补全
- * */
-fun compleBrackets(): String {
-
-    return ""
-}
-
-/**
  * 生日问题
  * 验证第一个重复随机数之前生成的整数数量为(ΠN/2)^(1/2)
  * 具体测试查看Test文件
@@ -224,4 +215,67 @@ fun firstRandomDuplicate(N: Int): Int {
         m.add(rn)
         i++
     }
+}
+
+/**
+ * 创建斐波那契数列
+ * @author xmmmmmovo
+ * @date 2020/8/3 1:01
+ * @param length 数列长度
+ * @return 数列
+ * @since version-1.0
+ */
+fun makeFibonacciList(length: Int): List<Long> =
+    when (length) {
+        0 -> emptyList()
+        1 -> listOf(1)
+        2 -> listOf(1, 1)
+        else -> {
+            val fl = mutableListOf<Long>(1, 1)
+            for (i in 1 until length - 1) {
+                fl.add(fl[i] + fl[i - 1])
+            }
+            fl
+        }
+    }
+
+/**
+ * 创建斐波那契数列
+ * @author xmmmmmovo
+ * @date 2020/8/3 1:01
+ * @param length 最长值
+ * @return 数列
+ * @since version-1.0
+ */
+fun makeFibonacciListUntilLength(length: Int): List<Long> {
+    var v = 1
+    while (v <= length) {
+
+    }
+
+    when (length) {
+        0 -> emptyList()
+        1 -> listOf(1)
+        2 -> listOf(1, 2)
+        else -> {
+            val fl = mutableListOf<Long>()
+            fl.add(1)
+            fl.add(1)
+            for (i in 1 until length) {
+                fl.add(fl[i] + fl[i - 1])
+            }
+            fl
+        }
+    }
+    return emptyList()
+}
+
+
+/**
+ * 括号补全
+ * TODO: 括号补全
+ * */
+fun compleBrackets(): String {
+
+    return ""
 }

@@ -57,7 +57,7 @@ internal class BinarySearchUtilsKtTest {
     }
 
     @Test
-    fun partialMaxElem(){
+    fun partialMaxElem() {
         log.info { "partialMaxElem testing" }
 
         assertEquals(6, algorithms.partialMaxElem(l1))
@@ -72,5 +72,14 @@ internal class BinarySearchUtilsKtTest {
         assertEquals(4, algorithms.doubleToneSearch(l4, 4))
         assertEquals(1, algorithms.doubleToneSearch(l4, 6))
         assertEquals(2, algorithms.doubleToneSearch(l4, 10))
+    }
+
+    @Test
+    fun fibonacciBinarySearch() {
+        log.info { "fibonacciBinarySearch testing" }
+
+//        intestlist.forEach {
+//            assertEquals(wtestlist.indexOf(it), algorithms.fibonacciBinarySearch(wtestlist, it))
+//        }
     }
 }
