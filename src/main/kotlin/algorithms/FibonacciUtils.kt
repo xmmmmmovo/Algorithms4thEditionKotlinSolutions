@@ -34,14 +34,14 @@ fun makeFibonacciList(length: Int): List<Long> =
  * @return 数列
  * @since version-1.0
  */
-fun makeFibonacciListUntilLength(length: Int): List<Long> {
+fun makeFibonacciListUntilLength(length: Int): List<Int> {
     return when (length) {
         0 -> emptyList()
         1 -> listOf(1, 1, 2)
         2 -> listOf(1, 1, 2, 3, 5)
         else -> {
-            val fl = mutableListOf<Long>(1, 1)
-            var nv = 2L
+            val fl = mutableListOf(1, 1)
+            var nv = 2
             while (length > nv - 1) {
                 fl.add(nv)
                 nv += fl[fl.size - 2]
@@ -64,17 +64,35 @@ fun makeFibonacciListUntilLength(length: Int): List<Long> {
  * @since version-1.0
  */
 fun <T : Comparable<T>> fibonacciBinarySearch(
-    list: List<T?>, key: T, _lo: Int = 0, _hi: Int = list.size - 1
+    list: List<T>, key: T, _lo: Int = 0, _hi: Int = list.size - 1
 ): Int {
     if (list.isEmpty()) return -1
     if (list.size < 3) return list.indexOf(key)
-    var lo = _lo
-    var hi = _hi
 
     // 此时最末尾的值肯定是刚好大于长度的那个
-    val fbl = makeFibonacciListUntilLength(list.size)
+    val fbl = makeFibonacciListUntilLength(_hi - _lo + 1)
+    val tl = list.toMutableList()
+    tl.addAll(List((fbl.last() - 1 - list.size)) { list.last() })
 
+    var lo = _lo
+    var hi = if (_hi == list.lastIndex) tl.lastIndex else _hi
+    var k = fbl.lastIndex
 
+    while (lo <= hi) {
+        val mid = lo + fbl[k - 1] - 1
+        when {
+            tl[mid] > key -> {
+                hi = mid - 1
+                k--
+            }
+            // 小堆就-2，因为少了f(n-1)的信息
+            tl[mid] < key -> {
+                lo = mid + 1
+                k -= 2
+            }
+            else -> return if (mid >= _hi) list.lastIndex else mid
+        }
+    }
 
     return -1
 }

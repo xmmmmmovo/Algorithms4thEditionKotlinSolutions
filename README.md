@@ -41,6 +41,7 @@ API文档地址：http://algs4.fivezha.cn/doc/
 - [栈](src/main/kotlin/ds/Stack.kt)
 - [队列](src/main/kotlin/ds/Queue.kt)
 - [括号匹配](src/main/kotlin/algorithms/MathUtils.kt#L174)
+- [括号补全](src/main/kotlin/algorithms/MathUtils.kt#L195)
 - [简单计算器](src/main/kotlin/algorithms/MathUtils.kt#L159)
   - [中缀转后缀](src/main/kotlin/algorithms/MathUtils.kt#L75)
   - [计算后缀](src/main/kotlin/algorithms/MathUtils.kt#L137)

@@ -195,6 +195,7 @@ fun isBanlanced(expr: String): Boolean {
 
 /**
  * 括号补全
+ * 双栈解法，一个用于保存数据，一个用于保存运算符
  * @author xmmmmmovo
  * @date 2020/8/4 0:50
  * @param expr 缺陷表达式
@@ -228,6 +229,10 @@ fun compleBrackets(expr: String): String {
         i++
     }
 
+    /**
+     * 这里如果左边没出现括号，运算符栈种存在数据
+     * 所以会出错，这里把运算符栈清空放到数据栈种就好了
+     */
     while (opStack.isNotEmpty()) {
         val n2 = numStack.pop()
         val n1 = numStack.pop()

@@ -35,26 +35,26 @@ internal class FibonacciUtilsKtTest {
     @Test
     fun makeFibonacciList() {
         assertEquals(emptyList<Long>(), algorithms.makeFibonacciList(0))
-        assertEquals(listOf(1L), algorithms.makeFibonacciList(1))
-        assertEquals(listOf(1L, 1L), algorithms.makeFibonacciList(2))
-        assertEquals(listOf(1L, 1L, 2L), algorithms.makeFibonacciList(3))
-        assertEquals(listOf(1L, 1L, 2L, 3L), algorithms.makeFibonacciList(4))
+        assertEquals(listOf(1), algorithms.makeFibonacciList(1))
+        assertEquals(listOf(1, 1), algorithms.makeFibonacciList(2))
+        assertEquals(listOf(1, 1, 2), algorithms.makeFibonacciList(3))
+        assertEquals(listOf(1, 1, 2, 3), algorithms.makeFibonacciList(4))
     }
 
     @Test
     fun makeFibonacciListUntilLength() {
         assertEquals(emptyList<Long>(), algorithms.makeFibonacciListUntilLength(0))
-        assertEquals(listOf(1L, 1L, 2L), algorithms.makeFibonacciListUntilLength(1))
-        assertEquals(listOf(1L, 1L, 2L, 3L, 5L), algorithms.makeFibonacciListUntilLength(2))
-        assertEquals(listOf(1L, 1L, 2L, 3L, 5L), algorithms.makeFibonacciListUntilLength(3))
+        assertEquals(listOf(1, 1, 2), algorithms.makeFibonacciListUntilLength(1))
+        assertEquals(listOf(1, 1, 2, 3, 5), algorithms.makeFibonacciListUntilLength(2))
+        assertEquals(listOf(1, 1, 2, 3, 5), algorithms.makeFibonacciListUntilLength(3))
     }
 
     @Test
     fun fibonacciBinarySearch() {
         log.info { "fibonacciBinarySearch testing" }
 
-//        intestlist.forEach {
-//            assertEquals(wtestlist.indexOf(it), algorithms.fibonacciBinarySearch(wtestlist, it))
-//        }
+        intestlist.forEach {
+            assertEquals(wtestlist.indexOf(it), algorithms.fibonacciBinarySearch(wtestlist, it))
+        }
     }
 }
