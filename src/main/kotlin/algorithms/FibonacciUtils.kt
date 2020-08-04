@@ -12,13 +12,13 @@ package algorithms
  * @return 数列
  * @since version-1.0
  */
-fun makeFibonacciList(length: Int): List<Long> =
+fun makeFibonacciList(length: Int): List<Int> =
     when (length) {
         0 -> emptyList()
         1 -> listOf(1)
         2 -> listOf(1, 1)
         else -> {
-            val fl = mutableListOf<Long>(1, 1)
+            val fl = mutableListOf<Int>(1, 1)
             for (i in 1 until length - 1) {
                 fl.add(fl[i] + fl[i - 1])
             }

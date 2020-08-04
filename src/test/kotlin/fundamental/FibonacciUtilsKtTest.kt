@@ -34,7 +34,7 @@ internal class FibonacciUtilsKtTest {
 
     @Test
     fun makeFibonacciList() {
-        assertEquals(emptyList<Long>(), algorithms.makeFibonacciList(0))
+        assertEquals(emptyList<Int>(), algorithms.makeFibonacciList(0))
         assertEquals(listOf(1), algorithms.makeFibonacciList(1))
         assertEquals(listOf(1, 1), algorithms.makeFibonacciList(2))
         assertEquals(listOf(1, 1, 2), algorithms.makeFibonacciList(3))
@@ -43,7 +43,7 @@ internal class FibonacciUtilsKtTest {
 
     @Test
     fun makeFibonacciListUntilLength() {
-        assertEquals(emptyList<Long>(), algorithms.makeFibonacciListUntilLength(0))
+        assertEquals(emptyList<Int>(), algorithms.makeFibonacciListUntilLength(0))
         assertEquals(listOf(1, 1, 2), algorithms.makeFibonacciListUntilLength(1))
         assertEquals(listOf(1, 1, 2, 3, 5), algorithms.makeFibonacciListUntilLength(2))
         assertEquals(listOf(1, 1, 2, 3, 5), algorithms.makeFibonacciListUntilLength(3))
