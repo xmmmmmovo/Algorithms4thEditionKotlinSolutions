@@ -67,7 +67,6 @@ fun <T : Comparable<T>> fibonacciBinarySearch(
     list: List<T>, key: T, _lo: Int = 0, _hi: Int = list.size - 1
 ): Int {
     if (list.isEmpty()) return -1
-    if (list.size < 3) return list.indexOf(key)
 
     // 此时最末尾的值肯定是刚好大于长度的那个
     val fbl = makeFibonacciListUntilLength(_hi - _lo + 1)
