@@ -53,5 +53,7 @@ fun <T : Comparable<T>> bubbleSort(
 fun <T : Comparable<T>> insertSort(
     list: List<T>, _lo: Int = 0, _hi: Int = list.size - 1
 ): List<T> {
+    val ml = list.toMutableList()
 
+    return ml
 }
