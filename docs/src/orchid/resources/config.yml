@@ -1,0 +1,38 @@
+# docs/src/orchid/resources/config.yml
+site:
+  about:
+    siteName: 算法(第四版)kotlin个人实现
+    siteDescription: 📕算法(第四版)kotlin个人实现/部分课后习题/部分提高题
+Editorial:
+  primaryColor: '#DE9149'
+  social:
+    github: 'xmmmmmovo/Algorithms4thEditionKotlinSolutions'
+  metaComponents: # this is the replacement for the deprecated automatic search addition
+    - type: 'orchidSearch'
+  menu:
+    - type: 'separator'
+      title: 'Wiki'
+    - type: 'wiki'
+    - type: 'page'
+      itemId: 'Changelog'
+    - type: 'separator'
+      title: 'API Docs'
+    - type: 'sourcedocPages'
+      moduleType: 'kotlindoc'
+      node: 'classes'
+      asSubmenu: true
+      submenuTitle: 'Classes'
+    - type: 'sourcedocPages'
+      moduleType: 'kotlindoc'
+      node: 'packages'
+      asSubmenu: true
+      submenuTitle: 'Packages'
+kotlindoc:
+  sourceDirs:
+    - './../../../../src/main/kotlin'
+  sourcePages:
+    menu:
+      - type: 'sourcedocPageLinks'
+        moduleType: 'kotlindoc'
+        itemTitleType: 'SIGNATURE'
+        includeItems: true

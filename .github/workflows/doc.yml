@@ -2,10 +2,9 @@
 name: Doc Workflow
 
 on:
-  release:
-    types: [published]
-    branches:
-      - master
+  push:
+    tags:
+      - v*
 
 jobs:
   test:
@@ -42,25 +41,14 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      # 缓存
-      # 暂时还未找到hash值的解决方案，找到了请pr
-      # - name: Cache Dokka
-      #   uses: actions/cache@v2
-      #   with:
-      #     path: ~/.cache/dokka
-      #     key: ${{ runner.os }}-dokka-${{ hashFiles('**/*') }}
-      #     restore-keys: ${{ runner.os }}-dokka
-
       # 生成文档
       - name: Generate documentation
-        run: ./gradlew dokka
-
-      # - name: cp cname
-      #   run: cp ./CNAME ./build/dokka/CNAME
-
+        run: ./gradlew :docs:orchidBuild
+      - name: cp cname
+        run: cp ./CNAME ./docs/build/docs/orchid/CNAME
       # 部署到ghpage
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          publish_dir: ./build/dokka
+          publish_dir: ./docs/build/docs/orchid
