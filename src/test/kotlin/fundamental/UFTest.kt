@@ -49,7 +49,7 @@ internal class UFTest {
     @Test
     fun unionFindTest() {
         log.info { "unionFindTest testing" }
-        log.debug { "${pl.size}" }
+        log.info { "${pl.size}" }
 
         val uf = UF(N)
         val stduf = QuickUnionUF(N)

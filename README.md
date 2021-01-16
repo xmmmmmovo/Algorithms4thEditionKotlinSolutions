@@ -71,6 +71,7 @@ API文档地址：http://algs4.fivezha.cn/doc/
 - **[:star:利用三个栈实现双向队列，使得所有操作时间复杂度O(1)(均摊后虚假的O(1))](src/main/kotlin/ds/StackDeque.kt)**
 - **[:star:利用六个栈实现单向队列，使得所有操作时间复杂度O(1)(真正的O(1))](src/main/kotlin/ds/StackDequeOpt.kt)**
 - [生日问题](src/main/kotlin/algorithms/MathUtils.kt#L207)
+- [快速并查集](src/main/kotlin/ds/UF.kt)
 
 ### 第二章: 排序(未完成)
 
