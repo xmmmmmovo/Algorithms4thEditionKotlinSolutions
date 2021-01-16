@@ -1,0 +1,393 @@
+{
+  "ownKey": "kotlindoc",
+  "childrenPages": {"kotlindoc": {
+    "ownKey": "kotlindoc",
+    "childrenPages": {
+      "ext": {
+        "ownKey": "ext",
+        "ownPages": [{
+          "reference": {
+            "path": "kotlindoc",
+            "baseUrl": "https://algs4.fivezha.cn",
+            "fileName": "ext",
+            "extension": "html",
+            "usePrettyUrl": true,
+            "link": "https://algs4.fivezha.cn/kotlindoc/ext"
+          },
+          "description": "",
+          "title": "ext",
+          "content": "<p>compareTo<\/p>\n<p>类扩展->比较<\/p>\nminus\n<p>类扩展->减号<\/p>\nplus\n<p>类扩展->加号<\/p>\ndiv\n<p>类扩展->乘号<\/p>\ntimes\n<p>类扩展->除号<\/p>\n"
+        }]
+      },
+      "algorithms": {
+        "ownKey": "algorithms",
+        "childrenPages": {
+          "josephussolutions": {
+            "ownKey": "josephussolutions",
+            "ownPages": [{
+              "reference": {
+                "path": "kotlindoc",
+                "baseUrl": "https://algs4.fivezha.cn",
+                "fileName": "algorithms/josephussolutions",
+                "extension": "html",
+                "usePrettyUrl": true,
+                "link": "https://algs4.fivezha.cn/kotlindoc/algorithms/josephussolutions"
+              },
+              "description": "",
+              "title": "JosephusSolutions",
+              "content": "<p>约瑟夫环实现<\/p><init>\n<p>约瑟夫环实现<\/p>\nchangePeopleNumbers\n<p>更改人数<\/p>\nqueueForceSolution\n<p>双向队列求法 就是嗯求<\/p>\nlinkedListForceSolution\n<p>双向链表解法<\/p>\nmathFastSolution\n<p>数学解法<\/p>\n"
+            }]
+          },
+          "point2dmindistancecalculator": {
+            "ownKey": "point2dmindistancecalculator",
+            "ownPages": [{
+              "reference": {
+                "path": "kotlindoc",
+                "baseUrl": "https://algs4.fivezha.cn",
+                "fileName": "algorithms/point2dmindistancecalculator",
+                "extension": "html",
+                "usePrettyUrl": true,
+                "link": "https://algs4.fivezha.cn/kotlindoc/algorithms/point2dmindistancecalculator"
+              },
+              "description": "",
+              "title": "Point2DMinDistanceCalculator",
+              "content": "<p>平面最近点问题类<\/p><init>\n<p>平面最近点问题类<\/p>\nminDistanceForce\n<p>蛮力法求最近点<\/p>\nminDistanceDivide\n<p>TODO:分治法解最近点距离<\/p>\n"
+            }]
+          }
+        },
+        "ownPages": [{
+          "reference": {
+            "path": "kotlindoc",
+            "baseUrl": "https://algs4.fivezha.cn",
+            "fileName": "algorithms",
+            "extension": "html",
+            "usePrettyUrl": true,
+            "link": "https://algs4.fivezha.cn/kotlindoc/algorithms"
+          },
+          "description": "",
+          "title": "algorithms",
+          "content": "<p>JosephusSolutions<\/p>\n<p>约瑟夫环实现<\/p>\nPoint2DMinDistanceCalculator\n<p>平面最近点问题类<\/p>\npriority\n<p>优先级\n加减优先级最低\n然后就是乘除\n括号优先级最高<\/p>\nbinarySearch\n<p>在一个列表中二分查找到某个值(升序)<\/p>\npartialMinElem\n<p>局部最小元素<\/p>\npartialMaxElem\n<p>局部最大元素<\/p>\ndoubleToneSearch\n<p>双调查找<\/p>\nmakeFibonacciList\n<p>创建斐波那契数列<\/p>\nmakeFibonacciListUntilLength\n<p>创建最大值大于 length 的第一个数<\/p>\nfibonacciBinarySearch\n<p>斐波那契二分搜索<\/p>\ncontainsInList\n<p>查找列表中是否存在某元素，利用 binarySearch 二分查找<\/p>\ncontainsDuplicatesInSorted\n<p>查找已排序元素中是否有重复元素<\/p>\nminPair\n<p>求一个列表中两者之差绝对值最小的两个数<\/p>\nmaxPair\n<p>求一个列表中两者之差绝对值最大的两个数<\/p>\ngcd\n<p>普通gcd模板(辗转相除法)<\/p>\nqgcd\n<p>快速gcd对外函数<\/p>\nevalIntArithmetic\n<p>四则运算主函数<\/p>\nisBanlanced\n<p>括号是否匹配<\/p>\ncompleBrackets\n<p>括号补全\n双栈解法，一个用于保存数据，一个用于保存运算符<\/p>\nthreeSumForce\n<p>蛮力法求三数之和<\/p>\nthreeSumBinaryFast\n<p>二分法 binarySearch 求三数之和<\/p>\nmatrixPartialMinElem\n<p>矩阵局部最小元素<\/p>\nfirstRandomDuplicate\n<p>生日问题\n验证第一个重复随机数之前生成的整数数量为(ΠN/2)^(1/2)\n具体测试查看Test文件<\/p>\nbubbleSort\n<p>冒泡排序<\/p>\ninsertSort\n<p>插入排序<\/p>\n"
+        }]
+      },
+      "utils": {
+        "ownKey": "utils",
+        "childrenPages": {"stopwatchcpu": {
+          "ownKey": "stopwatchcpu",
+          "ownPages": [{
+            "reference": {
+              "path": "kotlindoc",
+              "baseUrl": "https://algs4.fivezha.cn",
+              "fileName": "utils/stopwatchcpu",
+              "extension": "html",
+              "usePrettyUrl": true,
+              "link": "https://algs4.fivezha.cn/kotlindoc/utils/stopwatchcpu"
+            },
+            "description": "",
+            "title": "StopwatchCPU",
+            "content": "<p>CPU计时类<\/p><init>\n<p>CPU计时类<\/p>\nelapsedTime\n<p>计算cpu使用的时间<\/p>\ntoString\n\n"
+          }]
+        }},
+        "ownPages": [{
+          "reference": {
+            "path": "kotlindoc",
+            "baseUrl": "https://algs4.fivezha.cn",
+            "fileName": "utils",
+            "extension": "html",
+            "usePrettyUrl": true,
+            "link": "https://algs4.fivezha.cn/kotlindoc/utils"
+          },
+          "description": "",
+          "title": "utils",
+          "content": "<p>StopwatchCPU<\/p>\n<p>CPU计时类<\/p>\n"
+        }]
+      },
+      "ds": {
+        "ownKey": "ds",
+        "childrenPages": {
+          "date": {
+            "ownKey": "date",
+            "ownPages": [{
+              "reference": {
+                "path": "kotlindoc",
+                "baseUrl": "https://algs4.fivezha.cn",
+                "fileName": "ds/date",
+                "extension": "html",
+                "usePrettyUrl": true,
+                "link": "https://algs4.fivezha.cn/kotlindoc/ds/date"
+              },
+              "description": "",
+              "title": "Date",
+              "content": "<p>日期类<\/p>year\n<p>month<\/p>\n<p>day<\/p>\n<p><init><\/p>\n<p>直接输入年月日<\/p>\n<init>\n<p>字符串解析<\/p>\ncompareTo\n\ntoString\n\nhashCode\n\nDate\n<p>日期类<\/p>\n"
+            }]
+          },
+          "linkedlist": {
+            "ownKey": "linkedlist",
+            "ownPages": [{
+              "reference": {
+                "path": "kotlindoc",
+                "baseUrl": "https://algs4.fivezha.cn",
+                "fileName": "ds/linkedlist",
+                "extension": "html",
+                "usePrettyUrl": true,
+                "link": "https://algs4.fivezha.cn/kotlindoc/ds/linkedlist"
+              },
+              "description": "",
+              "title": "LinkedList",
+              "content": "<p>双向链表类<\/p>size\n<p>获取链表长度<\/p>\n<init>\n<p>双向链表类<\/p>\nadd\n<p>在尾部添加元素<\/p>\nadd\n<p>在 index 位置添加元素<\/p>\naddAll\n<p>在 index 位置插入一个容器<\/p>\naddAll\n<p>在尾部位置插入一个容器<\/p>\nclear\n<p>清除所有元素<\/p>\nremove\n<p>删除元素为 element 的元素<\/p>\nremoveAll\n<p>删除元素为 elements 容器内的所有元素<\/p>\nremoveAt\n<p>删除元素为 index 位置上的节点<\/p>\nretainAll\n<p>仅留下 elements 里的元素<\/p>\nset\n<p>设定 index 为 element 并返回旧值<\/p>\ncontains\n<p>是否包含 element <\/p>\ncontainsAll\n<p>是否包含所有 elements <\/p>\nindexOf\n<p>查看 element 的位置<\/p>\nget\n<p>获取 index 节点数据<\/p>\nisEmpty\n<p>链表是否为空<\/p>\nlastIndexOf\n<p>可以查到的最后一个元素<\/p>\niterator\n<p>返回迭代器<\/p>\nlistIterator\n<p>返回列表迭代器<\/p>\nlistIterator\n<p>返回从某个index开始的迭代器<\/p>\nsubList\n<p>返回子列表<\/p>\ngetFirst\n<p>获取首节点数据<\/p>\ngetLast\n<p>获取尾节点数据<\/p>\nreverse\n<p>反转链表<\/p>\naddFirst\n<p>添加首节点<\/p>\naddLast\n<p>添加尾节点<\/p>\nremoveFirst\n<p>删除首节点<\/p>\nremoveLast\n<p>删除尾节点<\/p>\nequals\n<p>\" == \" 方法<\/p>\nhashCode\n<p>hash计算<\/p>\ntoString\n<p>转字符串方法<\/p>\n"
+            }]
+          },
+          "stack": {
+            "ownKey": "stack",
+            "ownPages": [{
+              "reference": {
+                "path": "kotlindoc",
+                "baseUrl": "https://algs4.fivezha.cn",
+                "fileName": "ds/stack",
+                "extension": "html",
+                "usePrettyUrl": true,
+                "link": "https://algs4.fivezha.cn/kotlindoc/ds/stack"
+              },
+              "description": "",
+              "title": "Stack",
+              "content": "<p>栈<\/p>size\n<p>栈大小<\/p>\n<init>\n<p>构造函数<\/p>\n<init>\n<p>拷贝构造函数<\/p>\nisEmpty\n<p>判断是否为空<\/p>\ncontains\n<p>是否包含某元素<\/p>\ncontainsAll\n<p>是否包含传入参数的所有元素<\/p>\npush\n<p>入栈<\/p>\npop\n<p>出栈<\/p>\npeek\n<p>查看栈顶<\/p>\nclone\n<p>拷贝函数<\/p>\ntoString\n<p>转字符串方法<\/p>\niterator\n<p>返回迭代器方法<\/p>\n"
+            }]
+          },
+          "bag": {
+            "ownKey": "bag",
+            "ownPages": [{
+              "reference": {
+                "path": "kotlindoc",
+                "baseUrl": "https://algs4.fivezha.cn",
+                "fileName": "ds/bag",
+                "extension": "html",
+                "usePrettyUrl": true,
+                "link": "https://algs4.fivezha.cn/kotlindoc/ds/bag"
+              },
+              "description": "",
+              "title": "Bag",
+              "content": "<p>简单背包<\/p>size\n<p>返回长度<\/p>\n<init>\n<p>简单背包<\/p>\nisEmpty\n<p>是否为空<\/p>\ncontains\n<p>是否包含 element <\/p>\ncontainsAll\n<p>是否包含所有 elements <\/p>\nadd\n<p>添加元素<\/p>\niterator\n\n"
+            }]
+          },
+          "counter": {
+            "ownKey": "counter",
+            "ownPages": [{
+              "reference": {
+                "path": "kotlindoc",
+                "baseUrl": "https://algs4.fivezha.cn",
+                "fileName": "ds/counter",
+                "extension": "html",
+                "usePrettyUrl": true,
+                "link": "https://algs4.fivezha.cn/kotlindoc/ds/counter"
+              },
+              "description": "",
+              "title": "Counter",
+              "content": "<p>计数器类<\/p>tally\n<p>结尾多少count<\/p>\n<init>\n<p>计数器类<\/p>\nincrement\n<p>计数器+1<\/p>\ncompareTo\n\nequals\n\ntoString\n\n"
+            }]
+          },
+          "deque": {
+            "ownKey": "deque",
+            "ownPages": [{
+              "reference": {
+                "path": "kotlindoc",
+                "baseUrl": "https://algs4.fivezha.cn",
+                "fileName": "ds/deque",
+                "extension": "html",
+                "usePrettyUrl": true,
+                "link": "https://algs4.fivezha.cn/kotlindoc/ds/deque"
+              },
+              "description": "",
+              "title": "Deque",
+              "content": "<p>双向队列类<\/p>size\n<p><init><\/p>\n<p>双向队列类<\/p>\nisEmpty\n<p>pushLeft<\/p>\n<p>pushRight<\/p>\n<p>popLeft<\/p>\n<p>popRight<\/p>\n<p>contains<\/p>\n<p>是否包含 element <\/p>\ncontainsAll\n<p>是否包含所有 elements <\/p>\ntoString\n<p>iterator<\/p>\n"
+            }]
+          },
+          "circularlinkedlist": {
+            "ownKey": "circularlinkedlist",
+            "ownPages": [{
+              "reference": {
+                "path": "kotlindoc",
+                "baseUrl": "https://algs4.fivezha.cn",
+                "fileName": "ds/circularlinkedlist",
+                "extension": "html",
+                "usePrettyUrl": true,
+                "link": "https://algs4.fivezha.cn/kotlindoc/ds/circularlinkedlist"
+              },
+              "description": "",
+              "title": "CircularLinkedList",
+              "content": "<p>循环链表\n此类仅用于约瑟夫环问题 所以api设计很简单<\/p>size\n<p><init><\/p>\n<p>循环链表\n此类仅用于约瑟夫环问题 所以api设计很简单<\/p>\nclear\n<p>isEmpty<\/p>\n<p>add<\/p>\n<p>iterator<\/p>\n<p>toString<\/p>\n<p>转字符串方法<\/p>\n"
+            }]
+          },
+          "uf": {
+            "ownKey": "uf",
+            "ownPages": [{
+              "reference": {
+                "path": "kotlindoc",
+                "baseUrl": "https://algs4.fivezha.cn",
+                "fileName": "ds/uf",
+                "extension": "html",
+                "usePrettyUrl": true,
+                "link": "https://algs4.fivezha.cn/kotlindoc/ds/uf"
+              },
+              "description": "",
+              "title": "UF",
+              "content": "<p>并查集（已合并优化）<\/p>count\n<p>Int 集合数量（只读）<\/p>\n<init>\n\nfind\n<p>查找根节点<\/p>\nconnected\n<p>查找是否属于同一集合<\/p>\nunion\n<p>合并集合<\/p>\n"
+            }]
+          },
+          "stackdequeopt": {
+            "ownKey": "stackdequeopt",
+            "ownPages": [{
+              "reference": {
+                "path": "kotlindoc",
+                "baseUrl": "https://algs4.fivezha.cn",
+                "fileName": "ds/stackdequeopt",
+                "extension": "html",
+                "usePrettyUrl": true,
+                "link": "https://algs4.fivezha.cn/kotlindoc/ds/stackdequeopt"
+              },
+              "description": "",
+              "title": "StackDequeOpt",
+              "content": "<p>用六个栈实现单向队列<\/p>size\n<p>队列总长度<\/p>\n<init>\n<p>用六个栈实现单向队列<\/p>\nisEmpty\n<p>队列是否为空<\/p>\npushRight\n<p>入右队列<\/p>\npopLeft\n<p>出左队列<\/p>\npeekLeft\n<p>预览元素<\/p>\n"
+            }]
+          },
+          "stackdeque": {
+            "ownKey": "stackdeque",
+            "ownPages": [{
+              "reference": {
+                "path": "kotlindoc",
+                "baseUrl": "https://algs4.fivezha.cn",
+                "fileName": "ds/stackdeque",
+                "extension": "html",
+                "usePrettyUrl": true,
+                "link": "https://algs4.fivezha.cn/kotlindoc/ds/stackdeque"
+              },
+              "description": "",
+              "title": "StackDeque",
+              "content": "<p>使用三个栈实现双向队列，使得所有操作为O(1)<\/p>size\n<p>队列长度<\/p>\n<init>\n<p>使用三个栈实现双向队列，使得所有操作为O(1)<\/p>\nisEmpty\n<p>判断是否为空<\/p>\npushLeft\n<p>入左队列<\/p>\npushRight\n<p>入右队列<\/p>\npopLeft\n<p>出左队列<\/p>\npopRight\n<p>出右队列<\/p>\nasList\n<p>转换为列表格式<\/p>\ntoString\n<p>转字符串方法<\/p>\n"
+            }]
+          },
+          "accumulator": {
+            "ownKey": "accumulator",
+            "ownPages": [{
+              "reference": {
+                "path": "kotlindoc",
+                "baseUrl": "https://algs4.fivezha.cn",
+                "fileName": "ds/accumulator",
+                "extension": "html",
+                "usePrettyUrl": true,
+                "link": "https://algs4.fivezha.cn/kotlindoc/ds/accumulator"
+              },
+              "description": "",
+              "title": "Accumulator",
+              "content": "<p>累加器 已经增加防抖动<\/p><init>\n<p>累加器 已经增加防抖动<\/p>\naddDataValue\n<p>添加新值<\/p>\nmean\n<p>返回平均数<\/p>\nvariance\n<p>返回方差<\/p>\nstddev\n<p>返回标准差<\/p>\ntotal\n<p>返回总值<\/p>\ntoString\n<p>转字符串<\/p>\n"
+            }]
+          },
+          "buffer": {
+            "ownKey": "buffer",
+            "ownPages": [{
+              "reference": {
+                "path": "kotlindoc",
+                "baseUrl": "https://algs4.fivezha.cn",
+                "fileName": "ds/buffer",
+                "extension": "html",
+                "usePrettyUrl": true,
+                "link": "https://algs4.fivezha.cn/kotlindoc/ds/buffer"
+              },
+              "description": "",
+              "title": "Buffer",
+              "content": "<p>缓冲区类<\/p>size\n<p>返回buffer大小<\/p>\n<init>\n<p>缓冲区类<\/p>\ninsert\n<p>光标处插入<\/p>\ndelete\n<p>光标左边删除<\/p>\nleft\n<p>光标左移<\/p>\nright\n<p>光标右移<\/p>\ntoString\n\n"
+            }]
+          },
+          "point2d": {
+            "ownKey": "point2d",
+            "ownPages": [{
+              "reference": {
+                "path": "kotlindoc",
+                "baseUrl": "https://algs4.fivezha.cn",
+                "fileName": "ds/point2d",
+                "extension": "html",
+                "usePrettyUrl": true,
+                "link": "https://algs4.fivezha.cn/kotlindoc/ds/point2d"
+              },
+              "description": "",
+              "title": "Point2D",
+              "content": "<p>2D点类<\/p>x\n<p>x坐标<\/p>\ny\n<p>y坐标<\/p>\n<init>\n<p>2D点类<\/p>\ncompareTo\n<p>比较方法<\/p>\ntoString\n<p>转字符串方法<\/p>\n"
+            }]
+          },
+          "rational": {
+            "ownKey": "rational",
+            "ownPages": [{
+              "reference": {
+                "path": "kotlindoc",
+                "baseUrl": "https://algs4.fivezha.cn",
+                "fileName": "ds/rational",
+                "extension": "html",
+                "usePrettyUrl": true,
+                "link": "https://algs4.fivezha.cn/kotlindoc/ds/rational"
+              },
+              "description": "",
+              "title": "Rational",
+              "content": "<p>分数类<\/p><init>\n<p>分数类<\/p>\nnumerator\n\ndenominator\n\nplus\n<p>加号重载<\/p>\nminus\n<p>减号重载<\/p>\ntimes\n<p>乘号重载<\/p>\ndiv\n<p>除号重载<\/p>\nequals\n\ntoString\n\ncompareTo\n\n"
+            }]
+          },
+          "queue": {
+            "ownKey": "queue",
+            "ownPages": [{
+              "reference": {
+                "path": "kotlindoc",
+                "baseUrl": "https://algs4.fivezha.cn",
+                "fileName": "ds/queue",
+                "extension": "html",
+                "usePrettyUrl": true,
+                "link": "https://algs4.fivezha.cn/kotlindoc/ds/queue"
+              },
+              "description": "",
+              "title": "Queue",
+              "content": "<p>单向队列类<\/p>size\n<p><init><\/p>\n<p><init><\/p>\n<p>isEmpty<\/p>\n<p>enqueue<\/p>\n<p>入队列<\/p>\ndequeue\n<p>出队列<\/p>\npeek\n<p>查看队列首<\/p>\ncontains\n<p>是否包含 element <\/p>\ncontainsAll\n<p>是否包含所有 elements <\/p>\ntoString\n<p>iterator<\/p>\n"
+            }]
+          },
+          "transaction": {
+            "ownKey": "transaction",
+            "ownPages": [{
+              "reference": {
+                "path": "kotlindoc",
+                "baseUrl": "https://algs4.fivezha.cn",
+                "fileName": "ds/transaction",
+                "extension": "html",
+                "usePrettyUrl": true,
+                "link": "https://algs4.fivezha.cn/kotlindoc/ds/transaction"
+              },
+              "description": "",
+              "title": "Transaction",
+              "content": "<p>收据类<\/p><init>\n\n<init>\n\nwho\n\ntime\n\namount\n\ncompareTo\n\ntoString\n\n"
+            }]
+          }
+        },
+        "ownPages": [{
+          "reference": {
+            "path": "kotlindoc",
+            "baseUrl": "https://algs4.fivezha.cn",
+            "fileName": "ds",
+            "extension": "html",
+            "usePrettyUrl": true,
+            "link": "https://algs4.fivezha.cn/kotlindoc/ds"
+          },
+          "description": "",
+          "title": "ds",
+          "content": "<p>Accumulator<\/p>\n<p>累加器 已经增加防抖动<\/p>\nBag\n<p>简单背包<\/p>\nBuffer\n<p>缓冲区类<\/p>\nCircularLinkedList\n<p>循环链表\n此类仅用于约瑟夫环问题 所以api设计很简单<\/p>\nCounter\n<p>计数器类<\/p>\nDate\n<p>日期类<\/p>\nDeque\n<p>双向队列类<\/p>\nLinkedList\n<p>双向链表类<\/p>\nPoint2D\n<p>2D点类<\/p>\nQueue\n<p>单向队列类<\/p>\nRational\n<p>分数类<\/p>\nStack\n<p>栈<\/p>\nStackDeque\n<p>使用三个栈实现双向队列，使得所有操作为O(1)<\/p>\nStackDequeOpt\n<p>用六个栈实现单向队列<\/p>\nTransaction\n<p>收据类<\/p>\nUF\n<p>并查集（已合并优化）<\/p>\n"
+        }]
+      }
+    },
+    "ownPages": [{
+      "reference": {
+        "path": "kotlindoc",
+        "baseUrl": "https://algs4.fivezha.cn",
+        "fileName": "",
+        "extension": "html",
+        "usePrettyUrl": true,
+        "link": "https://algs4.fivezha.cn/kotlindoc"
+      },
+      "description": "",
+      "title": "README",
+      "content": "<h1 id=\"算法第四版个人题解\"><a href=\"#算法第四版个人题解\" id=\"算法第四版个人题解\" class=\"anchor\"><\/a>算法(第四版)个人题解<\/h1>\n<p><img src=\"https://img.shields.io/badge/language-kotlin-orange.svg\" alt=\"kotlin\" /> <img src=\"https://img.shields.io/badge/license-Apache2.0-brightgreen.svg\" alt=\"apache\" /> <a href=\"https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/actions?query=workflow%3A%22Test+Workflow%22\"><img src=\"https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/workflows/Test%20Workflow/badge.svg\" alt=\"test\" /><\/a> <a href=\"https://codecov.io/gh/xmmmmmovo/Algorithms4thEditionKotlinSolutions\"><img src=\"https://codecov.io/gh/xmmmmmovo/Algorithms4thEditionKotlinSolutions/branch/master/graph/badge.svg?token=MJ0M8W38F7\" alt=\"codecov\" /><\/a><\/p>\n<p>算法(第四版)个人实现/部分课后习题/部分提高题<\/p>\n<p>API文档地址：http://algs4.fivezha.cn/doc/<\/p>\n<p>题解博客地址：https://blog.fivezha.cn/categories/algorithm4/<\/p>\n<p>现在已完成至1.4算法分析, 1.5并查集(未完成)<\/p>\n<h2 id=\"资料\"><a href=\"#资料\" id=\"资料\" class=\"anchor\"><\/a>资料<\/h2>\n<p><a href=\"http://algs4.cs.princeton.edu/code/algs4-data.zip\">数据下载<\/a><\/p>\n<p><a href=\"https://algs4.cs.princeton.edu/\">官方网站<\/a><\/p>\n<p><a href=\"https://www.coursera.org/learn/algorithms-part1\">官方课程<\/a><\/p>\n<h2 id=\"实现\"><a href=\"#实现\" id=\"实现\" class=\"anchor\"><\/a>实现<\/h2>\n<p><a href=\"src/main/kotlin/algorithms\">算法实现<\/a><\/p>\n<p><a href=\"/ds\">数据结构实现<\/a><\/p>\n<p><strong>加粗标星号:star:的是在书中标极难的题目<\/strong><\/p>\n<h3 id=\"第一章-基础未完成\"><a href=\"#第一章-基础未完成\" id=\"第一章-基础未完成\" class=\"anchor\"><\/a><a href=\"src/test/kotlin/fundamental\">第一章: 基础(未完成)<\/a><\/h3>\n<ul>\n<li><a href=\"src/main/kotlin/algorithms/BinarySearchUtils.kt\">二分搜索<\/a><\/li>\n<li><a href=\"src/main/kotlin/ds/Accumulator.kt\">累加器<\/a><\/li>\n<li><a href=\"src/main/kotlin/ds/Counter.kt\">计数器<\/a><\/li>\n<li><a href=\"src/main/kotlin/ds/Point2D.kt\">平面点<\/a><\/li>\n<li><a href=\"src/main/kotlin/ds/Date.kt\">日期类<\/a><\/li>\n<li><a href=\"src/main/kotlin/ds/Transaction.kt\">账单类<\/a><\/li>\n<li><a href=\"src/main/kotlin/algorithms/MathUtils.kt#L13\">gcd<\/a><\/li>\n<li><a href=\"src/main/kotlin/algorithms/MathUtils.kt#L35\">快速gcd<\/a><\/li>\n<li><a href=\"src/main/kotlin/ds/Rational.kt\">分数类<\/a><\/li>\n<li><a href=\"src/main/kotlin/ds/Bag.kt\">背包<\/a><\/li>\n<li><a href=\"src/main/kotlin/ds/Stack.kt\">栈<\/a><\/li>\n<li><a href=\"src/main/kotlin/ds/Queue.kt\">队列<\/a><\/li>\n<li><a href=\"src/main/kotlin/algorithms/MathUtils.kt#L174\">括号匹配<\/a><\/li>\n<li><a href=\"src/main/kotlin/algorithms/MathUtils.kt#L195\">括号补全<\/a><\/li>\n<li><a href=\"src/main/kotlin/algorithms/MathUtils.kt#L159\">简单计算器<\/a>\n<ul>\n<li><a href=\"src/main/kotlin/algorithms/MathUtils.kt#L75\">中缀转后缀<\/a><\/li>\n<li><a href=\"src/main/kotlin/algorithms/MathUtils.kt#L137\">计算后缀<\/a><\/li>\n<\/ul>\n<\/li>\n<li><a href=\"src/main/kotlin/ds/LinkedList.kt\">双向链表<\/a><\/li>\n<li><a href=\"src/main/kotlin/ds/Deque.kt\">双向队列<\/a><\/li>\n<li><a href=\"src/main/kotlin/ds/Buffer.kt\">缓冲区Buffer<\/a><\/li>\n<li><a href=\"src/main/kotlin/algorithms/NumUtils.kt#L7\">蛮力法三数之和<\/a><\/li>\n<li><a href=\"src/main/kotlin/algorithms/NumUtils.kt#L28\">二分法三数之和<\/a>\n<ul>\n<li><a href=\"src/main/kotlin/algorithms/ListUtils.kt#L20\">查找已排序列表中是否有重复元素<\/a><\/li>\n<\/ul>\n<\/li>\n<li><a href=\"src/main/kotlin/algorithms/ListUtils.kt#L38\">最接近的一对<\/a><\/li>\n<li><a href=\"src/main/kotlin/algorithms/ListUtils.kt#L63\">最遥远的一对<\/a><\/li>\n<li><a href=\"src/main/kotlin/algorithms/BinarySearchUtils.kt#L44\">数组的局部最小元素<\/a><\/li>\n<li><a href=\"src/main/kotlin/algorithms/NumUtils.kt#L64\">矩阵的局部最小元素<\/a><\/li>\n<li><a href=\"src/main/kotlin/algorithms/BinarySearchUtils.kt#L147\">双调查栈<\/a>\n<ul>\n<li><a href=\"src/main/kotlin/algorithms/BinarySearchUtils.kt#L100\">数组的局部最大值<\/a><\/li>\n<\/ul>\n<\/li>\n<li><a href=\"src/main/kotlin/algorithms/FibonacciUtils.kt#L54\">仅用加减实现的二分查找<\/a>\n<ul>\n<li><a href=\"src/main/kotlin/algorithms/FibonacciUtils.kt#L6\">生成固定长度的斐波那契数列<\/a><\/li>\n<li><a href=\"src/main/kotlin/algorithms/FibonacciUtils.kt#28\">根据最大值生成斐波那契数列<\/a><\/li>\n<\/ul>\n<\/li>\n<li>[扔鸡蛋]<\/li>\n<li>[扔两个鸡蛋]<\/li>\n<li>[三点共线]<\/li>\n<li><a href=\"src/main/kotlin/ds/CircularLinkedList.kt\">循环链表<\/a><\/li>\n<li><a href=\"src/main/kotlin/algorithms/JosephusSolutions.kt\">约瑟夫环问题<\/a>\n<ul>\n<li><a href=\"src/main/kotlin/algorithms/JosephusSolutions.kt#L67\">双向队列解法<\/a><\/li>\n<li><a href=\"src/main/kotlin/algorithms/JosephusSolutions.kt#L99\">循环链表解法<\/a><\/li>\n<li><a href=\"src/main/kotlin/algorithms/JosephusSolutions.kt#L132\">数学解法<\/a><\/li>\n<\/ul>\n<\/li>\n<li><strong><a href=\"src/main/kotlin/ds/StackDeque.kt\">:star:利用三个栈实现双向队列，使得所有操作时间复杂度O(1)(均摊后虚假的O(1))<\/a><\/strong><\/li>\n<li><strong><a href=\"src/main/kotlin/ds/StackDequeOpt.kt\">:star:利用六个栈实现单向队列，使得所有操作时间复杂度O(1)(真正的O(1))<\/a><\/strong><\/li>\n<li><a href=\"src/main/kotlin/algorithms/MathUtils.kt#L207\">生日问题<\/a><\/li>\n<li><a href=\"src/main/kotlin/ds/UF.kt\">快速并查集<\/a><\/li>\n<\/ul>\n<h3 id=\"第二章-排序未完成\"><a href=\"#第二章-排序未完成\" id=\"第二章-排序未完成\" class=\"anchor\"><\/a>第二章: 排序(未完成)<\/h3>\n<h3 id=\"第三章-查找未完成\"><a href=\"#第三章-查找未完成\" id=\"第三章-查找未完成\" class=\"anchor\"><\/a>第三章: 查找(未完成)<\/h3>\n<h3 id=\"第四章-图未完成\"><a href=\"#第四章-图未完成\" id=\"第四章-图未完成\" class=\"anchor\"><\/a>第四章: 图(未完成)<\/h3>\n<h3 id=\"第五章-字符串未完成\"><a href=\"#第五章-字符串未完成\" id=\"第五章-字符串未完成\" class=\"anchor\"><\/a>第五章: 字符串(未完成)<\/h3>\n<h3 id=\"第六章-背景未完成\"><a href=\"#第六章-背景未完成\" id=\"第六章-背景未完成\" class=\"anchor\"><\/a>第六章: 背景(未完成)<\/h3>\n<h3 id=\"一些扩展函数和扩展属性\"><a href=\"#一些扩展函数和扩展属性\" id=\"一些扩展函数和扩展属性\" class=\"anchor\"><\/a>一些扩展函数和扩展属性<\/h3>\n<ul>\n<li><a href=\"src/main/kotlin/ext/NumberExt.kt\">Number类扩展<\/a><\/li>\n<\/ul>\n<h3 id=\"一些工具类\"><a href=\"#一些工具类\" id=\"一些工具类\" class=\"anchor\"><\/a>一些工具类<\/h3>\n<ul>\n<li><a href=\"src/test/kotlin/utils/FileUtils.kt\">文件工具类<\/a><\/li>\n<li><a href=\"src/main/kotlin/utils/RangeUtils.kt\">范围工具类<\/a><\/li>\n<li><a href=\"src/main/kotlin/utils/StopwatchCPU.kt\">计时类<\/a><\/li>\n<\/ul>\n<h2 id=\"写在最后\"><a href=\"#写在最后\" id=\"写在最后\" class=\"anchor\"><\/a>写在最后<\/h2>\n<p>你可能觉得这份题解不全(不包括未写章节)，是不全，因为本人做题的原则就是<strong>只做自己觉得需要做的<\/strong>，对于一些看一眼大概就有思路或者用处不大的题目就一律跳过了。<\/p>\n<p>如果你发现了代码的一些逻辑错误或者还有其它测试用例，可以在<a href=\"https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/issues\"><strong>Issue<\/strong><\/a>里面提出，或者直接发起<a href=\"https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/pulls\"><strong>Pull request<\/strong><\/a><\/p>\n<p>由于一些个人原因，本项目测试文件和文档注释都不全（前期的时候都没写），如有兴趣或能力补全可以直接发起<a href=\"https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/pulls\"><strong>Pull request<\/strong><\/a>，在此表示感谢!<\/p>\n<h2 id=\"为什么用kotlin\"><a href=\"#为什么用kotlin\" id=\"为什么用kotlin\" class=\"anchor\"><\/a>为什么用kotlin<\/h2>\n<p>只是因为用起来比较爽罢了，起码比Java用起来爽...<\/p>\n"
+    }]
+  }}
+}

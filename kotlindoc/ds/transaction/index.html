@@ -1,0 +1,1061 @@
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+
+
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.21.0"/>
+<link rel="icon" href="https://algs4.fivezha.cn/favicon.ico">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>Transaction</title>
+
+
+<meta name="description" content="📕算法(第四版)kotlin个人实现/部分课后习题/部分提高题">
+
+
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="https://algs4.fivezha.cn/Editorial/64724bee/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://algs4.fivezha.cn/Editorial/64724bee/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://algs4.fivezha.cn/Editorial/64724bee/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://algs4.fivezha.cn/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://algs4.fivezha.cn/assets/css/orchidSourceDoc.css"  />
+<!-- end:inject styles -->
+
+
+
+
+
+<!-- start:debug info -->
+
+<!-- THEME -->
+<!-- Type: Editorial -->
+<!-- Class: com.eden.orchid.editorial.EditorialTheme -->
+
+<!-- PAGE -->
+<!-- Type: classes -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocPage -->
+<!-- Layout: index -->
+<!-- Resolved Layout: templates/layouts/index.peb -->
+<!-- Page Template: kotlindocClass, sourceDocPage, classes, page -->
+<!-- Resolved Page Template: templates/pages/sourceDocPage.peb -->
+
+<!-- RESOURCE -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocResource -->
+<!-- Source Filename:  -->
+
+<!-- COMPLETE PAGE CONFIGURATION -->
+<script>
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://algs4.fivezha.cn","fileName":"ds/transaction","extension":"html","usePrettyUrl":true,"link":"https://algs4.fivezha.cn/kotlindoc/ds/transaction"},"description":"","title":"Transaction"};
+</script>
+
+<!-- end:debug info -->
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://algs4.fivezha.cn","environment":"debug","version":"1.0.0"};
+</script>
+
+
+    <!-- start:inject meta-components [head] -->
+    
+
+        
+            
+        
+
+        
+            
+        
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+
+
+
+
+</head>
+<body class="is-loading">
+
+
+
+
+
+    <!-- start:inject meta-components [bodyStart] -->
+    
+
+        
+            
+        
+
+        
+    
+    <!-- end:inject meta-components [bodyStart] -->
+
+
+
+    <!-- start:inject meta-components [bodyStart] -->
+    
+    <!-- end:inject meta-components [bodyStart] -->
+
+
+
+
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            
+                <header id="header">
+    <a href="https://algs4.fivezha.cn" class="logo">算法(第四版)kotlin个人实现</a>
+    <ul class="icons">
+    
+    
+        <li>
+            <a href="https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions" class="icon fa-github">
+                <span class="label">github</span>
+            </a>
+        </li>
+    
+    
+    </ul>
+</header>
+
+            
+            
+            
+            
+                <section id="pageContent">
+                    <header class="major"><h2>Transaction</h2></header>
+                    <article>
+                        
+    <!-- start:inject components -->
+    
+        
+            
+                
+                    
+                        <div class="sourcedoc-page orchid-sourcedoc content">
+  
+<div class="sourcedoc-section section-root section-level-1" id="Transaction">
+
+
+  
+
+  
+    <div class="sourcedoc-section section-element" id="bad9473c08122d93b7f632ebda30f39f57128ee9">
+      
+      <p class="sourcedoc-section section-signature">
+        <code>class Transaction: Comparable&lt;Transaction&gt;, Any</code>
+      </p>
+
+      
+        
+    <!-- start:inject components -->
+    
+    <!-- end:inject components -->
+
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>收据类</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="constructors">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Constructors</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="cec21db9e303fb8b2bceb455300cef936e30e498">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>constructor(w: String, t: Date, a: Double)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="3e8c840b8195e0109ad1cff9df5259af1415bfa0">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="d54d3aa0c75a4aed6c0f4f23a56e8f5568a9c817">
+        <td class="sourcedoc-section section-signature">
+          <code>w: String</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="94c4502378a6b9baaea07e6ee0eed6fa53af96b1">
+        <td class="sourcedoc-section section-signature">
+          <code>t: Date</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="8ee115a08e5b536b02e77cd5fefe22d9539dadf1">
+        <td class="sourcedoc-section section-signature">
+          <code>a: Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="dfecc784277c350bcde168099eb29ffc42ce95e9">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>constructor(parseString: String)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="f6d8e3014101dffab291f4b28c50d2c8d570de9a">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="d8120af48957fc064ba12749077f84ecafd571d0">
+        <td class="sourcedoc-section section-signature">
+          <code>parseString: String</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="methods">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Methods</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="81e7f463244c65a90e8f20ee21cba6c11adb3541">
+      
+      <h3 class="sourcedoc-section element-name">who</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun who(): String</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="e8cb40fd790689cdbbc4aaae6070390537270ed5">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="3df63b7acb0522da685dad5fe84b81fdd7b25264">
+        <td class="sourcedoc-section section-signature">
+          <code>String</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="e0d1be03d214b87c11a36f78d4468460dcc89273">
+      
+      <h3 class="sourcedoc-section element-name">time</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun time(): Date</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="0cf13c6de2dad49bd51cf86f70bf24b1527d320f">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="eb9a4bc1c0c153e4e4b042a79113b815b7e3021d">
+        <td class="sourcedoc-section section-signature">
+          <code>Date</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="449d5e381a919357f77ce3edec9fd13af1fef3f7">
+      
+      <h3 class="sourcedoc-section element-name">amount</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun amount(): Double</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="21567012ae0746e2e14b37cdc84d9a221e37ad9b">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="81581597044514bf54d4f97266022fc991f3915e">
+        <td class="sourcedoc-section section-signature">
+          <code>Double</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="7b799f0e3bb5e5bb490830144931ca2ad75e436e">
+      
+      <h3 class="sourcedoc-section element-name">compareTo</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun compareTo(other: Transaction): Int</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="ceade394ec5b5006232808d89bc81b394de2d026">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="11d619209bbef4dc73db438f2ab5c486d027f784">
+        <td class="sourcedoc-section section-signature">
+          <code>other: Transaction</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="88cf84c9d83331f3deb2771b1c03f34bac7de7f3">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="5c89edcac2811a6a9e8072517cae7f3cbfd5049d">
+        <td class="sourcedoc-section section-signature">
+          <code>Int</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="01d86357db616e3d839e73745db55c033ca70ffb">
+      
+      <h3 class="sourcedoc-section element-name">toString</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun toString(): String</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="51cc9ed56b4c58e53a7efded8900e33c932371be">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="3df63b7acb0522da685dad5fe84b81fdd7b25264">
+        <td class="sourcedoc-section section-signature">
+          <code>String</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+</div>
+
+
+
+
+
+
+                    
+                
+            
+        
+    
+    <!-- end:inject components -->
+
+
+                    </article>
+                </section>
+            
+        </div>
+        <hr>
+
+        <!-- Page Footer -->
+        <div class="inner">
+    <footer id="footer">
+        <div class="clearfix">
+            
+            
+        </div>
+    </footer>
+</div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+    <div class="inner">
+
+        <!-- Search -->
+        <section id="search" class="alt">
+            <form data-orchid-search="">
+                <input type="text" name="query" id="query" placeholder="Search"/>
+            </form>
+            <div class="box" id="search-results" data-orchid-search-results style="display: none;">
+                <b>Search Results</b>
+                <ul></ul>
+            </div>
+            <div class="box" id="search-progress" data-orchid-search-progress style="display: none;">
+                <div class="loader">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <nav id="siteNav" class="menu">
+            <header class="major">
+                <h2>算法(第四版)kotlin个人实现</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a class="subheader">Wiki</a>
+    </li>
+    
+
+                
+                    
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">API Docs</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">Classes</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/accumulator">Accumulator</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/bag">Bag</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/buffer">Buffer</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/circularlinkedlist">CircularLinkedList</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/counter">Counter</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/date">Date</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/deque">Deque</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/algorithms/josephussolutions">JosephusSolutions</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/linkedlist">LinkedList</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/point2d">Point2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/algorithms/point2dmindistancecalculator">Point2DMinDistanceCalculator</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/queue">Queue</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/rational">Rational</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/stack">Stack</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/stackdeque">StackDeque</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/stackdequeopt">StackDequeOpt</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/utils/stopwatchcpu">StopwatchCPU</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/transaction">Transaction</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/uf">UF</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Packages</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/algorithms">algorithms</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds">ds</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ext">ext</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/utils">utils</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+            </ul>
+        </nav>
+        
+        <nav class="menu">
+            <header class="major">
+                <h2>Transaction</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    <li>
+        <span class="opener">Constructors</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="#cec21db9e303fb8b2bceb455300cef936e30e498">constructor(w: String, t: Date, a: Double)</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#dfecc784277c350bcde168099eb29ffc42ce95e9">constructor(parseString: String)</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Methods</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="#81e7f463244c65a90e8f20ee21cba6c11adb3541">fun who(): String</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#e0d1be03d214b87c11a36f78d4468460dcc89273">fun time(): Date</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#449d5e381a919357f77ce3edec9fd13af1fef3f7">fun amount(): Double</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#7b799f0e3bb5e5bb490830144931ca2ad75e436e">fun compareTo(other: Transaction): Int</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#01d86357db616e3d839e73745db55c033ca70ffb">fun toString(): String</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+            </ul>
+        </nav>
+        
+
+        <!-- Section -->
+        <section>
+            <p class="text-center">
+                Currently 1.0.0. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright text-center">&copy; 算法(第四版)kotlin个人实现. All rights reserved.<br>Design by <a href="https://html5up.net">HTML5 UP</a></p>
+        </footer>
+
+    </div>
+</div>
+
+</div>
+
+
+
+
+
+
+    <!-- start:inject meta-components [bodyEnd] -->
+    
+
+        
+            
+        
+
+        
+    
+    <!-- end:inject meta-components [bodyEnd] -->
+
+
+
+    <!-- start:inject meta-components [bodyEnd] -->
+    
+    <!-- end:inject meta-components [bodyEnd] -->
+
+
+
+
+<!-- start:inject scripts -->
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+<script  src="https://algs4.fivezha.cn/Editorial/64724bee/assets/js/editorial_util.js"></script>
+<script  src="https://algs4.fivezha.cn/Editorial/64724bee/assets/js/editorial_main.js"></script>
+<script  src="https://algs4.fivezha.cn/Editorial/64724bee/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script  src="https://unpkg.com/lunr/lunr.js"></script>
+<script  src="https://algs4.fivezha.cn/assets/js/orchidSearch.js"></script>
+<!-- end:inject scripts -->
+
+
+</body>
+</html>

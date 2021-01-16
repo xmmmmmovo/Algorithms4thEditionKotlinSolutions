@@ -1,0 +1,1383 @@
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+
+
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.21.0"/>
+<link rel="icon" href="https://algs4.fivezha.cn/favicon.ico">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>Stack</title>
+
+
+<meta name="description" content="📕算法(第四版)kotlin个人实现/部分课后习题/部分提高题">
+
+
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="https://algs4.fivezha.cn/Editorial/64724bee/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://algs4.fivezha.cn/Editorial/64724bee/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://algs4.fivezha.cn/Editorial/64724bee/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://algs4.fivezha.cn/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://algs4.fivezha.cn/assets/css/orchidSourceDoc.css"  />
+<!-- end:inject styles -->
+
+
+
+
+
+<!-- start:debug info -->
+
+<!-- THEME -->
+<!-- Type: Editorial -->
+<!-- Class: com.eden.orchid.editorial.EditorialTheme -->
+
+<!-- PAGE -->
+<!-- Type: classes -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocPage -->
+<!-- Layout: index -->
+<!-- Resolved Layout: templates/layouts/index.peb -->
+<!-- Page Template: kotlindocClass, sourceDocPage, classes, page -->
+<!-- Resolved Page Template: templates/pages/sourceDocPage.peb -->
+
+<!-- RESOURCE -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocResource -->
+<!-- Source Filename:  -->
+
+<!-- COMPLETE PAGE CONFIGURATION -->
+<script>
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://algs4.fivezha.cn","fileName":"ds/stack","extension":"html","usePrettyUrl":true,"link":"https://algs4.fivezha.cn/kotlindoc/ds/stack"},"description":"","title":"Stack"};
+</script>
+
+<!-- end:debug info -->
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://algs4.fivezha.cn","environment":"debug","version":"1.0.0"};
+</script>
+
+
+    <!-- start:inject meta-components [head] -->
+    
+
+        
+            
+        
+
+        
+            
+        
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+
+
+
+
+</head>
+<body class="is-loading">
+
+
+
+
+
+    <!-- start:inject meta-components [bodyStart] -->
+    
+
+        
+            
+        
+
+        
+    
+    <!-- end:inject meta-components [bodyStart] -->
+
+
+
+    <!-- start:inject meta-components [bodyStart] -->
+    
+    <!-- end:inject meta-components [bodyStart] -->
+
+
+
+
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            
+                <header id="header">
+    <a href="https://algs4.fivezha.cn" class="logo">算法(第四版)kotlin个人实现</a>
+    <ul class="icons">
+    
+    
+        <li>
+            <a href="https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions" class="icon fa-github">
+                <span class="label">github</span>
+            </a>
+        </li>
+    
+    
+    </ul>
+</header>
+
+            
+            
+            
+            
+                <section id="pageContent">
+                    <header class="major"><h2>Stack</h2></header>
+                    <article>
+                        
+    <!-- start:inject components -->
+    
+        
+            
+                
+                    
+                        <div class="sourcedoc-page orchid-sourcedoc content">
+  
+<div class="sourcedoc-section section-root section-level-1" id="Stack">
+
+
+  
+
+  
+    <div class="sourcedoc-section section-element" id="0f83df13b613b8bb92ad7cd19b397b53151b4728">
+      
+      <p class="sourcedoc-section section-signature">
+        <code>class Stack&lt;T&gt; : Collection&lt;T&gt;, Cloneable, Any</code>
+      </p>
+
+      
+        
+    <!-- start:inject components -->
+    
+    <!-- end:inject components -->
+
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>栈</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="fields">
+
+
+  <p class="sourcedoc-section section-name"><strong>Fields</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="6cceeb39171f0bc3de4da4df1fc3a043260e0bb9">
+        <td class="sourcedoc-section section-signature">
+          <code>val size: Int</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>栈大小</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="constructors">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Constructors</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="d4613aad3f43ed7d2b370aabe518d8516ff827ff">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>constructor()</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>构造函数</p>
+</div>
+
+      
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="ac7c8aa218dae728b1c0193c792d2ac258ecff05">
+      
+      <h3 class="sourcedoc-section element-name">&lt;init&gt;</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>constructor(s: Stack&lt;T&gt;)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>拷贝构造函数</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="2d5d7f087546675cae08eddf8cb689f29daae437">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f366cde0535d340a246c83fe13b23b85accbae06">
+        <td class="sourcedoc-section section-signature">
+          <code>s: Stack&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="methods">
+
+
+  
+    <h2 class="sourcedoc-section section-name">Methods</h2>
+  
+
+  
+    <div class="sourcedoc-section section-element" id="c7bbf253716dcbbe72dc26569b54c5505b7d4ff1">
+      
+      <h3 class="sourcedoc-section element-name">isEmpty</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun isEmpty(): Boolean</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>判断是否为空</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="9e492ebd7fbe4b91c508904f771d416a059ed504">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
+        <td class="sourcedoc-section section-signature">
+          <code>Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>返回是否为空</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="095a63f86f40c02c0657dad825d7cf237650986c">
+      
+      <h3 class="sourcedoc-section element-name">contains</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun contains(element: T): Boolean</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>是否包含某元素</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="cdaf5a2885cbf7225bade7b7c1ee9797d6ddc7c5">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="1a323677d440ff8bb88b380d122f0f4d33955a77">
+        <td class="sourcedoc-section section-signature">
+          <code>element: T</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>查找的元素</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="8866313357b197e3f2b8574637c37f3820a5840c">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
+        <td class="sourcedoc-section section-signature">
+          <code>Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>是否包含</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="784eb7cf38026116f33c641b6418cf0fdf877ac8">
+      
+      <h3 class="sourcedoc-section element-name">containsAll</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun containsAll(elements: Collection&lt;T&gt;): Boolean</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>是否包含传入参数的所有元素</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="c7cc5e06947e63f2ab91d7ab704a237792acf41c">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="fce762bc04aefb54a50202b3d8d71577d1ab5668">
+        <td class="sourcedoc-section section-signature">
+          <code>elements: Collection&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>需要查找的元素列表</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="0bc2d2a3d01d4e91fdd114f7351068cd6b0460ec">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="b76ff4906f33c2dd97ddd929b9662ba8cac6174c">
+        <td class="sourcedoc-section section-signature">
+          <code>Boolean</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>是否包含所有</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="0980c22a5127551d81c017d4daa68f9050329992">
+      
+      <h3 class="sourcedoc-section element-name">push</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun push(item: T)</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>入栈</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="c8441185ae9a624095094f5dfc314ac553b1df3d">
+
+
+  <p class="sourcedoc-section section-name"><strong>Parameters</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="4e7c82c80daa26ddeca5a1416875b4c456adc4ea">
+        <td class="sourcedoc-section section-signature">
+          <code>item: T</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>入栈元素</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="d2d1684245d60d974178a5ef2a6770e5b9d57f43">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="f6b935ab337145efdeadda28cae18aa89a845e36">
+        <td class="sourcedoc-section section-signature">
+          <code>Unit</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="3e810834ba1dc657f985acdd189aa92323eb50a8">
+      
+      <h3 class="sourcedoc-section element-name">pop</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun pop(): T</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>出栈</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="30fc60259bac41a0b6b3c2e85085b24368e6beeb">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="c2c53d66948214258a26ca9ca845d7ac0c17f8e7">
+        <td class="sourcedoc-section section-signature">
+          <code>T</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>返回出栈元素</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="5703cb2319ba976533c24572addd27c4175fe750">
+      
+      <h3 class="sourcedoc-section element-name">peek</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun peek(): T</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>查看栈顶</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="fa4a87d87d86b9d6f24aa09d1479a874ce8b9e46">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="c2c53d66948214258a26ca9ca845d7ac0c17f8e7">
+        <td class="sourcedoc-section section-signature">
+          <code>T</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>栈顶元素</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="19ffdedbedeb119b80b3a2b6e19c18e06d929b52">
+      
+      <h3 class="sourcedoc-section element-name">clone</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun clone(): Stack&lt;T&gt;</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>拷贝函数</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="81fe6db83e72bafdddf41429abb87c69205051ad">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="99e8124509f9a882d49abaaa8c2331650373a218">
+        <td class="sourcedoc-section section-signature">
+          <code>Stack&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>返回拷贝</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="01d86357db616e3d839e73745db55c033ca70ffb">
+      
+      <h3 class="sourcedoc-section element-name">toString</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun toString(): String</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>转字符串方法</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="51cc9ed56b4c58e53a7efded8900e33c932371be">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="3df63b7acb0522da685dad5fe84b81fdd7b25264">
+        <td class="sourcedoc-section section-signature">
+          <code>String</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>字符串</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+    <div class="sourcedoc-section section-element" id="4eceae25526cef8f4e84fa957b183946e1ca5cad">
+      
+      <h3 class="sourcedoc-section element-name">iterator</h3>
+      
+      <p class="sourcedoc-section section-signature">
+        <code>fun iterator(): Iterator&lt;T&gt;</code>
+      </p>
+
+      
+
+      <div class="sourcedoc-section section-comments"><p>返回迭代器方法</p>
+</div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-3" id="5911b6da4c4f468c080da41f3ec95f57cacc9a68">
+
+
+  <p class="sourcedoc-section section-name"><strong>ReturnValue</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="3c2f4c5158c582a734acffd1caa858ae18a34b1e">
+        <td class="sourcedoc-section section-signature">
+          <code>Iterator&lt;T&gt;</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>返回迭代器</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+</div>
+
+
+
+
+
+
+                    
+                
+            
+        
+    
+    <!-- end:inject components -->
+
+
+                    </article>
+                </section>
+            
+        </div>
+        <hr>
+
+        <!-- Page Footer -->
+        <div class="inner">
+    <footer id="footer">
+        <div class="clearfix">
+            
+            
+        </div>
+    </footer>
+</div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+    <div class="inner">
+
+        <!-- Search -->
+        <section id="search" class="alt">
+            <form data-orchid-search="">
+                <input type="text" name="query" id="query" placeholder="Search"/>
+            </form>
+            <div class="box" id="search-results" data-orchid-search-results style="display: none;">
+                <b>Search Results</b>
+                <ul></ul>
+            </div>
+            <div class="box" id="search-progress" data-orchid-search-progress style="display: none;">
+                <div class="loader">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <nav id="siteNav" class="menu">
+            <header class="major">
+                <h2>算法(第四版)kotlin个人实现</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a class="subheader">Wiki</a>
+    </li>
+    
+
+                
+                    
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">API Docs</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">Classes</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/accumulator">Accumulator</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/bag">Bag</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/buffer">Buffer</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/circularlinkedlist">CircularLinkedList</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/counter">Counter</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/date">Date</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/deque">Deque</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/algorithms/josephussolutions">JosephusSolutions</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/linkedlist">LinkedList</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/point2d">Point2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/algorithms/point2dmindistancecalculator">Point2DMinDistanceCalculator</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/queue">Queue</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/rational">Rational</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/stack">Stack</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/stackdeque">StackDeque</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/stackdequeopt">StackDequeOpt</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/utils/stopwatchcpu">StopwatchCPU</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/transaction">Transaction</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/uf">UF</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Packages</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/algorithms">algorithms</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds">ds</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ext">ext</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/utils">utils</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+            </ul>
+        </nav>
+        
+        <nav class="menu">
+            <header class="major">
+                <h2>Stack</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    <li>
+        <span class="opener">Fields</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="#6cceeb39171f0bc3de4da4df1fc3a043260e0bb9">val size: Int</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Constructors</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="#d4613aad3f43ed7d2b370aabe518d8516ff827ff">constructor()</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#ac7c8aa218dae728b1c0193c792d2ac258ecff05">constructor(s: Stack&lt;T&gt;)</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Methods</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="#c7bbf253716dcbbe72dc26569b54c5505b7d4ff1">fun isEmpty(): Boolean</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#095a63f86f40c02c0657dad825d7cf237650986c">fun contains(element: T): Boolean</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#784eb7cf38026116f33c641b6418cf0fdf877ac8">fun containsAll(elements: Collection&lt;T&gt;): Boolean</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#0980c22a5127551d81c017d4daa68f9050329992">fun push(item: T)</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#3e810834ba1dc657f985acdd189aa92323eb50a8">fun pop(): T</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#5703cb2319ba976533c24572addd27c4175fe750">fun peek(): T</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#19ffdedbedeb119b80b3a2b6e19c18e06d929b52">fun clone(): Stack&lt;T&gt;</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#01d86357db616e3d839e73745db55c033ca70ffb">fun toString(): String</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#4eceae25526cef8f4e84fa957b183946e1ca5cad">fun iterator(): Iterator&lt;T&gt;</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+            </ul>
+        </nav>
+        
+
+        <!-- Section -->
+        <section>
+            <p class="text-center">
+                Currently 1.0.0. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright text-center">&copy; 算法(第四版)kotlin个人实现. All rights reserved.<br>Design by <a href="https://html5up.net">HTML5 UP</a></p>
+        </footer>
+
+    </div>
+</div>
+
+</div>
+
+
+
+
+
+
+    <!-- start:inject meta-components [bodyEnd] -->
+    
+
+        
+            
+        
+
+        
+    
+    <!-- end:inject meta-components [bodyEnd] -->
+
+
+
+    <!-- start:inject meta-components [bodyEnd] -->
+    
+    <!-- end:inject meta-components [bodyEnd] -->
+
+
+
+
+<!-- start:inject scripts -->
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+<script  src="https://algs4.fivezha.cn/Editorial/64724bee/assets/js/editorial_util.js"></script>
+<script  src="https://algs4.fivezha.cn/Editorial/64724bee/assets/js/editorial_main.js"></script>
+<script  src="https://algs4.fivezha.cn/Editorial/64724bee/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script  src="https://unpkg.com/lunr/lunr.js"></script>
+<script  src="https://algs4.fivezha.cn/assets/js/orchidSearch.js"></script>
+<!-- end:inject scripts -->
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "ownKey": "home",
+  "ownPages": [
+    {
+      "reference": {
+        "path": "",
+        "baseUrl": "https://algs4.fivezha.cn",
+        "fileName": "",
+        "extension": "html",
+        "usePrettyUrl": true,
+        "link": "https://algs4.fivezha.cn"
+      },
+      "description": "",
+      "title": "Home",
+      "content": "<h1 id=\"算法第四版\"><a href=\"#算法第四版\" id=\"算法第四版\" class=\"anchor\"><\/a>算法(第四版)<\/h1>\n"
+    },
+    {
+      "reference": {
+        "path": "",
+        "baseUrl": "https://algs4.fivezha.cn",
+        "fileName": "404",
+        "extension": "html",
+        "usePrettyUrl": false,
+        "link": "https://algs4.fivezha.cn/404.html"
+      },
+      "description": "",
+      "title": "Not Found",
+      "content": ""
+    }
+  ]
+}

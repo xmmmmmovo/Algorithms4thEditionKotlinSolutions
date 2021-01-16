@@ -1,0 +1,874 @@
+<!DOCTYPE HTML>
+<!--
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+
+
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.21.0"/>
+<link rel="icon" href="https://algs4.fivezha.cn/favicon.ico">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>ds</title>
+
+
+<meta name="description" content="📕算法(第四版)kotlin个人实现/部分课后习题/部分提高题">
+
+
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="https://algs4.fivezha.cn/Editorial/64724bee/assets/css/editorial_main.css"  />
+<link rel="stylesheet" type="text/css" href="https://algs4.fivezha.cn/Editorial/64724bee/assets/css/editorial_orchidCustomizations.css"  />
+<link rel="stylesheet" type="text/css" href="https://algs4.fivezha.cn/Editorial/64724bee/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://algs4.fivezha.cn/assets/css/orchidSearch.css"  />
+<link rel="stylesheet" type="text/css" href="https://algs4.fivezha.cn/assets/css/orchidSourceDoc.css"  />
+<!-- end:inject styles -->
+
+
+
+
+
+<!-- start:debug info -->
+
+<!-- THEME -->
+<!-- Type: Editorial -->
+<!-- Class: com.eden.orchid.editorial.EditorialTheme -->
+
+<!-- PAGE -->
+<!-- Type: packages -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocPage -->
+<!-- Layout: index -->
+<!-- Resolved Layout: templates/layouts/index.peb -->
+<!-- Page Template: kotlindocPackage, sourceDocPage, packages, page -->
+<!-- Resolved Page Template: templates/pages/sourceDocPage.peb -->
+
+<!-- RESOURCE -->
+<!-- Class: com.eden.orchid.sourcedoc.page.SourceDocResource -->
+<!-- Source Filename:  -->
+
+<!-- COMPLETE PAGE CONFIGURATION -->
+<script>
+    window.allData = {"reference":{"path":"kotlindoc","baseUrl":"https://algs4.fivezha.cn","fileName":"ds","extension":"html","usePrettyUrl":true,"link":"https://algs4.fivezha.cn/kotlindoc/ds"},"description":"","title":"ds"};
+</script>
+
+<!-- end:debug info -->
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.21.0","baseUrl":"https://algs4.fivezha.cn","environment":"debug","version":"1.0.0"};
+</script>
+
+
+    <!-- start:inject meta-components [head] -->
+    
+
+        
+            
+        
+
+        
+            
+        
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+    <!-- start:inject meta-components [head] -->
+    
+    <!-- end:inject meta-components [head] -->
+
+
+
+
+
+
+
+</head>
+<body class="is-loading">
+
+
+
+
+
+    <!-- start:inject meta-components [bodyStart] -->
+    
+
+        
+            
+        
+
+        
+    
+    <!-- end:inject meta-components [bodyStart] -->
+
+
+
+    <!-- start:inject meta-components [bodyStart] -->
+    
+    <!-- end:inject meta-components [bodyStart] -->
+
+
+
+
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <!-- Header -->
+            
+                <header id="header">
+    <a href="https://algs4.fivezha.cn" class="logo">算法(第四版)kotlin个人实现</a>
+    <ul class="icons">
+    
+    
+        <li>
+            <a href="https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions" class="icon fa-github">
+                <span class="label">github</span>
+            </a>
+        </li>
+    
+    
+    </ul>
+</header>
+
+            
+            
+            
+            
+                <section id="pageContent">
+                    <header class="major"><h2>ds</h2></header>
+                    <article>
+                        
+    <!-- start:inject components -->
+    
+        
+            
+                
+                    
+                        <div class="sourcedoc-page orchid-sourcedoc content">
+  
+<div class="sourcedoc-section section-root section-level-1" id="ds">
+
+
+  
+
+  
+    <div class="sourcedoc-section section-element" id="cf550115f3d518342bbd8f3d02701de87d3cbcb6">
+      
+      <p class="sourcedoc-section section-signature">
+        <code>package ds</code>
+      </p>
+
+      
+        
+    <!-- start:inject components -->
+    
+    <!-- end:inject components -->
+
+
+      
+
+      <div class="sourcedoc-section section-comments"></div>
+
+      
+      
+        
+          
+<div class="sourcedoc-section section-root section-level-2" id="classes">
+
+
+  <p class="sourcedoc-section section-name"><strong>Classes</strong></p>
+
+  <div class="table-container">
+    <table class="table is-fullwidth is-bordered">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+      <tr class="sourcedoc-section section-element" id="80b9fa0f1066aabdc18019714471c5ca572601ea">
+        <td class="sourcedoc-section section-signature">
+          <code>class Accumulator: Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>累加器 已经增加防抖动</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="3ce8d49e939fc5d0261dc2e44979e3dad92f5a3c">
+        <td class="sourcedoc-section section-signature">
+          <code>class Bag&lt;T&gt; : Collection&lt;T&gt;, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>简单背包</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="ab897cb656f9fecb916890349fdb87dd4fc7b865">
+        <td class="sourcedoc-section section-signature">
+          <code>class Buffer: Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>缓冲区类</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="161caa6cd19490bf7d0c30680c3814527cecd926">
+        <td class="sourcedoc-section section-signature">
+          <code>class CircularLinkedList&lt;T&gt; : MutableIterable&lt;T&gt;, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>循环链表
+此类仅用于约瑟夫环问题 所以api设计很简单</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="d617af2bb80ecbe8f6d7e783dce7f58c3de33d8c">
+        <td class="sourcedoc-section section-signature">
+          <code>class Counter: Comparable&lt;Counter&gt;, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>计数器类</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="fc34ef024635479bbf1324170c6de0cd02ae1ebd">
+        <td class="sourcedoc-section section-signature">
+          <code>class Date: Comparable&lt;Date&gt;, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>日期类</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="abd549508c88048174a8b0476c7728f9a617491e">
+        <td class="sourcedoc-section section-signature">
+          <code>class Deque&lt;T&gt; : Collection&lt;T&gt;, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>双向队列类</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="f7970252879ebc74d0c1537d1b4bfacb7851f1cb">
+        <td class="sourcedoc-section section-signature">
+          <code>class LinkedList&lt;T&gt; : MutableList&lt;T&gt;, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>双向链表类</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="3de665afe6aa4f03659980f6c6778984825eac49">
+        <td class="sourcedoc-section section-signature">
+          <code>class Point2D: Comparable&lt;Point2D&gt;, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>2D点类</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="ad24635ddd7f4f50c023e68db6fc206ce7bfd2d0">
+        <td class="sourcedoc-section section-signature">
+          <code>class Queue&lt;T&gt; : Collection&lt;T&gt;, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>单向队列类</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="fe0373bc2609879515260d6d1483b08688b827b1">
+        <td class="sourcedoc-section section-signature">
+          <code>class Rational: Comparable&lt;Rational&gt;, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>分数类</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="0f83df13b613b8bb92ad7cd19b397b53151b4728">
+        <td class="sourcedoc-section section-signature">
+          <code>class Stack&lt;T&gt; : Collection&lt;T&gt;, Cloneable, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>栈</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="f06451a713e4c3f49078cf95566c09ad730f89ea">
+        <td class="sourcedoc-section section-signature">
+          <code>class StackDeque&lt;T&gt; : Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>使用三个栈实现双向队列，使得所有操作为O(1)</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="cca0e3c0a414f920bae4f559e50a2e7696d9f6cd">
+        <td class="sourcedoc-section section-signature">
+          <code>class StackDequeOpt&lt;T&gt; : Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>用六个栈实现单向队列</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="bad9473c08122d93b7f632ebda30f39f57128ee9">
+        <td class="sourcedoc-section section-signature">
+          <code>class Transaction: Comparable&lt;Transaction&gt;, Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>收据类</p>
+
+        </td>
+      </tr>
+      
+      <tr class="sourcedoc-section section-element" id="e6cd6b569cfcffe2de6c86fde49c5a3b767302f1">
+        <td class="sourcedoc-section section-signature">
+          <code>class UF: Any</code>
+        </td>
+        <td class="sourcedoc-section section-comments content">
+        <p>并查集（已合并优化）</p>
+
+        </td>
+      </tr>
+      
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+        
+      
+    </div>
+  
+
+</div>
+
+</div>
+
+
+
+
+
+
+                    
+                
+            
+        
+    
+    <!-- end:inject components -->
+
+
+                    </article>
+                </section>
+            
+        </div>
+        <hr>
+
+        <!-- Page Footer -->
+        <div class="inner">
+    <footer id="footer">
+        <div class="clearfix">
+            
+            
+        </div>
+    </footer>
+</div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+    <div class="inner">
+
+        <!-- Search -->
+        <section id="search" class="alt">
+            <form data-orchid-search="">
+                <input type="text" name="query" id="query" placeholder="Search"/>
+            </form>
+            <div class="box" id="search-results" data-orchid-search-results style="display: none;">
+                <b>Search Results</b>
+                <ul></ul>
+            </div>
+            <div class="box" id="search-progress" data-orchid-search-progress style="display: none;">
+                <div class="loader">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <nav id="siteNav" class="menu">
+            <header class="major">
+                <h2>算法(第四版)kotlin个人实现</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    
+    <li>
+        <a class="subheader">Wiki</a>
+    </li>
+    
+
+                
+                    
+    
+
+                
+                    
+    
+    <li>
+        <a class="subheader">API Docs</a>
+    </li>
+    
+
+                
+                    
+    <li>
+        <span class="opener">Classes</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/accumulator">Accumulator</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/bag">Bag</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/buffer">Buffer</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/circularlinkedlist">CircularLinkedList</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/counter">Counter</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/date">Date</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/deque">Deque</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/algorithms/josephussolutions">JosephusSolutions</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/linkedlist">LinkedList</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/point2d">Point2D</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/algorithms/point2dmindistancecalculator">Point2DMinDistanceCalculator</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/queue">Queue</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/rational">Rational</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/stack">Stack</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/stackdeque">StackDeque</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/stackdequeopt">StackDequeOpt</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/utils/stopwatchcpu">StopwatchCPU</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/transaction">Transaction</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds/uf">UF</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+                    
+    <li>
+        <span class="opener">Packages</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/algorithms">algorithms</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ds">ds</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/ext">ext</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="https://algs4.fivezha.cn/kotlindoc/utils">utils</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+            </ul>
+        </nav>
+        
+        <nav class="menu">
+            <header class="major">
+                <h2>ds</h2>
+            </header>
+            <ul class="top-level">
+                
+                    
+    <li>
+        <span class="opener">Classes</span>
+        <ul>
+        
+            
+    
+    <li>
+        <a href="#80b9fa0f1066aabdc18019714471c5ca572601ea">class Accumulator: Any</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#3ce8d49e939fc5d0261dc2e44979e3dad92f5a3c">class Bag&lt;T&gt; : Collection&lt;T&gt;, Any</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#ab897cb656f9fecb916890349fdb87dd4fc7b865">class Buffer: Any</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#161caa6cd19490bf7d0c30680c3814527cecd926">class CircularLinkedList&lt;T&gt; : MutableIterable&lt;T&gt;, Any</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#d617af2bb80ecbe8f6d7e783dce7f58c3de33d8c">class Counter: Comparable&lt;Counter&gt;, Any</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#fc34ef024635479bbf1324170c6de0cd02ae1ebd">class Date: Comparable&lt;Date&gt;, Any</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#abd549508c88048174a8b0476c7728f9a617491e">class Deque&lt;T&gt; : Collection&lt;T&gt;, Any</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#f7970252879ebc74d0c1537d1b4bfacb7851f1cb">class LinkedList&lt;T&gt; : MutableList&lt;T&gt;, Any</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#3de665afe6aa4f03659980f6c6778984825eac49">class Point2D: Comparable&lt;Point2D&gt;, Any</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#ad24635ddd7f4f50c023e68db6fc206ce7bfd2d0">class Queue&lt;T&gt; : Collection&lt;T&gt;, Any</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#fe0373bc2609879515260d6d1483b08688b827b1">class Rational: Comparable&lt;Rational&gt;, Any</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#0f83df13b613b8bb92ad7cd19b397b53151b4728">class Stack&lt;T&gt; : Collection&lt;T&gt;, Cloneable, Any</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#f06451a713e4c3f49078cf95566c09ad730f89ea">class StackDeque&lt;T&gt; : Any</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#cca0e3c0a414f920bae4f559e50a2e7696d9f6cd">class StackDequeOpt&lt;T&gt; : Any</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#bad9473c08122d93b7f632ebda30f39f57128ee9">class Transaction: Comparable&lt;Transaction&gt;, Any</a>
+    </li>
+    
+
+        
+            
+    
+    <li>
+        <a href="#e6cd6b569cfcffe2de6c86fde49c5a3b767302f1">class UF: Any</a>
+    </li>
+    
+
+        
+        </ul>
+    </li>
+
+                
+            </ul>
+        </nav>
+        
+
+        <!-- Section -->
+        <section>
+            <p class="text-center">
+                Currently 1.0.0. Created with <a href="https://orchid.run">Orchid </a> and <b>Orchid Editorial Theme</b>.
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright text-center">&copy; 算法(第四版)kotlin个人实现. All rights reserved.<br>Design by <a href="https://html5up.net">HTML5 UP</a></p>
+        </footer>
+
+    </div>
+</div>
+
+</div>
+
+
+
+
+
+
+    <!-- start:inject meta-components [bodyEnd] -->
+    
+
+        
+            
+        
+
+        
+    
+    <!-- end:inject meta-components [bodyEnd] -->
+
+
+
+    <!-- start:inject meta-components [bodyEnd] -->
+    
+    <!-- end:inject meta-components [bodyEnd] -->
+
+
+
+
+<!-- start:inject scripts -->
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+<script  src="https://algs4.fivezha.cn/Editorial/64724bee/assets/js/editorial_util.js"></script>
+<script  src="https://algs4.fivezha.cn/Editorial/64724bee/assets/js/editorial_main.js"></script>
+<script  src="https://algs4.fivezha.cn/Editorial/64724bee/assets/js/editorial_orchidCustomizations.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script  src="https://unpkg.com/lunr/lunr.js"></script>
+<script  src="https://algs4.fivezha.cn/assets/js/orchidSearch.js"></script>
+<!-- end:inject scripts -->
+
+
+</body>
+</html>

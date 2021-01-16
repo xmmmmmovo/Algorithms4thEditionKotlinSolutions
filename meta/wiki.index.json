@@ -1,0 +1,19 @@
+{
+  "ownKey": "wiki",
+  "childrenPages": {"wiki": {
+    "ownKey": "wiki",
+    "ownPages": [{
+      "reference": {
+        "path": "",
+        "baseUrl": "https://algs4.fivezha.cn",
+        "fileName": "wiki",
+        "extension": "html",
+        "usePrettyUrl": true,
+        "link": "https://algs4.fivezha.cn/wiki"
+      },
+      "description": "",
+      "title": "Wiki",
+      "content": "<html>\n <head><\/head>\n <body><\/body>\n<\/html>\n"
+    }]
+  }}
+}
