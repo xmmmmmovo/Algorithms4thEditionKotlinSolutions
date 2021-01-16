@@ -2,7 +2,6 @@ plugins {
     id 'java'
     id 'jacoco'
     id 'org.jetbrains.kotlin.jvm' version '1.3.72'
-    id 'org.jetbrains.dokka' version '0.10.1'
 }
 
 group 'cn.fivezha'
@@ -26,11 +25,11 @@ dependencies {
 }
 
 compileKotlin {
-    kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions.jvmTarget = "11"
 }
 
 compileTestKotlin {
-    kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions.jvmTarget = "11"
 }
 
 // 测试报告生成
@@ -46,62 +45,4 @@ check.dependsOn jacocoTestReport
 // 全量测试
 test {
     useJUnitPlatform()
-}
-
-// 生成文档
-dokka {
-    // 样式
-    outputFormat = 'html'
-    outputDirectory = "$buildDir/dokka"
-    disableAutoconfiguration = false
-
-    cacheRoot = 'default'
-
-    configuration {
-        moduleName = 'doc'
-
-        // Use to include or exclude non public members.
-        includeNonPublic = false
-
-        // Do not output deprecated members. Applies globally, can be overridden by packageOptions
-        skipDeprecated = false
-
-        // Emit warnings about not documented members. Applies globally, also can be overridden by packageOptions
-        reportUndocumented = true
-
-        // Do not create index pages for empty packages
-        skipEmptyPackages = true
-
-        // This is a list of platform names that will be shown in the final result. See the "Platforms" section of this readme
-        targets = ["JVM"]
-
-        // Platform used for code analysis. See the "Platforms" section of this readme
-        platform = "JVM"
-
-        sourceRoot {
-            // 源文件目录
-            path = "src"
-        }
-
-        sourceLink {
-            // Unix based directory relative path to the root of the project (where you execute gradle respectively).
-            path = "src/main/kotlin" // or simply "./"
-
-            // URL showing where the source code can be accessed through the web browser
-            url = "https://github.com/xmmmmmovo/Algorithms4thEditionKotlinSolutions/blob/master/src/main/kotlin"
-            //remove src/main/kotlin if you use "./" above
-
-            // 指定行数前缀，github是#L
-            lineSuffix = "#L"
-        }
-
-        // 用于链接java官方文档
-        jdkVersion = 8
-
-        // Disable linking to online kotlin-stdlib documentation
-        noStdlibLink = false
-
-        // Disable linking to online JDK documentation
-        noJdkLink = false
-    }
 }
